@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installation — OpenAmer</title>
+<meta name="description" content="Komplette Installationsanleitung für OpenAmer auf Windows, macOS und Linux: Voraussetzungen, Befehle, Setup-Wizard, Speicherorte und Fehlerbehebung.">
+<meta name="theme-color" content="#07080c">
+<link rel="canonical" href="https://openamer-max.github.io/installation.html">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%235b8cff'/><text x='50' y='70' font-size='58' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>O</text></svg>">
+<style>
+  .step-block { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 26px; margin-bottom: 18px; }
+  .step-block h3 { font-size: 18px; margin-bottom: 10px; color: #fff; }
+  .step-block p { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+  .step-num { display:inline-block; width: 28px; height: 28px; line-height: 28px; text-align:center; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:#fff; font-weight:700; font-size:14px; margin-right:10px; }
+  pre { background: #0a0d14; border: 1px solid var(--border-strong); border-radius: 10px; padding: 14px 16px; overflow-x: auto; font-family: var(--mono); font-size: 13.5px; color: #c8e1ff; margin: 10px 0; }
+  code { font-family: var(--mono); background: rgba(91,140,255,.12); padding: 2px 6px; border-radius: 5px; font-size: 13.5px; color: #a8c2ff; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--muted); }
+  th { color: #fff; font-weight: 600; }
+  .video-mini { max-width: 340px; margin: 0 auto 30px; border-radius: 18px; overflow: hidden; border: 1px solid var(--border-strong); }
+  .video-mini video { display:block; width:100%; aspect-ratio:9/16; background:#000; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/"><span class="brand-mark">O</span><span>OpenAmer</span></a>
+    <div class="nav-links">
+      <a href="index.html#funktionen">Funktionen</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="https://github.com/openamer/openamer" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="nav-cta"><a class="btn btn-primary btn-sm" href="index.html">Zur Startseite</a></div>
+  </div>
+</nav>
+
+<main class="wrap legal">
+  <h1>Installation</h1>
+  <p class="lead">OpenAmer in fünf Schritten installieren — Windows, macOS und Linux. Dauer: etwa 5 bis 15 Minuten.</p>
+
+  <div class="video-mini">
+    <video controls preload="none" playsinline poster="assets/poster_install.jpg">
+      <source src="assets/video/installation.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <h2>Voraussetzungen</h2>
+  <ul>
+    <li>Windows 10/11 (64-Bit), macOS 13+ oder eine aktuelle Linux-Distribution</li>
+    <li>Internetverbindung (für Download und Abhängigkeiten)</li>
+    <li>ca. 2 GB freier Speicherplatz</li>
+    <li>Für lokale Sprachmodelle: 16 GB RAM empfohlen, GPU optional</li>
+  </ul>
+
+  <h2>Die fünf Schritte</h2>
+
+  <div class="step-block">
+    <h3><span class="step-num">1</span>Terminal öffnen</h3>
+    <p><strong>Windows:</strong> Startmenü → «PowerShell» eintippen → Rechtsklick → «Als Administrator ausführen».</p>
+    <p><strong>macOS / Linux:</strong> Terminal öffnen (bei macOS: Programme → Dienstprogramme → Terminal).</p>
+  </div>
+
+  <div class="step-block">
+    <h3><span class="step-num">2</span>Installationsbefehl ausführen</h3>
+    <p><strong>Windows (PowerShell):</strong></p>
+    <pre>iex (irm https://raw.githubusercontent.com/openamer/openamer/main/scripts/install.ps1)</pre>
+    <p><strong>macOS / Linux:</strong></p>
+    <pre>curl -fsSL https://raw.githubusercontent.com/openamer/openamer/main/scripts/install.sh | bash</pre>
+    <p>Das Skript prüft Python und uv, lädt das Projekt, installiert alle Abhängigkeiten und baut die Oberfläche.</p>
+  </div>
+
+  <div class="step-block">
+    <h3><span class="step-num">3</span>Installation abwarten</h3>
+    <p>Je nach Rechner und Internetverbindung dauert dieser Teil 5 bis 15 Minuten. Im Terminal erscheinen Meldungen wie:</p>
+    <pre>[OK] Managed uv found
+[OK] Main package installed (hash-verified via uv.lock)
+[OK] ALL dependencies installed
+[OK] Interface built</pre>
+    <p>Bitte das Fenster in dieser Zeit nicht schliessen.</p>
+  </div>
+
+  <div class="step-block">
+    <h3><span class="step-num">4</span>Setup-Wizard durchlaufen</h3>
+    <p>Nach der Installation startet automatisch der Einrichtungsassistent. Er fragt:</p>
+    <ul>
+      <li><strong>Modell / Anbieter:</strong> lokal (kein Schlüssel nötig) oder Cloud (API-Schlüssel erforderlich)</li>
+      <li><strong>Terminal-Backend:</strong> lokal empfohlen</li>
+      <li><strong>Messaging-Plattform:</strong> Telegram, Discord usw. — optional, kann übersprungen werden</li>
+      <li><strong>API-Schlüssel:</strong> nur bei Cloud-Modellen</li>
+    </ul>
+    <p>Die vorgeschlagenen Standardwerte sind für den Anfang geeignet.</p>
+  </div>
+
+  <div class="step-block">
+    <h3><span class="step-num">5</span>Starten</h3>
+    <pre>openamer</pre>
+    <p>Beim ersten Start erscheint die Oberfläche mit der Liste der verfügbaren Werkzeuge — über 120 an der Zahl.</p>
+  </div>
+
+  <h2>Speicherorte</h2>
+  <table>
+    <tr><th>Was</th><th>Wo (Windows)</th></tr>
+    <tr><td>Einstellungen</td><td><code>%LOCALAPPDATA%\openamer\config.yaml</code></td></tr>
+    <tr><td>API-Schlüssel</td><td><code>%LOCALAPPDATA%\openamer\</code></td></tr>
+    <tr><td>Protokolle</td><td><code>%LOCALAPPDATA%\openamer\logs</code></td></tr>
+    <tr><td>Skills</td><td><code>%LOCALAPPDATA%\openamer\skills</code></td></tr>
+  </table>
+  <p>Auf macOS und Linux liegen dieselben Dateien unter <code>~/AppData/Local/openamer</code> bzw. <code>~/.local/share/openamer</code>.</p>
+
+  <h2>Nützliche Befehle</h2>
+  <table>
+    <tr><th>Befehl</th><th>Wirkung</th></tr>
+    <tr><td><code>openamer</code></td><td>Assistent starten</td></tr>
+    <tr><td><code>openamer setup</code></td><td>Setup-Wizard erneut ausführen</td></tr>
+    <tr><td><code>openamer setup model</code></td><td>Modell oder Anbieter ändern</td></tr>
+    <tr><td><code>openamer setup terminal</code></td><td>Terminal-Backend ändern</td></tr>
+    <tr><td><code>openamer tools</code></td><td>Verfügbare Werkzeuge anzeigen</td></tr>
+    <tr><td><code>openamer --help</code></td><td>Alle Befehle anzeigen</td></tr>
+  </table>
+
+  <h2>Deinstallation</h2>
+  <p><strong>Windows (PowerShell):</strong></p>
+  <pre>Remove-Item -Recurse -Force "$env:LOCALAPPDATA\openamer"</pre>
+  <p><strong>macOS / Linux:</strong></p>
+  <pre>rm -rf ~/.local/share/openamer ~/AppData/Local/openamer</pre>
+
+  <h2>Wenn etwas nicht klappt</h2>
+  <ul>
+    <li><strong>«python nicht gefunden»:</strong> Python 3.11 oder neuer installieren, danach das Terminal neu öffnen.</li>
+    <li><strong>Berechtigungsfehler:</strong> Terminal bzw. PowerShell als Administrator starten.</li>
+    <li><strong>Download blockiert:</strong> Firewall oder Virenscanner prüfen; die Skripte kommen von <code>raw.githubusercontent.com</code>.</li>
+    <li><strong>Build bricht ab:</strong> Speicherplatz prüfen (mindestens 2 GB) und den Befehl erneut ausführen — der Installer setzt an der letzten Stelle fort.</li>
+  </ul>
+
+  <div class="note">
+    <strong>Hinweis:</strong> OpenAmer läuft vollständig auf deinem Gerät. Es werden keine Gespräche, Dateien oder Konfigurationen an Dritte übertragen — ausser du bindest bewusst einen Cloud-Anbieter an.
+  </div>
+
+  <h2>Weiterführend</h2>
+  <ul>
+    <li>Quellcode und Dokumentation: <a href="https://github.com/openamer/openamer" target="_blank" rel="noopener">github.com/openamer/openamer</a></li>
+    <li>Video-Anleitung: <a href="index.html#video">auf der Startseite</a></li>
+    <li>Datenschutz: <a href="datenschutz.html">Datenschutzerklärung</a></li>
+  </ul>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-bottom" style="border-top:none;padding-top:0">
+      <span>© 2026 OpenAmer · Amer Sacirovic · Schweiz</span>
+      <span><a href="index.html" style="color:var(--muted)">Startseite</a> · <a href="impressum.html" style="color:var(--muted)">Impressum</a></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
