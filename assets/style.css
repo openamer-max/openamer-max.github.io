@@ -271,3 +271,36 @@ footer { border-top: 1px solid var(--border); padding: 52px 0 34px; margin-top: 
 .legal ul { padding-left: 22px; }
 .legal a { color: var(--accent); }
 .legal .note { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px 20px; font-size: 14.5px; }
+
+/* ---------- Sprachauswahl ---------- */
+.lang-sel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  border-radius: 9px;
+  padding: 8px 10px;
+  font-size: 13.5px;
+  font-family: var(--font);
+  cursor: pointer;
+  max-width: 150px;
+}
+.lang-sel:hover { background: rgba(255, 255, 255, 0.09); }
+.lang-sel option { background: #0f1219; color: #eef2f8; }
+@media (max-width: 640px) {
+  .nav-cta .lang-sel { max-width: 105px; font-size: 12.5px; padding: 7px 6px; }
+}
+
+/* ---------- RTL (Arabisch) ---------- */
+html[dir="rtl"] body { text-align: right; }
+html[dir="rtl"] .nav-inner,
+html[dir="rtl"] .nav-links,
+html[dir="rtl"] .nav-cta,
+html[dir="rtl"] .hero-actions,
+html[dir="rtl"] .links,
+html[dir="rtl"] .foot-bottom { flex-direction: row-reverse; }
+html[dir="rtl"] .card,
+html[dir="rtl"] .step,
+html[dir="rtl"] .faq,
+html[dir="rtl"] .legal { text-align: right; }
+html[dir="rtl"] .foot-desc { text-align: right; }
+html[dir="rtl"] .faq summary { flex-direction: row-reverse; }
