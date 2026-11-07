@@ -313,3 +313,21 @@ html[dir="rtl"] .faq summary { flex-direction: row-reverse; }
 .demo-card img { height: auto; background: #07080c; }
 .demo-card figcaption { padding: 16px 20px 20px; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
 @media (max-width: 860px) { .demo-grid { grid-template-columns: 1fr; } .demos-section { padding: 64px 0; } }
+
+/* Hero-Banner: Logo + Wortmarke + Tagline, zentriert und gleichmaessig verteilt */
+.hero-banner { display: flex; flex-direction: column; align-items: center; gap: 22px;
+  max-width: 880px; margin: 26px auto 34px; padding: 38px 30px 34px;
+  border: 1px solid var(--border-strong); border-radius: 26px;
+  background: radial-gradient(120% 160% at 50% 0%, rgba(34, 211, 238, 0.13), rgba(7, 8, 12, 0) 62%),
+              rgba(15, 18, 25, 0.66);
+  box-shadow: var(--shadow); }
+.banner-lockup { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.banner-logo { width: 66px; height: 66px; display: block; }
+.banner-word { font-size: 34px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); line-height: 1; }
+.hero-banner h1 { margin: 0; text-align: center; }
+@media (max-width: 720px) {
+  .hero-banner { padding: 28px 18px 26px; border-radius: 20px; margin: 18px auto 26px; }
+  .banner-lockup { gap: 12px; }
+  .banner-logo { width: 52px; height: 52px; }
+  .banner-word { font-size: 26px; }
+}
