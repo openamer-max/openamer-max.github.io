@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Installation — OpenAmer</title>
-<meta name="description" content="Komplette Installationsanleitung für OpenAmer auf Windows, macOS und Linux: Voraussetzungen, Befehle, Setup-Wizard, Speicherorte und Fehlerbehebung.">
+<meta name="description" content="Komplette Installationsanleitung für OpenAmer auf Windows, macOS, Linux und Android: Voraussetzungen, Befehle, Setup-Wizard, Speicherorte und Fehlerbehebung.">
 <meta name="theme-color" content="#07080c">
 <link rel="canonical" href="https://openamer-max.github.io/installation.html">
 <link rel="stylesheet" href="assets/style.css">
@@ -40,7 +40,7 @@
 
 <main class="wrap legal">
   <h1>Installation</h1>
-  <p class="lead">OpenAmer in fünf Schritten installieren — Windows, macOS und Linux. Dauer: etwa 5 bis 15 Minuten.</p>
+  <p class="lead">OpenAmer in fünf Schritten installieren — Windows, macOS, Linux und Android. Dauer: etwa 5 bis 15 Minuten.</p>
 
   <div class="video-mini">
     <video controls preload="none" playsinline poster="assets/poster_install.jpg">
@@ -50,7 +50,7 @@
 
   <h2>Voraussetzungen</h2>
   <ul>
-    <li>Windows 10/11 (64-Bit), macOS 13+ oder eine aktuelle Linux-Distribution</li>
+    <li>Windows 10/11 (64-Bit), macOS 13+ oder eine aktuelle Linux-Distribution &mdash; oder Android ab 8 &uuml;ber Termux</li>
     <li>Internetverbindung (für Download und Abhängigkeiten)</li>
     <li>ca. 2 GB freier Speicherplatz</li>
     <li>Für lokale Sprachmodelle: 16 GB RAM empfohlen, GPU optional</li>
@@ -61,14 +61,14 @@
   <div class="step-block">
     <h3><span class="step-num">1</span>Terminal öffnen</h3>
     <p><strong>Windows:</strong> Startmenü → «PowerShell» eintippen → Rechtsklick → «Als Administrator ausführen».</p>
-    <p><strong>macOS / Linux:</strong> Terminal öffnen (bei macOS: Programme → Dienstprogramme → Terminal).</p>
+    <p><strong>macOS / Linux / Android (Termux):</strong> Terminal öffnen (bei macOS: Programme → Dienstprogramme → Terminal).</p>
   </div>
 
   <div class="step-block">
     <h3><span class="step-num">2</span>Installationsbefehl ausführen</h3>
     <p><strong>Windows (PowerShell):</strong></p>
     <pre>iex (irm https://raw.githubusercontent.com/openamer/openamer/main/scripts/install.ps1)</pre>
-    <p><strong>macOS / Linux:</strong></p>
+    <p><strong>macOS / Linux / Android (Termux):</strong></p>
     <pre>curl -fsSL https://raw.githubusercontent.com/openamer/openamer/main/scripts/install.sh | bash</pre>
     <p>Das Skript prüft Python und uv, lädt das Projekt, installiert alle Abhängigkeiten und baut die Oberfläche.</p>
   </div>
@@ -125,7 +125,7 @@
   <h2>Deinstallation</h2>
   <p><strong>Windows (PowerShell):</strong></p>
   <pre>Remove-Item -Recurse -Force "$env:LOCALAPPDATA\openamer"</pre>
-  <p><strong>macOS / Linux:</strong></p>
+  <p><strong>macOS / Linux / Android (Termux):</strong></p>
   <pre>rm -rf ~/.local/share/openamer ~/AppData/Local/openamer</pre>
 
   <h2>Wenn etwas nicht klappt</h2>
