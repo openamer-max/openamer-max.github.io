@@ -1,6 +1,7 @@
 /* OpenAmer i18n — Teil 2: RU, AR, ZH, TR, BS, SQ */
 window.I18N2 = {
 ru: {
+  d_eyebrow: "В действии", d_title: "Посмотри, как он работает", d_sub: "Две реальные записи экрана из работы — без макетов и обработки.", d_c1: "Управляет окном, по которому ты не кликал — твой курсор не сдвинулся ни на пиксель.", d_c2: "Сломанный процесс чинит себя сам — без участия человека.",
   lang: "Русский", rtl: false,
   nav_features: "Функции", nav_how: "Как работает", nav_video: "Видео", nav_faq: "FAQ", nav_docs: "Документация", nav_start: "Начать",
   badge: "Новая эра цифровых ассистентов",
@@ -38,6 +39,7 @@ ru: {
   folge: "Следи за OpenAmer", folge_sub: "Стань частью пути."
 },
 ar: {
+  d_eyebrow: "قيد التنفيذ", d_title: "شاهده أثناء العمل", d_sub: "تسجيلان حقيقيان للشاشة أثناء العمل — بلا نماذج ولا تعديل.", d_c1: "يتحكم في نافذة لم تنقر عليها أبدًا — مؤشرك لا يتحرك ولو بكسل.", d_c2: "سير عمل معطّل يصلح نفسه — دون تدخل بشري.",
   lang: "العربية", rtl: true,
   nav_features: "المزايا", nav_how: "كيف يعمل", nav_video: "فيديو", nav_faq: "الأسئلة", nav_docs: "التوثيق", nav_start: "ابدأ الآن",
   badge: "عصر جديد للمساعدين الرقميين",
@@ -75,6 +77,7 @@ ar: {
   folge: "تابع OpenAmer", folge_sub: "كن جزءًا من الرحلة."
 },
 zh: {
+  d_eyebrow: "实际运行", d_title: "看它如何工作", d_sub: "两段真实运行录屏——不是效果图，也没有后期处理。", d_c1: "操作你从未点击过的窗口——你的鼠标指针移动 0 像素。", d_c2: "损坏的流程会自行修复——无需人工干预。",
   lang: "中文", rtl: false,
   nav_features: "功能", nav_how: "如何使用", nav_video: "视频", nav_faq: "常见问题", nav_docs: "文档", nav_start: "立即开始",
   badge: "数字助手的新时代",
@@ -112,6 +115,7 @@ zh: {
   folge: "关注 OpenAmer", folge_sub: "加入这段旅程。"
 },
 tr: {
+  d_eyebrow: "İş başında", d_title: "Çalışırken izle", d_sub: "Çalışırken alınmış iki gerçek ekran kaydı — mockup yok, rötuş yok.", d_c1: "Hiç tıklamadığın bir pencereyi yönetir — kendi imlecin 0 piksel oynar.", d_c2: "Bozuk bir iş akışı kendini onarır — insan eli değmeden.",
   lang: "Türkçe", rtl: false,
   nav_features: "Özellikler", nav_how: "Nasıl çalışır", nav_video: "Video", nav_faq: "SSS", nav_docs: "Dokümantasyon", nav_start: "Başla",
   badge: "Dijital asistanlarda yeni bir dönem",
@@ -149,6 +153,7 @@ tr: {
   folge: "OpenAmer'i takip et", folge_sub: "Yolculuğun parçası ol."
 },
 bs: {
+  d_eyebrow: "U akciji", d_title: "Vidi ga na djelu", d_sub: "Dvije stvarne snimke ekrana iz rada — bez mockupova i bez dorade.", d_c1: "Upravlja prozorom koji nikad nisi kliknuo — tvoj pokazivač se pomjeri 0 px.", d_c2: "Pokvaren tok se sam popravi — bez ljudske ruke.",
   lang: "Bosanski", rtl: false,
   nav_features: "Funkcije", nav_how: "Kako radi", nav_video: "Video", nav_faq: "Pitanja", nav_docs: "Dokumentacija", nav_start: "Počni",
   badge: "Nova era digitalnih asistenata",
@@ -186,6 +191,7 @@ bs: {
   folge: "Prati OpenAmer", folge_sub: "Postani dio putovanja."
 },
 sq: {
+  d_eyebrow: "Në veprim", d_title: "Shikoje duke punuar", d_sub: "Dy regjistrime reale të ekranit gjatë punës — pa mockup, pa përpunim.", d_c1: "Drejton një dritare ku nuk ke klikuar kurrë — treguesi yt nuk lëviz as një piksel.", d_c2: "Një rrjedhë e prishur riparohet vetë — pa dorë njerëzore.",
   lang: "Shqip", rtl: false,
   nav_features: "Funksionet", nav_how: "Si funksionon", nav_video: "Video", nav_faq: "Pyetje", nav_docs: "Dokumentacioni", nav_start: "Fillo",
   badge: "Një epokë e re e asistentëve digjitalë",

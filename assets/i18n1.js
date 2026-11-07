@@ -1,6 +1,7 @@
 /* OpenAmer i18n — Teil 1: DE, EN, ES, FR, IT, PT */
 window.I18N = {
 de: {
+  d_eyebrow: "In Aktion", d_title: "Sieh es arbeiten", d_sub: "Zwei echte Bildschirmaufnahmen aus dem Betrieb — keine Mockups, keine Nachbearbeitung.", d_c1: "Steuert ein Fenster, das du nie angeklickt hast — dein Mauszeiger bewegt sich 0 px.", d_c2: "Ein kaputter Workflow repariert sich selbst — ohne dass ein Mensch eingreift.",
   lang: "Deutsch",
   nav_features: "Funktionen", nav_how: "So funktioniert's", nav_video: "Video", nav_faq: "FAQ", nav_docs: "Dokumentation", nav_start: "Jetzt starten",
   badge: "Neue Ära der digitalen Assistenten",
@@ -38,6 +39,7 @@ de: {
   folge: "Folge OpenAmer", folge_sub: "Werde Teil der Reise."
 },
 en: {
+  d_eyebrow: "In action", d_title: "Watch it work", d_sub: "Two real screen recordings from live operation — no mockups, no retouching.", d_c1: "Drives a window you never clicked — your own pointer moves 0 px.", d_c2: "A broken workflow repairs itself — no human touched it.",
   lang: "English",
   nav_features: "Features", nav_how: "How it works", nav_video: "Video", nav_faq: "FAQ", nav_docs: "Documentation", nav_start: "Get started",
   badge: "A new era of digital assistants",
@@ -75,6 +77,7 @@ en: {
   folge: "Follow OpenAmer", folge_sub: "Join the journey."
 },
 es: {
+  d_eyebrow: "En acción", d_title: "Míralo trabajar", d_sub: "Dos grabaciones reales de pantalla en funcionamiento — sin montajes ni retoques.", d_c1: "Controla una ventana que nunca has clicado — tu puntero no se mueve ni un píxel.", d_c2: "Un flujo roto se repara solo — sin que nadie intervenga.",
   lang: "Español",
   nav_features: "Funciones", nav_how: "Cómo funciona", nav_video: "Vídeo", nav_faq: "FAQ", nav_docs: "Documentación", nav_start: "Empezar",
   badge: "Una nueva era de asistentes digitales",
@@ -112,6 +115,7 @@ es: {
   folge: "Sigue OpenAmer", folge_sub: "Forma parte del viaje."
 },
 fr: {
+  d_eyebrow: "En action", d_title: "Voyez-le travailler", d_sub: "Deux vraies captures d'écran en fonctionnement — sans maquette ni retouche.", d_c1: "Pilote une fenêtre que vous n'avez jamais cliquée — votre pointeur ne bouge pas d'un pixel.", d_c2: "Un flux cassé se répare lui-même — sans intervention humaine.",
   lang: "Français",
   nav_features: "Fonctions", nav_how: "Comment ça marche", nav_video: "Vidéo", nav_faq: "FAQ", nav_docs: "Documentation", nav_start: "Commencer",
   badge: "Une nouvelle ère des assistants numériques",
@@ -149,6 +153,7 @@ fr: {
   folge: "Suivez OpenAmer", folge_sub: "Rejoignez l'aventure."
 },
 it: {
+  d_eyebrow: "In azione", d_title: "Guardalo al lavoro", d_sub: "Due vere registrazioni dello schermo in funzione — nessun mockup, nessuna postproduzione.", d_c1: "Guida una finestra che non hai mai cliccato — il tuo puntatore non si muove di un pixel.", d_c2: "Un flusso rotto si ripara da solo — senza intervento umano.",
   lang: "Italiano",
   nav_features: "Funzioni", nav_how: "Come funziona", nav_video: "Video", nav_faq: "FAQ", nav_docs: "Documentazione", nav_start: "Inizia",
   badge: "Una nuova era degli assistenti digitali",
@@ -186,6 +191,7 @@ it: {
   folge: "Segui OpenAmer", folge_sub: "Entra nel viaggio."
 },
 pt: {
+  d_eyebrow: "Em ação", d_title: "Vê-lo a trabalhar", d_sub: "Duas gravações reais do ecrã em funcionamento — sem mockups nem retoques.", d_c1: "Controla uma janela que nunca clicaste — o teu ponteiro não se move um pixel.", d_c2: "Um fluxo partido repara-se sozinho — sem intervenção humana.",
   lang: "Português",
   nav_features: "Funções", nav_how: "Como funciona", nav_video: "Vídeo", nav_faq: "FAQ", nav_docs: "Documentação", nav_start: "Começar",
   badge: "Uma nova era de assistentes digitais",

@@ -309,3 +309,13 @@ html[dir="rtl"] .faq summary { flex-direction: row-reverse; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
+
+/* Abschnitt "In Aktion" â€” echte Bildschirmaufnahmen */
+.demos-section { padding: 88px 0; }
+.demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+.demo-card { margin: 0; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.demo-card picture, .demo-card img { display: block; width: 100%; }
+.demo-card img { height: auto; background: #07080c; }
+.demo-card figcaption { padding: 16px 20px 20px; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+@media (max-width: 860px) { .demo-grid { grid-template-columns: 1fr; } .demos-section { padding: 64px 0; } }
