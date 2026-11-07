@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://openamer-max.github.io/sitemap.xml
