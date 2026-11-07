@@ -321,20 +321,34 @@ html[dir="rtl"] .faq summary { flex-direction: row-reverse; }
   .demo-card picture, .demo-card img { height: 210px; }
 }
 
-/* Hero-Banner: Logo + Wortmarke + Tagline, zentriert und gleichmaessig verteilt */
-.hero-banner { display: flex; flex-direction: column; align-items: center; gap: 22px;
-  max-width: 880px; margin: 26px auto 34px; padding: 38px 30px 34px;
+/* Hero-Banner: Logo + Wortmarke, Trennlinie, Tagline, Plattformzeile - alles zentriert */
+.hero-banner { display: flex; flex-direction: column; align-items: center;
+  max-width: 980px; margin: 26px auto 34px; padding: 38px 44px 34px;
   border: 1px solid var(--border-strong); border-radius: 26px;
   background: radial-gradient(120% 160% at 50% 0%, rgba(34, 211, 238, 0.13), rgba(7, 8, 12, 0) 62%),
               rgba(15, 18, 25, 0.66);
   box-shadow: var(--shadow); }
-.banner-lockup { display: flex; align-items: center; justify-content: center; gap: 16px; }
-.banner-logo { width: 66px; height: 66px; display: block; }
-.banner-word { font-size: 34px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); line-height: 1; }
-.hero-banner h1 { margin: 0; text-align: center; }
+
+.banner-lockup { display: flex; align-items: center; justify-content: center; gap: 18px;
+  width: 100%; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+
+.banner-logo { width: 72px; height: 72px; display: block; }
+
+.banner-word { font-family: "Bahnschrift", var(--font); font-size: 38px; font-weight: 700;
+  letter-spacing: -0.01em; color: var(--text); line-height: 1; }
+
+.hero-banner h1 { font-family: "Bahnschrift", var(--font); margin: 26px 0 0;
+  font-size: clamp(30px, 4.4vw, 52px); line-height: 1.1; letter-spacing: -0.01em; text-align: center; }
+
+.banner-platforms { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--border); width: 100%;
+  text-align: center; font-family: "Bahnschrift", var(--font); font-size: 12.5px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase; color: #22d3ee; opacity: 0.85; }
+
 @media (max-width: 720px) {
-  .hero-banner { padding: 28px 18px 26px; border-radius: 20px; margin: 18px auto 26px; }
-  .banner-lockup { gap: 12px; }
-  .banner-logo { width: 52px; height: 52px; }
-  .banner-word { font-size: 26px; }
+  .hero-banner { padding: 26px 18px 24px; border-radius: 20px; margin: 16px auto 24px; }
+  .banner-lockup { gap: 12px; padding-bottom: 18px; }
+  .banner-logo { width: 54px; height: 54px; }
+  .banner-word { font-size: 27px; }
+  .hero-banner h1 { margin-top: 20px; }
+  .banner-platforms { margin-top: 20px; padding-top: 18px; font-size: 11px; letter-spacing: 0.12em; }
 }
