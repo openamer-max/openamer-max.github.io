@@ -312,7 +312,7 @@ html[dir="rtl"] .faq summary { flex-direction: row-reverse; }
 
 /* Abschnitt "In Aktion" â€” echte Bildschirmaufnahmen */
 .demos-section { padding: 88px 0; }
-.demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+.demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; align-items: start; }
 .demo-card { margin: 0; background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 .demo-card picture, .demo-card img { display: block; width: 100%; }
