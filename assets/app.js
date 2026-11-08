@@ -15,7 +15,11 @@
     zh: ["OpenAmer — 你的私人 AI 助手。本地。私密。诚实。", "OpenAmer 直接运行在你的电脑上，超过 120 种工具，数据完全由你掌控。"],
     tr: ["OpenAmer — Kişisel yapay zekâ asistanın. Yerel. Gizli. Dürüst.", "OpenAmer kendi bilgisayarında çalışan yapay zekâ asistanı. 120'den fazla araç."],
     bs: ["OpenAmer — Tvoj lični AI asistent. Lokalno. Privatno. Iskreno.", "OpenAmer je asistent koji radi na tvom računaru. Preko 120 alata."],
-    sq: ["OpenAmer — Asistenti yt personal me AI. Lokal. Privat. I sinqertë.", "OpenAmer është asistenti me AI që punon në kompjuterin tënd. Mbi 120 mjete."]
+    sq: ["OpenAmer — Asistenti yt personal me AI. Lokal. Privat. I sinqertë.", "OpenAmer është asistenti me AI që punon në kompjuterin tënd. Mbi 120 mjete."],
+    pl: ["OpenAmer — Twój osobisty asystent AI. Lokalnie. Prywatnie. Uczciwie.", "OpenAmer działa na Twoim komputerze. Ponad 120 narzędzi, pełna kontrola nad danymi."],
+    id: ["OpenAmer — Asisten AI pribadimu. Lokal. Privat. Jujur.", "OpenAmer berjalan di komputermu. Lebih dari 120 alat, kendali penuh atas data."],
+    hi: ["OpenAmer — आपका व्यक्तिगत AI सहायक।", "सीधे आपके कंप्यूटर पर चलता है। 120+ टूल, पूरा नियंत्रण।"],
+    ja: ["OpenAmer — あなた専用の AI アシスタント。ローカル。プライベート。誠実。", "あなたのパソコンで動きます。120 以上のツール、データは完全に你の手元に。"]
   };
 
   function detect() {
