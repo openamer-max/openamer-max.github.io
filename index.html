@@ -532,6 +532,17 @@
 <script src="/assets/i18n3.js" defer></script>
 <script src="/assets/app.js"></script>
 
+<script>
+/* Sicherheitsnetz: hat der Einblend-Beobachter nach 2,5 s noch nichts gezeigt,
+   wird alles sichtbar. Sonst bleibt die Seite schwarz, wenn app.js zwar laedt,
+   der IntersectionObserver aber nicht feuert oder die Sprachdatei fehlt. */
+setTimeout(function () {
+  if (!document.querySelector('.reveal.in')) {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+}, 2500);
+</script>
+
 </body>
 
 </html>
