@@ -8,15 +8,15 @@
  * Wichtig: der Service Worker laeuft nur ueber HTTPS oder auf localhost.
  */
 
-const VERSION = 'openamer-app-v2';
+const VERSION = 'openamer-app-v3';
 const SHELL = [
-  '/',
-  '/manifest.webmanifest',
-  '/logo.png',
-  '/icon-180.png',
-  '/icon-192.png',
-  '/icon-512.png',
-  '/icon-maskable-512.png'
+  './',
+  './manifest.webmanifest',
+  './logo.png',
+  './icon-180.png',
+  './icon-192.png',
+  './icon-512.png',
+  './icon-maskable-512.png'
 ];
 
 self.addEventListener('install', (event) => {
@@ -56,7 +56,7 @@ self.addEventListener('fetch', (event) => {
         .catch(() => caches.match(req).then((hit) => {
             if (hit) return hit;
             // Nur die App selbst bekommt den Shell-Rueckfall
-            if (url.pathname === '/' || url.pathname === '/index.html') return caches.match('/');
+            if (url.pathname === '/app/' || url.pathname === '/app/index.html') return caches.match('./');
             return Response.error();
           }))
     );
