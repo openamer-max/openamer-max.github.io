@@ -1,6 +1,12 @@
 /* OpenAmer i18n — Teil 1: DE, EN, ES, FR, IT, PT */
 window.I18N = {
 de: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer für deinen PC",
+  dl_win_sub: "Die komplette Desktop-App: Agent-Kern, Terminal, Browser-Steuerung, Skills und Plugins.",
+  dl_win: "Windows-Testversion",
+  dl_win_note: "Version 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "Nicht signiert — SmartScreen: „Weitere Informationen“ → „Trotzdem ausführen“",
   btn_test: "Jetzt testen",
   test_note: "Kein Konto · läuft im Browser · antwortet sofort, auch ohne Modell",
   dl_web: "Im Browser öffnen",
@@ -48,6 +54,12 @@ de: {
   folge: "Folge OpenAmer", folge_sub: "Werde Teil der Reise."
 },
 en: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer for your PC",
+  dl_win_sub: "The complete desktop app: agent core, terminal, browser control, skills and plugins.",
+  dl_win: "Windows test version",
+  dl_win_note: "Version 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "Unsigned — SmartScreen: “More info” → “Run anyway”",
   btn_test: "Try it now",
   test_note: "No account · runs in the browser · answers instantly, even without a model",
   dl_web: "Open in browser",
@@ -95,6 +107,12 @@ en: {
   folge: "Follow OpenAmer", folge_sub: "Join the journey."
 },
 es: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer para tu PC",
+  dl_win_sub: "La app de escritorio completa: núcleo del agente, terminal, control del navegador, skills y plugins.",
+  dl_win: "Versión de prueba Windows",
+  dl_win_note: "Versión 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "Sin firmar — SmartScreen: «Más información» → «Ejecutar de todos modos»",
   btn_test: "Probar ahora",
   test_note: "Sin cuenta · funciona en el navegador · responde al instante, incluso sin modelo",
   dl_web: "Abrir en el navegador",
@@ -142,6 +160,12 @@ es: {
   folge: "Sigue OpenAmer", folge_sub: "Forma parte del viaje."
 },
 fr: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer pour ton PC",
+  dl_win_sub: "L’application de bureau complète : cœur de l’agent, terminal, pilotage du navigateur, skills et plugins.",
+  dl_win: "Version d’essai Windows",
+  dl_win_note: "Version 2026.11.7 · 104 Mo · Windows 10/11",
+  dl_win_sign: "Non signée — SmartScreen : « Informations complémentaires » → « Exécuter quand même »",
   btn_test: "Essayer maintenant",
   test_note: "Sans compte · dans le navigateur · répond aussitôt, même sans modèle",
   dl_web: "Ouvrir dans le navigateur",
@@ -189,6 +213,12 @@ fr: {
   folge: "Suivez OpenAmer", folge_sub: "Rejoignez l'aventure."
 },
 it: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer per il tuo PC",
+  dl_win_sub: "L’app desktop completa: core dell’agente, terminale, controllo del browser, skills e plugin.",
+  dl_win: "Versione di prova Windows",
+  dl_win_note: "Versione 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "Non firmata — SmartScreen: «Ulteriori informazioni» → «Esegui comunque»",
   btn_test: "Prova ora",
   test_note: "Nessun account · nel browser · risponde subito, anche senza modello",
   dl_web: "Apri nel browser",
@@ -236,6 +266,12 @@ it: {
   folge: "Segui OpenAmer", folge_sub: "Entra nel viaggio."
 },
 pt: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer para o teu PC",
+  dl_win_sub: "A aplicação de ambiente de trabalho completa: núcleo do agente, terminal, controlo do navegador, skills e plugins.",
+  dl_win: "Versão de teste Windows",
+  dl_win_note: "Versão 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "Não assinada — SmartScreen: «Mais informações» → «Executar mesmo assim»",
   btn_test: "Testar agora",
   test_note: "Sem conta · no navegador · responde de imediato, mesmo sem modelo",
   dl_web: "Abrir no navegador",

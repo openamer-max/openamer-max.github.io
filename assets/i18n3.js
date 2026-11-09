@@ -2,6 +2,12 @@
    Wird wie Teil 2 per Object.assign in window.I18N gemischt. */
 window.I18N3 = {
 pl: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer na twój PC",
+  dl_win_sub: "Pełna aplikacja desktopowa: rdzeń agenta, terminal, sterowanie przeglądarką, umiejętności i wtyczki.",
+  dl_win: "Wersja testowa Windows",
+  dl_win_note: "Wersja 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "Niepodpisana — SmartScreen: „Więcej informacji“ → „Uruchom mimo to“",
   btn_test: "Wypróbuj teraz",
   test_note: "Bez konta · działa w przeglądarce · odpowiada od razu, nawet bez modelu",
   dl_web: "Otwórz w przeglądarce",
@@ -75,6 +81,12 @@ pl: {
   folge: "Obserwuj OpenAmer", folge_sub: "Bądź częścią drogi."
 },
 id: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer untuk PC-mu",
+  dl_win_sub: "Aplikasi desktop lengkap: inti agen, terminal, kendali peramban, keterampilan dan plugin.",
+  dl_win: "Versi uji Windows",
+  dl_win_note: "Versi 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "Tidak ditandatangani — SmartScreen: «Info selengkapnya» → «Jalankan saja»",
   btn_test: "Coba sekarang",
   test_note: "Tanpa akun · berjalan di peramban · menjawab langsung, bahkan tanpa model",
   dl_web: "Buka di peramban",
@@ -150,6 +162,12 @@ id: {
   folge: "Ikuti OpenAmer", folge_sub: "Jadilah bagian dari perjalanan."
 },
 hi: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "आपके PC के लिए OpenAmer",
+  dl_win_sub: "पूरा डेस्कटॉप ऐप: एजेंट कोर, टर्मिनल, ब्राउज़र नियंत्रण, स्किल्स और प्लगइन।",
+  dl_win: "Windows परीक्षण संस्करण",
+  dl_win_note: "संस्करण 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "अहस्ताक्षरित — SmartScreen: «अधिक जानकारी» → «फिर भी चलाएँ»",
   btn_test: "अभी आज़माएँ",
   test_note: "बिना खाता · ब्राउज़र में चलता है · बिना मॉडल भी तुरंत जवाब देता है",
   dl_web: "ब्राउज़र में खोलें",
@@ -225,6 +243,12 @@ hi: {
   folge: "OpenAmer को फ़ॉलो करें", folge_sub: "इस सफ़़र का हिस्सा बनें।"
 },
 ja: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "PC 版 OpenAmer",
+  dl_win_sub: "デスクトップ完全版：エージェントコア、ターミナル、ブラウザ操作、スキルとプラグイン。",
+  dl_win: "Windows 体験版",
+  dl_win_note: "バージョン 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "署名なし — SmartScreen：「詳細情報」→「実行」",
   btn_test: "今すぐ試す",
   test_note: "アカウント不要 · ブラウザで動作 · モデルなしでも即答",
   dl_web: "ブラウザで開く",

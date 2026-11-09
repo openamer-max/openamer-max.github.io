@@ -1,6 +1,12 @@
 /* OpenAmer i18n — Teil 2: RU, AR, ZH, TR, BS, SQ */
 window.I18N2 = {
 ru: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer для вашего ПК",
+  dl_win_sub: "Полное настольное приложение: ядро агента, терминал, управление браузером, навыки и плагины.",
+  dl_win: "Тестовая версия для Windows",
+  dl_win_note: "Версия 2026.11.7 · 104 МБ · Windows 10/11",
+  dl_win_sign: "Без подписи — SmartScreen: «Подробнее» → «Выполнить в любом случае»",
   btn_test: "Попробовать сейчас",
   test_note: "Без аккаунта · в браузере · отвечает сразу, даже без модели",
   dl_web: "Открыть в браузере",
@@ -48,6 +54,12 @@ ru: {
   folge: "Следи за OpenAmer", folge_sub: "Стань частью пути."
 },
 ar: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer لحاسوبك",
+  dl_win_sub: "تطبيق سطح المكتب الكامل: نواة الوكيل، الطرفية، التحكم بالمتصفح، المهارات والإضافات.",
+  dl_win: "نسخة تجريبية لويندوز",
+  dl_win_note: "الإصدار 2026.11.7 · 104 ميغابايت · Windows 10/11",
+  dl_win_sign: "غير موقّعة — SmartScreen: «مزيد من المعلومات» ← «تشغيل على أي حال»",
   btn_test: "جرّبه الآن",
   test_note: "بدون حساب · يعمل في المتصفح · يجيب فورًا حتى بدون نموذج",
   dl_web: "افتح في المتصفح",
@@ -95,6 +107,12 @@ ar: {
   folge: "تابع OpenAmer", folge_sub: "كن جزءًا من الرحلة."
 },
 zh: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer 桌面版",
+  dl_win_sub: "完整的桌面应用：智能体内核、终端、浏览器控制、技能与插件。",
+  dl_win: "Windows 测试版",
+  dl_win_note: "版本 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "未签名 — SmartScreen：「更多信息」→「仍要运行」",
   btn_test: "立即试用",
   test_note: "无需账号 · 在浏览器中运行 · 即使没有模型也能立即回答",
   dl_web: "在浏览器中打开",
@@ -142,6 +160,12 @@ zh: {
   folge: "关注 OpenAmer", folge_sub: "加入这段旅程。"
 },
 tr: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "PC için OpenAmer",
+  dl_win_sub: "Tam masaüstü uygulaması: ajan çekirdeği, terminal, tarayıcı kontrolü, yetenekler ve eklentiler.",
+  dl_win: "Windows test sürümü",
+  dl_win_note: "Sürüm 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "İmzasız — SmartScreen: «Daha fazla bilgi» → «Yine de çalıştır»",
   btn_test: "Hemen dene",
   test_note: "Hesap yok · tarayıcıda çalışır · model olmadan bile hemen yanıtlar",
   dl_web: "Tarayıcıda aç",
@@ -189,6 +213,12 @@ tr: {
   folge: "OpenAmer'i takip et", folge_sub: "Yolculuğun parçası ol."
 },
 bs: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer za tvoj PC",
+  dl_win_sub: "Kompletna desktop aplikacija: jezgro agenta, terminal, upravljanje preglednikom, vještine i dodaci.",
+  dl_win: "Windows probna verzija",
+  dl_win_note: "Verzija 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "Nije potpisano — SmartScreen: «Više informacija» → «Ipak pokreni»",
   btn_test: "Isprobaj sada",
   test_note: "Bez računa · radi u pregledniku · odgovara odmah, i bez modela",
   dl_web: "Otvori u pregledniku",
@@ -236,6 +266,12 @@ bs: {
   folge: "Prati OpenAmer", folge_sub: "Postani dio putovanja."
 },
 sq: {
+  dl_win_eyebrow: "Windows",
+  dl_win_title: "OpenAmer për PC-në tënd",
+  dl_win_sub: "Aplikacioni i plotë desktop: bërthama e agjentit, terminali, kontrolli i shfletuesit, aftësitë dhe shtojcat.",
+  dl_win: "Version prove për Windows",
+  dl_win_note: "Versioni 2026.11.7 · 104 MB · Windows 10/11",
+  dl_win_sign: "Pa nënshkrim — SmartScreen: «Më shumë informacion» → «Ekzekuto gjithsesi»",
   btn_test: "Provoje tani",
   test_note: "Pa llogari · në shfletues · përgjigjet menjëherë, edhe pa model",
   dl_web: "Hap në shfletues",
