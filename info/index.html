@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html lang="de" dir="ltr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>OpenAmer — Dein persönlicher KI-Assistent. Lokal. Privat. Ehrlich.</title>
+
+<meta name="description" content="OpenAmer ist der persönliche KI-Assistent, der direkt auf deinem Computer läuft. Über 120 Werkzeuge, volle Datenkontrolle, keine Cloud-Pflicht. Windows, macOS, Linux und Android.">
+
+<meta name="theme-color" content="#07080c">
+
+<link rel="canonical" href="https://openamer-max.github.io/">
+
+<link rel="alternate" hreflang="de" href="https://openamer-max.github.io/?lang=de">
+
+<link rel="alternate" hreflang="en" href="https://openamer-max.github.io/?lang=en">
+
+<link rel="alternate" hreflang="es" href="https://openamer-max.github.io/?lang=es">
+
+<link rel="alternate" hreflang="fr" href="https://openamer-max.github.io/?lang=fr">
+
+<link rel="alternate" hreflang="it" href="https://openamer-max.github.io/?lang=it">
+
+<link rel="alternate" hreflang="pt" href="https://openamer-max.github.io/?lang=pt">
+
+<link rel="alternate" hreflang="ru" href="https://openamer-max.github.io/?lang=ru">
+
+<link rel="alternate" hreflang="ar" href="https://openamer-max.github.io/?lang=ar">
+
+<link rel="alternate" hreflang="zh" href="https://openamer-max.github.io/?lang=zh">
+
+<link rel="alternate" hreflang="tr" href="https://openamer-max.github.io/?lang=tr">
+
+<link rel="alternate" hreflang="bs" href="https://openamer-max.github.io/?lang=bs">
+
+<link rel="alternate" hreflang="sq" href="https://openamer-max.github.io/?lang=sq">
+
+<link rel="alternate" hreflang="x-default" href="https://openamer-max.github.io/">
+
+<link rel="stylesheet" href="/assets/style.css">
+
+<link rel="icon" href="/assets/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/logo.png">
+
+<meta property="og:type" content="website">
+
+<meta property="og:locale" content="de_CH">
+
+<meta property="og:site_name" content="OpenAmer">
+
+<meta property="og:title" content="OpenAmer — Dein persönlicher KI-Assistent. Lokal. Privat. Ehrlich.">
+
+<meta property="og:description" content="Der KI-Assistent, der auf deinem Computer läuft. 120+ Werkzeuge, volle Datenkontrolle, keine Cloud-Pflicht.">
+
+<meta property="og:url" content="https://openamer-max.github.io/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://openamer-max.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OpenAmer — lokaler KI-Assistent. Lokal, privat, ehrlich.">
+<meta name="twitter:image" content="https://openamer-max.github.io/assets/og-image.png">
+
+<script type="application/ld+json">
+
+{
+
+  "@context": "https://schema.org",
+
+  "@type": "SoftwareApplication",
+
+  "name": "OpenAmer",
+
+  "applicationCategory": "BusinessApplication",
+
+  "operatingSystem": "Windows, macOS, Linux, Android",
+
+  "description": "Persönlicher KI-Assistent, der lokal auf dem eigenen Computer läuft. Über 120 Werkzeuge, volle Datenkontrolle.",
+
+  "url": "https://openamer-max.github.io/",
+
+  "inLanguage": ["de","en","es","fr","it","pt","ru","ar","zh","tr","bs","sq","pl","id","hi","ja"],
+
+  "author": { "@type": "Person", "name": "Amer Sacirovic" },
+
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CHF" }
+
+}
+
+</script>
+
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+
+<body>
+
+
+
+<nav class="nav">
+
+  <div class="nav-inner">
+
+    <a class="brand" href="/"><img class="brand-mark" src="/assets/logo.png" width="30" height="30" alt="" decoding="async"><span>OpenAmer</span></a>
+
+    <div class="nav-links">
+
+      <a href="#funktionen" data-i18n="nav_features">Funktionen</a>
+
+      <a href="#ablauf" data-i18n="nav_how">So funktioniert's</a>
+
+      <a href="#video" data-i18n="nav_video">Video</a>
+
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+
+      <a href="https://github.com/openamer-max/openamer" target="_blank" rel="noopener" data-i18n="nav_docs">Dokumentation</a>
+
+    </div>
+
+    <div class="nav-cta">
+
+      <select id="langSel" aria-label="Sprache / Language" class="lang-sel">
+
+        <option value="de">🇩🇪 Deutsch</option>
+
+        <option value="en">🇬🇧 English</option>
+
+        <option value="es">🇪🇸 Español</option>
+
+        <option value="fr">🇫🇷 Français</option>
+
+        <option value="it">🇮🇹 Italiano</option>
+
+        <option value="pt">🇵🇹 Português</option>
+
+        <option value="ru">🇷🇺 Русский</option>
+
+        <option value="ar">🇸🇦 العربية</option>
+
+        <option value="zh">🇨🇳 中文</option>
+
+        <option value="tr">🇹🇷 Türkçe</option>
+
+        <option value="bs">🇧🇦 Bosanski</option>
+
+        <option value="sq">🇦🇱 Shqip</option>
+        <option value="pl">🇵🇱 Polski</option>
+        <option value="id">🇮🇩 Bahasa Indonesia</option>
+        <option value="hi">🇮🇳 हिन्दी</option>
+        <option value="ja">🇯🇵 日本語</option>
+
+      </select>
+
+      <a class="btn btn-primary btn-sm" href="https://github.com/openamer-max/openamer" target="_blank" rel="noopener" data-i18n="nav_start">Jetzt starten</a>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<header class="hero">
+
+  <div class="wrap">
+
+    <div class="badge"><span class="dot"></span> <span data-i18n="badge">Neue Ära der digitalen Assistenten</span></div>
+
+    <div class="hero-banner">
+      <div class="banner-lockup">
+        <img class="banner-logo" src="/assets/logo.png" width="66" height="66" alt="OpenAmer Logo" decoding="async">
+        <span class="banner-word">OpenAmer</span>
+      </div>
+      <h1><span data-i18n="t1">Dein persönlicher</span><br><span class="grad" data-i18n="t2">KI-Assistent</span><br><span data-i18n="t3">— lokal, privat, ehrlich.</span></h1>
+      <div class="banner-platforms">Windows · macOS · Linux · Android</div>
+    </div>
+
+    <p class="hero-sub" data-i18n="sub">OpenAmer läuft direkt auf deinem Computer. Über 120 Werkzeuge für Terminal, Browser, Dateien und E-Mail — deine Daten bleiben bei dir. Keine Cloud-Pflicht. Keine Kompromisse.</p>
+
+    <div class="hero-actions">
+
+      <a class="btn btn-primary" href="#video">▶ <span data-i18n="btn_video">Video ansehen</span></a>
+
+      <a class="btn btn-ghost" href="https://github.com/openamer-max/openamer" target="_blank" rel="noopener" data-i18n="btn_docs">Dokumentation lesen</a>
+
+    </div>
+
+
+    <div class="stats">
+
+      <div class="stat"><b>120+</b><span data-i18n="st1">Werkzeuge</span></div>
+
+      <div class="stat"><b>100 %</b><span data-i18n="st2">lokal &amp; privat</span></div>
+
+      <div class="stat"><b>0 €</b><span data-i18n="st3">Cloud-Kosten</span></div>
+
+      <div class="stat"><b>24/7</b><span data-i18n="st4">einsatzbereit</span></div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<section id="funktionen">
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow" data-i18n="fe_eyebrow">Funktionen</div>
+
+      <h2 data-i18n="fe_title">Ein Assistent, der wirklich arbeitet</h2>
+
+      <p data-i18n="fe_sub">Kein Chatbot, der nur redet. OpenAmer führt Aufgaben aus — auf deinem System, mit deinen Programmen.</p>
+
+    </div>
+
+    <div class="grid grid-3">
+
+      <div class="card reveal"><div class="card-ico">🔒</div><h3 data-i18n="f1t">Volle Datenkontrolle</h3><p data-i18n="f1d">Alles läuft auf deinem Gerät. Keine Telemetrie, keine fremden Server, keine versteckten Uploads.</p></div>
+
+      <div class="card reveal"><div class="card-ico">🛠️</div><h3 data-i18n="f2t">120+ Werkzeuge</h3><p data-i18n="f2d">Terminal, Browser-Automation, Dateiverwaltung, E-Mail, Kalender, Datenbanken — nahtlos verbunden.</p></div>
+
+      <div class="card reveal"><div class="card-ico">🤖</div><h3 data-i18n="f3t">Handelt selbstständig</h3><p data-i18n="f3d">Recherchiert, schreibt, automatisiert und erledigt mehrstufige Aufgaben — ohne dass du jeden Schritt vorgibst.</p></div>
+
+      <div class="card reveal"><div class="card-ico">🧩</div><h3 data-i18n="f4t">Erweiterbar mit Skills</h3><p data-i18n="f4d">Eigene Fähigkeiten als Module: wiederkehrende Abläufe werden zu dauerhaftem Können.</p></div>
+
+      <div class="card reveal"><div class="card-ico">🌍</div><h3 data-i18n="f5t">Deutsch &amp; mehrsprachig</h3><p data-i18n="f5d">Versteht und antwortet in deiner Sprache — im Alltag, im Beruf, im Projekt.</p></div>
+
+      <div class="card reveal"><div class="card-ico">⚡</div><h3 data-i18n="f6t">Schnell &amp; schlank</h3><p data-i18n="f6d">Startet in Sekunden, läuft auch auf Laptops ohne dedizierte GPU. Keine Abhängigkeit von der Cloud.</p></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section id="ablauf">
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow" data-i18n="how_eyebrow">In drei Schritten</div>
+
+      <h2 data-i18n="how_title">In wenigen Minuten einsatzbereit</h2>
+
+      <p data-i18n="how_sub">Installieren, verbinden, delegieren. Mehr braucht es nicht.</p>
+
+    </div>
+
+    <div class="steps">
+
+      <div class="step reveal"><h3 data-i18n="s1t">Installieren</h3><p data-i18n="s1d">OpenAmer auf deinem Rechner einrichten — Windows, macOS, Linux oder Android. Keine Server, kein Abo.</p></div>
+
+      <div class="step reveal"><h3 data-i18n="s2t">Verbinden</h3><p data-i18n="s2d">Deine Programme, Dateien und Konten anbinden. Du entscheidest, was der Assistent sehen darf.</p></div>
+
+      <div class="step reveal"><h3 data-i18n="s3t">Delegieren</h3><p data-i18n="s3d">Aufgaben stellen und ausführen lassen: Recherche, Dokumente, Automatisierung, Organisation.</p></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section id="video" class="video-section">
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow" data-i18n="v_eyebrow">Video</div>
+
+      <h2 data-i18n="v_title">OpenAmer in 60 Sekunden</h2>
+
+      <p data-i18n="v_sub">Sieh selbst, was die neue Ära bedeutet.</p>
+
+    </div>
+
+    <div class="video-stage reveal">
+      <div class="video-frame">
+
+      <video controls preload="metadata" playsinline poster="assets/video/openamer-promo-poster.jpg">
+
+        <source src="/assets/video/openamer-promo.mp4" type="video/mp4">
+
+      </video>
+
+    </div>
+    </div>
+
+    <p style="margin-top:28px"><a class="btn btn-ghost" href="installation.html" data-i18n="btn_docs">Dokumentation lesen</a></p>
+
+  </div>
+
+</section>
+
+
+
+<section id="demos" class="demos-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="d_eyebrow">In Aktion</div>
+      <h2 data-i18n="d_title">Sieh es arbeiten</h2>
+      <p data-i18n="d_sub">Zwei echte Bildschirmaufnahmen aus dem Betrieb — keine Mockups, keine Nachbearbeitung.</p>
+    </div>
+    <div class="demo-grid">
+      <figure class="demo-card reveal">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/background-computer-use-poster.png">
+          <img src="/assets/background-computer-use.gif" alt="OpenAmer tippt in ein Fenster, das nie angeklickt wurde, während der echte Mauszeiger bei 0 px bleibt" loading="lazy" decoding="async" width="760" height="494">
+        </picture>
+        <figcaption data-i18n="d_c1">Steuert ein Fenster, das du nie angeklickt hast — dein Mauszeiger bewegt sich 0 px.</figcaption>
+      </figure>
+      <figure class="demo-card reveal">
+        <img src="/assets/wis-self-healing-demo.gif" alt="Terminal: ein defekter Workflow repariert sich selbst, ohne Eingriff eines Menschen" loading="lazy" decoding="async" width="1100" height="500">
+        <figcaption data-i18n="d_c2">Ein kaputter Workflow repariert sich selbst — ohne dass ein Mensch eingreift.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<section>
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow" data-i18n="u_eyebrow">Anwendungsfälle</div>
+
+      <h2 data-i18n="u_title">Für Menschen, die Zeit zurückgewinnen wollen</h2>
+
+      <p data-i18n="u_sub">Ob Beruf, Studium oder Alltag — OpenAmer übernimmt die Arbeit, die niemand gerne macht.</p>
+
+    </div>
+
+    <div class="grid grid-2">
+
+      <div class="card reveal"><div class="card-ico">💼</div><h3 data-i18n="u1t">Beruf &amp; Büro</h3><p data-i18n="u1d">Angebote, Berichte, E-Mails und Recherchen in Minuten statt Stunden — konsistent und sauber formuliert.</p></div>
+
+      <div class="card reveal"><div class="card-ico">🎓</div><h3 data-i18n="u2t">Studium &amp; Weiterbildung</h3><p data-i18n="u2d">Zusammenfassungen, Lernpläne, Quellenarbeit. Verstehen statt nur abschreiben.</p></div>
+
+      <div class="card reveal"><div class="card-ico">🖥️</div><h3 data-i18n="u3t">Entwicklung</h3><p data-i18n="u3d">Code schreiben, prüfen, dokumentieren. Tests ausführen und Fehler systematisch eingrenzen.</p></div>
+
+      <div class="card reveal"><div class="card-ico">🏠</div><h3 data-i18n="u4t">Alltag &amp; Organisation</h3><p data-i18n="u4d">Termine, Behördenwege, Verträge, Vorbereitung von Gesprächen — nichts mehr vergessen.</p></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section id="faq">
+
+  <div class="wrap">
+
+    <div class="section-head reveal">
+
+      <div class="eyebrow" data-i18n="faq_eyebrow">FAQ</div>
+
+      <h2 data-i18n="faq_title">Häufige Fragen</h2>
+
+    </div>
+
+    <div class="faq">
+
+      <details class="reveal"><summary data-i18n="q1">Wo laufen meine Daten?</summary><p data-i18n="a1">Auf deinem Gerät.</p></details>
+
+      <details class="reveal"><summary data-i18n="q2">Brauche ich einen leistungsstarken Computer?</summary><p data-i18n="a2">Für den Assistenten selbst nicht.</p></details>
+
+      <details class="reveal"><summary data-i18n="q3">Ist OpenAmer kostenlos?</summary><p data-i18n="a3">OpenAmer ist Open Source.</p></details>
+
+      <details class="reveal"><summary data-i18n="q4">Kann ich eigene Fähigkeiten hinzufügen?</summary><p data-i18n="a4">Ja.</p></details>
+
+      <details class="reveal"><summary data-i18n="q5">Ersetzt OpenAmer einen Arzt oder Anwalt?</summary><p data-i18n="a5">Nein.</p></details>
+
+      <details class="reveal"><summary data-i18n="q6">Wie starte ich?</summary><p data-i18n="a6">Folge der Dokumentation auf GitHub.</p></details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section id="download">
+
+  <div class="wrap">
+
+    <div class="dl-box reveal">
+
+      <span class="dl-eyebrow" data-i18n="dl_eyebrow">Android</span>
+
+      <h2 data-i18n="dl_title">OpenAmer für dein Handy</h2>
+
+      <p data-i18n="dl_sub">Die komplette App als APK — direkt vom Entwickler, ohne Play Store, ohne Konto.</p>
+
+      <div class="hero-actions" style="margin-bottom:16px">
+
+        <a class="btn btn-primary" href="https://github.com/openamer-max/android/releases/latest/download/openamer-latest.apk" rel="noopener">⬇ <span data-i18n="dl_btn">APK herunterladen</span></a>
+
+        <a class="btn btn-ghost" href="https://github.com/openamer-max/android/releases" target="_blank" rel="noopener" data-i18n="dl_all">Alle Versionen</a>
+
+        <a class="btn btn-ghost" href="/" data-i18n="dl_web">Im Browser öffnen</a>
+
+      </div>
+
+      <p class="dl-note" data-i18n="dl_note">Version 1.3.2 · 616 KB · Android 7.0+</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section>
+
+  <div class="wrap">
+
+    <div class="cta-box reveal">
+
+      <h2 data-i18n="cta_title">Bereit für die neue Ära?</h2>
+
+      <p data-i18n="cta_sub">Installiere OpenAmer und übergib die Arbeit, die dir Zeit stiehlt.</p>
+
+      <div class="hero-actions" style="margin-bottom:0">
+
+        <a class="btn btn-primary" href="https://github.com/openamer-max/openamer" target="_blank" rel="noopener" data-i18n="cta_b1">Jetzt installieren</a>
+
+        <a class="btn btn-ghost" href="#video" data-i18n="cta_b2">Video ansehen</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<footer>
+
+  <div class="wrap">
+
+    <div class="foot-grid">
+
+      <div>
+
+        <a class="brand" href="/"><img class="brand-mark" src="/assets/logo.png" width="30" height="30" alt="" decoding="async"><span>OpenAmer</span></a>
+
+        <p class="foot-desc" data-i18n="foot_desc">Dein persönlicher KI-Assistent. Lokal, privat und ehrlich — gebaut in der Schweiz.</p>
+
+      </div>
+
+      <div>
+
+        <h4 data-i18n="foot_product">Produkt</h4>
+
+        <a href="#funktionen" data-i18n="nav_features">Funktionen</a>
+
+        <a href="#ablauf" data-i18n="nav_how">So funktioniert's</a>
+
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+
+      </div>
+
+      <div>
+
+        <h4 data-i18n="foot_res">Ressourcen</h4>
+
+        <a href="https://github.com/openamer-max/openamer" target="_blank" rel="noopener" data-i18n="nav_docs">Dokumentation</a>
+
+        <a href="https://github.com/openamer-max" target="_blank" rel="noopener">GitHub</a>
+
+
+      </div>
+
+      <div>
+
+        <h4 data-i18n="foot_legal">Rechtliches</h4>
+
+        <a href="impressum.html">Impressum</a>
+
+        <a href="datenschutz.html">Datenschutz</a>
+
+      </div>
+
+    </div>
+
+    <div class="foot-bottom">
+
+      <span data-i18n="rights">© 2026 OpenAmer · Amer Sacirovic · Schweiz</span>
+
+      <span data-i18n="note">Open Source · Läuft offline</span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<script src="/assets/i18n1.js"></script>
+
+<script src="/assets/i18n2.js"></script>
+
+<script src="/assets/i18n3.js" defer></script>
+<script src="/assets/app.js"></script>
+
+</body>
+
+</html>
+
