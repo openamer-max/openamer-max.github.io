@@ -576,3 +576,22 @@ header[id] {
   }
   .model-box .btn { width: 100%; justify-content: center; }
 }
+
+.model-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.model-mirror {
+  font-size: 12px;
+  color: #7d8ba3;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(125, 139, 163, 0.45);
+}
+.model-mirror:hover { color: #22d3ee; border-bottom-color: #22d3ee; }
+@media (max-width: 760px) {
+  .model-actions { width: 100%; align-items: stretch; }
+  .model-mirror { text-align: center; border-bottom: 0; }
+}
