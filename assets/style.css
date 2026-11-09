@@ -521,3 +521,21 @@ header[id] {
   .dl-desc { min-height: 0; }
 }
 
+
+/* ---------- Hinweise unter den Installations-Karten ---------- */
+.dl-notes {
+  max-width: 760px;
+  margin: 22px auto 0;
+  text-align: center;
+}
+.dl-notes p {
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #7d8ba3;
+}
+.dl-notes p:first-child { color: #9fb0c9; }
+@media (max-width: 560px) {
+  .dl-notes { margin-top: 18px; }
+  .dl-notes p { font-size: 12.5px; }
+}

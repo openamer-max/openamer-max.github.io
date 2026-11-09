@@ -587,6 +587,42 @@ const DEFAULT_SETTINGS = {
   stream: true,
   speak: false,
   awake: true
+}
+
+/* ---------------------------------------------------------------- Demo-Zeitfenster
+   Der eingebaute Key ist oeffentlich (er steht in dieser Datei). Damit ihn nicht
+   ein einzelner Besucher leerlaufen laesst, gilt er nur DEMO_MINUTEN ab der ersten
+   Nachricht. Danach: eigener API-Key oder ein lokales Modell (Ollama).
+   Der eigene Key ist NICHT begrenzt -- die Sperre prueft nur den Demo-Key. */
+const DEMO_KEY = 'thk_live__Q6dhnowHkEfnzxmq6D-it00B2tM3E7rbMDR7S8nAGZpvIZVVfIyz_dP2UoM5BQh';
+const DEMO_MINUTEN = 4;
+const DEMO_MS = DEMO_MINUTEN * 60 * 1000;
+const LS_DEMO = 'oa_demo_start';
+
+function isDemo() { return (settings.apiKey || '') === DEMO_KEY; }
+
+function demoStart() {
+  // nur lesen -- die Uhr startet erst mit der ersten Nachricht (demoTouch),
+  // damit niemand Zeit beim Lesen der Seite verliert.
+  try { return Number(localStorage.getItem(LS_DEMO) || 0) || 0; } catch (e) { return 0; }
+}
+function demoLeftMs() {
+  if (!isDemo()) return Infinity;
+  const t = demoStart();
+  if (!t) return DEMO_MS;
+  return Math.max(0, DEMO_MS - (Date.now() - t));
+}
+function demoTouch() {
+  if (!isDemo()) return;
+  if (!demoStart()) { try { localStorage.setItem(LS_DEMO, String(Date.now())); } catch (e) {} }
+}
+function demoExpired() { return isDemo() && demoLeftMs() <= 0; }
+function demoLabel() {
+  const ms = demoLeftMs();
+  if (ms === Infinity) return null;
+  if (ms <= 0) return 'Demo abgelaufen · Setup';
+  const s = Math.ceil(ms / 1000);
+  return 'Demo · ' + Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0') + ' übrig';
 };
 
 let settings = Object.assign({}, DEFAULT_SETTINGS);
@@ -1231,7 +1267,40 @@ function send() {
     runOffline(s, text);
     return;
   }
+  demoTouch();
+  if (demoExpired()) {
+    demoNotice(s);
+    return;
+  }
   runRemote(s);
+}
+
+/* Demo-Zeit vorbei: freundlich erklaeren, was jetzt geht -- statt einer
+   technischen Fehlermeldung. Der eigene Key hat KEIN Limit. */
+function demoNotice(s) {
+  const txt = [
+    '**Die ' + DEMO_MINUTEN + '-Minuten-Demo ist vorbei.**',
+    '',
+    'Damit jeder OpenAmer ausprobieren kann, ist der eingebaute TokenHarbor-Key auf '
+      + DEMO_MINUTEN + ' Minuten begrenzt.',
+    '',
+    'So geht es weiter:',
+    '',
+    '1. **Eigener API-Key** — Setup öffnen, Anbieter wählen (TokenHarbor, OpenAI, '
+      + 'OpenRouter …), eigenen Key eintragen. Kein Limit.',
+    '2. **Ollama lokal** — Setup öffnen, „Ollama (dieses Gerät)". Kostenlos, privat, '
+      + 'ohne Key. Auf dem Handy nur in der Android-App möglich.',
+    '',
+    'OpenAmer selbst ist offen und läuft lokal. Für Cloud-Anbieter besorgst du dir '
+      + 'deinen eigenen Zugang.',
+  ].join('\n');
+
+  s.messages.push({ role: 'assistant', content: txt, ts: Date.now(),
+    meta: 'Demo beendet · eigener Key oder lokales Modell' });
+  saveSessions();
+  renderChat();
+  scrollBottom(true);
+  switchTab('settings');
 }
 
 function runOffline(s, text) {
@@ -1434,9 +1503,13 @@ function setConn(mode, label) {
     : mode === 'err' ? 'Fehler · Setup prüfen' : 'Offline-Kern');
 }
 function refreshConn() {
-  if (!endpointConfigured()) setConn('off');
-  else setConn('on');
+  if (!endpointConfigured()) { setConn('off'); return; }
+  const d = demoLabel();
+  if (d) { setConn(demoExpired() ? 'err' : 'on', d); return; }
+  setConn('on');
 }
+/* Sekundentakt: die Demo-Uhr im Kopf sichtbar runterzaehlen */
+setInterval(function () { if (isDemo() && endpointConfigured()) refreshConn(); }, 1000);
 
 /* ---------------------------------------------------------------- Tabs */
 let activeTab = 'chat';
