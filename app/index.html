@@ -1805,13 +1805,13 @@ function bind() {
 const PROVIDERS = [
   { id: 'ollama', name: 'Ollama (dieses Gerät)', tag: 'local', free: true,
     base: 'http://127.0.0.1:11434/v1', key: false,
-    note: 'Termux/Ollama, keine Kosten',
-    models: ['llama3.2:1b', 'qwen3.5:4b', 'qwen3:14b', 'deepseek-r1:8b'] },
+    note: 'openamer-max = eigenes Modell, keine Kosten',
+    models: ['openamer-max', 'llama3.2:1b', 'qwen3.5:4b', 'qwen3:14b', 'deepseek-r1:8b'] },
 
   { id: 'ollama-pc', name: 'Ollama (PC im WLAN)', tag: 'local', free: true,
     base: 'http://10.0.2.2:11434/v1', key: false,
     note: 'Rechner im selben Netz',
-    models: ['qwen3.5:4b', 'gemma4:12b', 'deepseek-r1:14b', 'deepseek-v4.1-flash:1017-cloud'] },
+    models: ['openamer-max', 'qwen3.5:4b', 'gemma4:12b', 'deepseek-r1:14b'] },
 
   { id: 'lmstudio', name: 'LM Studio / llama.cpp', tag: 'local', free: true,
     base: 'http://127.0.0.1:1234/v1', key: false,
