@@ -1,6 +1,7 @@
 /* OpenAmer i18n — Teil 2: RU, AR, ZH, TR, BS, SQ */
 window.I18N2 = {
 ru: {
+  dl_web: "Открыть в браузере",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer для вашего телефона",
   dl_sub: "Полное приложение в виде APK — напрямую от разработчика, без Play Store и аккаунта.",
@@ -45,6 +46,7 @@ ru: {
   folge: "Следи за OpenAmer", folge_sub: "Стань частью пути."
 },
 ar: {
+  dl_web: "افتح في المتصفح",
   dl_eyebrow: "أندرويد",
   dl_title: "OpenAmer لهاتفك",
   dl_sub: "التطبيق الكامل بصيغة APK — مباشرة من المطوّر، بدون متجر Play وبدون حساب.",
@@ -89,6 +91,7 @@ ar: {
   folge: "تابع OpenAmer", folge_sub: "كن جزءًا من الرحلة."
 },
 zh: {
+  dl_web: "在浏览器中打开",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer 手机版",
   dl_sub: "完整应用 APK — 直接来自开发者，无需 Play 商店，无需账号。",
@@ -133,6 +136,7 @@ zh: {
   folge: "关注 OpenAmer", folge_sub: "加入这段旅程。"
 },
 tr: {
+  dl_web: "Tarayıcıda aç",
   dl_eyebrow: "Android",
   dl_title: "Telefonunuz için OpenAmer",
   dl_sub: "Uygulamanın tamamı APK olarak — doğrudan geliştiriciden, Play Store olmadan, hesap açmadan.",
@@ -177,6 +181,7 @@ tr: {
   folge: "OpenAmer'i takip et", folge_sub: "Yolculuğun parçası ol."
 },
 bs: {
+  dl_web: "Otvori u pregledniku",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer za tvoj telefon",
   dl_sub: "Kompletna aplikacija kao APK — direktno od developera, bez Play Storea, bez računa.",
@@ -221,6 +226,7 @@ bs: {
   folge: "Prati OpenAmer", folge_sub: "Postani dio putovanja."
 },
 sq: {
+  dl_web: "Hap në shfletues",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer për telefonin tënd",
   dl_sub: "Aplikacioni i plotë si APK — direkt nga zhvilluesi, pa Play Store, pa llogari.",

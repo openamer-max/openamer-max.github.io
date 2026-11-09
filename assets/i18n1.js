@@ -1,6 +1,7 @@
 /* OpenAmer i18n — Teil 1: DE, EN, ES, FR, IT, PT */
 window.I18N = {
 de: {
+  dl_web: "Im Browser öffnen",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer für dein Handy",
   dl_sub: "Die komplette App als APK — direkt vom Entwickler, ohne Play Store, ohne Konto.",
@@ -45,6 +46,7 @@ de: {
   folge: "Folge OpenAmer", folge_sub: "Werde Teil der Reise."
 },
 en: {
+  dl_web: "Open in browser",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer for your phone",
   dl_sub: "The full app as an APK — straight from the developer, no Play Store, no account.",
@@ -89,6 +91,7 @@ en: {
   folge: "Follow OpenAmer", folge_sub: "Join the journey."
 },
 es: {
+  dl_web: "Abrir en el navegador",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer para tu móvil",
   dl_sub: "La app completa en APK — directamente del desarrollador, sin Play Store, sin cuenta.",
@@ -133,6 +136,7 @@ es: {
   folge: "Sigue OpenAmer", folge_sub: "Forma parte del viaje."
 },
 fr: {
+  dl_web: "Ouvrir dans le navigateur",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer pour votre téléphone",
   dl_sub: "L'application complète en APK — directement du développeur, sans Play Store, sans compte.",
@@ -177,6 +181,7 @@ fr: {
   folge: "Suivez OpenAmer", folge_sub: "Rejoignez l'aventure."
 },
 it: {
+  dl_web: "Apri nel browser",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer per il tuo telefono",
   dl_sub: "L'app completa in APK — direttamente dallo sviluppatore, senza Play Store, senza account.",
@@ -221,6 +226,7 @@ it: {
   folge: "Segui OpenAmer", folge_sub: "Entra nel viaggio."
 },
 pt: {
+  dl_web: "Abrir no navegador",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer para o seu telemóvel",
   dl_sub: "A aplicação completa em APK — diretamente do programador, sem Play Store, sem conta.",

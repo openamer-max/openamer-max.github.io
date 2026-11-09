@@ -2,6 +2,7 @@
    Wird wie Teil 2 per Object.assign in window.I18N gemischt. */
 window.I18N3 = {
 pl: {
+  dl_web: "Otwórz w przeglądarce",
   dl_eyebrow: "Android", dl_title: "OpenAmer na Twój telefon",
   dl_sub: "Pełna aplikacja jako APK — bezpośrednio od dewelopera, bez Play Store, bez konta.",
   dl_btn: "Pobierz APK", dl_all: "Wszystkie wersje",
@@ -72,6 +73,7 @@ pl: {
   folge: "Obserwuj OpenAmer", folge_sub: "Bądź częścią drogi."
 },
 id: {
+  dl_web: "Buka di peramban",
   dl_eyebrow: "Android", dl_title: "OpenAmer untuk ponselmu",
   dl_sub: "Aplikasi lengkap dalam bentuk APK — langsung dari pengembang, tanpa Play Store, tanpa akun.",
   dl_btn: "Unduh APK", dl_all: "Semua versi",
@@ -144,6 +146,7 @@ id: {
   folge: "Ikuti OpenAmer", folge_sub: "Jadilah bagian dari perjalanan."
 },
 hi: {
+  dl_web: "ब्राउज़र में खोलें",
   dl_eyebrow: "Android", dl_title: "अपने फ़ोन के लिए OpenAmer",
   dl_sub: "पूरा ऐप APK के रूप में — सीधे डेवलपर से, बिना Play Store, बिना खाता।",
   dl_btn: "APK डाउनलोड करें", dl_all: "सभी संस्करण",
@@ -216,6 +219,7 @@ hi: {
   folge: "OpenAmer को फ़ॉलो करें", folge_sub: "इस सफ़़र का हिस्सा बनें।"
 },
 ja: {
+  dl_web: "ブラウザで開く",
   dl_eyebrow: "Android", dl_title: "スマートフォン版 OpenAmer",
   dl_sub: "完全なアプリを APK で — 開発者から直接、Play ストア不要、アカウント不要。",
   dl_btn: "APK をダウンロード", dl_all: "すべてのバージョン",
