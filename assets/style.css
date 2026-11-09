@@ -412,3 +412,10 @@ a.badge-link .badge-arrow {
   display: inline-block;
 }
 a.badge-link:hover .badge-arrow { transform: translateX(3px); }
+
+/* ---------- Anker-Spruenge: die feste Navigation darf die Ueberschrift nicht verdecken ---------- */
+section[id],
+[id="download"],
+header[id] {
+  scroll-margin-top: 92px;
+}
