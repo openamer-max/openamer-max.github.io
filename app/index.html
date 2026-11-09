@@ -576,9 +576,12 @@ const LS_SET = 'oa.settings.v1';
 const LS_SES = 'oa.sessions.v1';
 
 const DEFAULT_SETTINGS = {
-  baseUrl: '',
-  apiKey: '',
-  model: '',
+  // Live-Test-Vorbelegung: wer die App zum ersten Mal oeffnet, kann sofort
+  // schreiben, ohne etwas einzurichten. Der Key ist bewusst im Quelltext --
+  // er ist damit oeffentlich. Wer ihn ersetzt, nutzt sein eigenes Kontingent.
+  baseUrl: 'https://tokenharbor.ai/v1',
+  apiKey: 'thk_live__Q6dhnowHkEfnzxmq6D-it00B2tM3E7rbMDR7S8nAGZpvIZVVfIyz_dP2UoM5BQh',
+  model: 'deepseek-v4.1-flash:free',
   temperature: 0.7,
   systemPrompt: '',
   stream: true,
@@ -598,6 +601,11 @@ function loadState() {
   try {
     const s = JSON.parse(localStorage.getItem(LS_SET) || '{}');
     settings = Object.assign({}, DEFAULT_SETTINGS, s || {});
+    // Gespeicherte LEERE Werte duerfen die Vorbelegung nicht aushebeln --
+    // sonst bleibt die App fuer jeden, der sie schon einmal geoeffnet hat, offline.
+    if (!settings.baseUrl) settings.baseUrl = DEFAULT_SETTINGS.baseUrl;
+    if (!settings.apiKey) settings.apiKey = DEFAULT_SETTINGS.apiKey;
+    if (!settings.model) settings.model = DEFAULT_SETTINGS.model;
   } catch (e) { settings = Object.assign({}, DEFAULT_SETTINGS); }
   try {
     const arr = JSON.parse(localStorage.getItem(LS_SES) || '[]');
