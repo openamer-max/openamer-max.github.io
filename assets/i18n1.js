@@ -1,6 +1,8 @@
 /* OpenAmer i18n — Teil 1: DE, EN, ES, FR, IT, PT */
 window.I18N = {
 de: {
+  btn_test: "Jetzt testen",
+  test_note: "Kein Konto · läuft im Browser · antwortet sofort, auch ohne Modell",
   dl_web: "Im Browser öffnen",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer für dein Handy",
@@ -46,6 +48,8 @@ de: {
   folge: "Folge OpenAmer", folge_sub: "Werde Teil der Reise."
 },
 en: {
+  btn_test: "Try it now",
+  test_note: "No account · runs in the browser · answers instantly, even without a model",
   dl_web: "Open in browser",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer for your phone",
@@ -91,6 +95,8 @@ en: {
   folge: "Follow OpenAmer", folge_sub: "Join the journey."
 },
 es: {
+  btn_test: "Probar ahora",
+  test_note: "Sin cuenta · funciona en el navegador · responde al instante, incluso sin modelo",
   dl_web: "Abrir en el navegador",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer para tu móvil",
@@ -136,6 +142,8 @@ es: {
   folge: "Sigue OpenAmer", folge_sub: "Forma parte del viaje."
 },
 fr: {
+  btn_test: "Essayer maintenant",
+  test_note: "Sans compte · dans le navigateur · répond aussitôt, même sans modèle",
   dl_web: "Ouvrir dans le navigateur",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer pour votre téléphone",
@@ -181,6 +189,8 @@ fr: {
   folge: "Suivez OpenAmer", folge_sub: "Rejoignez l'aventure."
 },
 it: {
+  btn_test: "Prova ora",
+  test_note: "Nessun account · nel browser · risponde subito, anche senza modello",
   dl_web: "Apri nel browser",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer per il tuo telefono",
@@ -226,6 +236,8 @@ it: {
   folge: "Segui OpenAmer", folge_sub: "Entra nel viaggio."
 },
 pt: {
+  btn_test: "Testar agora",
+  test_note: "Sem conta · no navegador · responde de imediato, mesmo sem modelo",
   dl_web: "Abrir no navegador",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer para o seu telemóvel",

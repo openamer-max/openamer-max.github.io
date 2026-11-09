@@ -1,6 +1,8 @@
 /* OpenAmer i18n — Teil 2: RU, AR, ZH, TR, BS, SQ */
 window.I18N2 = {
 ru: {
+  btn_test: "Попробовать сейчас",
+  test_note: "Без аккаунта · в браузере · отвечает сразу, даже без модели",
   dl_web: "Открыть в браузере",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer для вашего телефона",
@@ -46,6 +48,8 @@ ru: {
   folge: "Следи за OpenAmer", folge_sub: "Стань частью пути."
 },
 ar: {
+  btn_test: "جرّبه الآن",
+  test_note: "بدون حساب · يعمل في المتصفح · يجيب فورًا حتى بدون نموذج",
   dl_web: "افتح في المتصفح",
   dl_eyebrow: "أندرويد",
   dl_title: "OpenAmer لهاتفك",
@@ -91,6 +95,8 @@ ar: {
   folge: "تابع OpenAmer", folge_sub: "كن جزءًا من الرحلة."
 },
 zh: {
+  btn_test: "立即试用",
+  test_note: "无需账号 · 在浏览器中运行 · 即使没有模型也能立即回答",
   dl_web: "在浏览器中打开",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer 手机版",
@@ -136,6 +142,8 @@ zh: {
   folge: "关注 OpenAmer", folge_sub: "加入这段旅程。"
 },
 tr: {
+  btn_test: "Hemen dene",
+  test_note: "Hesap yok · tarayıcıda çalışır · model olmadan bile hemen yanıtlar",
   dl_web: "Tarayıcıda aç",
   dl_eyebrow: "Android",
   dl_title: "Telefonunuz için OpenAmer",
@@ -181,6 +189,8 @@ tr: {
   folge: "OpenAmer'i takip et", folge_sub: "Yolculuğun parçası ol."
 },
 bs: {
+  btn_test: "Isprobaj sada",
+  test_note: "Bez računa · radi u pregledniku · odgovara odmah, i bez modela",
   dl_web: "Otvori u pregledniku",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer za tvoj telefon",
@@ -226,6 +236,8 @@ bs: {
   folge: "Prati OpenAmer", folge_sub: "Postani dio putovanja."
 },
 sq: {
+  btn_test: "Provoje tani",
+  test_note: "Pa llogari · në shfletues · përgjigjet menjëherë, edhe pa model",
   dl_web: "Hap në shfletues",
   dl_eyebrow: "Android",
   dl_title: "OpenAmer për telefonin tënd",
