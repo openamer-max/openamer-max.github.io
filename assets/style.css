@@ -428,8 +428,11 @@ header[id] {
   scroll-margin-top: 92px;
 }
 
-/* ---------- Installations-Wege: Windows - macOS - Linux - Android ---------- */
-.dl-head { text-align: center; margin-bottom: 32px; }
+/* ---------- Installations-Wege: Windows - macOS - Linux - Android ----------
+   Alle Karten haben dieselben fuenf Zeilen (Plattform, Beschreibung, Knopf,
+   Zusatzlink, Version). Feste Mindesthoehen halten die Zeilen ueber alle Karten
+   auf gleicher Hoehe -- kein margin-top:auto, das verschiebt die Knoepfe. */
+.dl-head { text-align: center; margin-bottom: 34px; }
 .dl-head h2 { margin: 10px 0 10px; }
 .dl-head p { color: #8b9bb4; margin: 0; }
 
@@ -444,9 +447,10 @@ header[id] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   text-align: center;
   gap: 10px;
-  padding: 26px 20px 22px;
+  padding: 28px 20px 24px;
   background: linear-gradient(180deg, rgba(17, 23, 37, 0.92), rgba(11, 16, 24, 0.92));
   border: 1px solid #1b2434;
   border-radius: 16px;
@@ -462,6 +466,7 @@ header[id] {
   font-weight: 700;
   color: #e6edf7;
   letter-spacing: 0.01em;
+  line-height: 1.2;
 }
 
 .dl-desc {
@@ -469,32 +474,43 @@ header[id] {
   font-size: 13.5px;
   line-height: 1.45;
   color: #8b9bb4;
-  min-height: 38px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dl-card .btn {
   width: 100%;
   justify-content: center;
-  margin-top: auto;
+  margin: 0;
 }
 
+.dl-alt {
+  margin: 0;
+  min-height: 17px;
+  font-size: 12.5px;
+  line-height: 1.3;
+  color: #7d8ba3;
+}
+.dl-alt a {
+  color: #7d8ba3;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(125, 139, 163, 0.4);
+}
+.dl-alt a:hover { color: #22d3ee; border-bottom-color: #22d3ee; }
+
 .dl-meta {
-  margin: 2px 0 0;
+  margin: 0;
   font-size: 11.5px;
+  line-height: 1.3;
   color: #5d6b82;
   letter-spacing: 0.02em;
 }
 
-.dl-warn {
-  margin: 4px 0 0;
-  font-size: 11px;
-  line-height: 1.4;
-  color: #b98a2e;
-}
-
 .dl-web {
   text-align: center;
-  margin: 26px 0 0;
+  margin: 28px 0 0;
   font-size: 14px;
 }
 .dl-web a {
@@ -510,6 +526,8 @@ header[id] {
 }
 @media (max-width: 560px) {
   .dl-grid { grid-template-columns: 1fr; }
+  .dl-desc { min-height: 0; }
+}
   .dl-desc { min-height: 0; }
 }
 
