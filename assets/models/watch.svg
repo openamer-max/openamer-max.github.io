@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="OpenAmer-Max-Watch — Smartwatch">
+  <defs>
+    <linearGradient id="wAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b8cff"/>
+      <stop offset="0.55" stop-color="#7c6cff"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <radialGradient id="wGlow" cx="50%" cy="42%" r="55%">
+      <stop offset="0" stop-color="#5b8cff" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#5b8cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#232b3d"/>
+      <stop offset="1" stop-color="#12161f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="260" rx="16" fill="#0f1219"/>
+  <circle cx="200" cy="118" r="112" fill="url(#wGlow)"/>
+
+  <!-- Armband -->
+  <path d="M170 44h60v22h-60z" fill="#1b2130"/>
+  <path d="M170 194h60v22h-60z" fill="#1b2130"/>
+
+  <!-- Gehäuse -->
+  <rect x="132" y="58" width="136" height="146" rx="34" fill="url(#wBody)" stroke="url(#wAccent)" stroke-width="2.5"/>
+  <!-- Krone -->
+  <rect x="268" y="112" width="9" height="26" rx="4" fill="#2b3446" stroke="url(#wAccent)" stroke-width="1.4"/>
+
+  <!-- Display -->
+  <rect x="146" y="72" width="108" height="118" rx="24" fill="#070a12"/>
+  <rect x="146" y="72" width="108" height="118" rx="24" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+
+  <!-- Inhalt auf dem Display: Puls + Textzeilen -->
+  <path d="M158 132h14l7-16 9 30 8-22 6 8h14" fill="none" stroke="url(#wAccent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="158" y="152" width="60" height="5" rx="2.5" fill="#2a3346"/>
+  <rect x="158" y="163" width="38" height="5" rx="2.5" fill="#1f2735"/>
+
+  <text x="200" y="240" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="600" fill="#99a5b9" letter-spacing="2.5">≤ 1B · 639 MB</text>
+</svg>

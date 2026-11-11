@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="OpenAmer-Max-Desktop — Desktop-PC (in Arbeit)">
+  <defs>
+    <linearGradient id="dAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b8cff"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <radialGradient id="dGlow" cx="50%" cy="42%" r="58%">
+      <stop offset="0" stop-color="#5b8cff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#5b8cff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="260" rx="16" fill="#0f1219"/>
+  <circle cx="200" cy="120" r="110" fill="url(#dGlow)"/>
+
+  <!-- Monitor -->
+  <rect x="92" y="46" width="216" height="136" rx="12" fill="#1b2130" stroke="url(#dAccent)" stroke-width="2.2"/>
+  <rect x="101" y="55" width="198" height="118" rx="7" fill="#070a12"/>
+
+  <!-- Terminal-Andeutung -->
+  <rect x="112" y="66" width="60" height="6" rx="3" fill="#2b3446"/>
+  <rect x="112" y="80" width="96" height="6" rx="3" fill="#1f2735"/>
+  <rect x="112" y="94" width="74" height="6" rx="3" fill="#1f2735"/>
+  <path d="M112 116l10 6-10 6" fill="none" stroke="url(#dAccent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="128" y="118" width="34" height="5" rx="2.5" fill="#33405a"/>
+
+  <!-- Standfuss -->
+  <path d="M186 182h28l6 26h-40z" fill="#1b2130"/>
+  <rect x="160" y="208" width="80" height="8" rx="4" fill="#232b3d" stroke="#2e384d"/>
+
+  <!-- Fragezeichen als "in Arbeit" -->
+  <circle cx="299" cy="70" r="12" fill="#0f1219" stroke="url(#dAccent)" stroke-width="1.6" stroke-dasharray="4 4"/>
+  <text x="299" y="76" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" fill="#7c8cad">?</text>
+
+  <text x="200" y="240" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="600" fill="#6f7c92" letter-spacing="2.5">10 – 20B</text>
+</svg>

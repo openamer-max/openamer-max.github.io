@@ -1,6 +1,14 @@
 /* OpenAmer i18n — Teil 1: DE, EN, ES, FR, IT, PT */
 window.I18N = {
 de: {
+  mdl_state_live: "Live",
+  mdl_state_soon: "In Arbeit",
+  mdl_state_planned: "Geplant",
+  nav_models: "Modelle",
+
+  mdl_eyebrow: "Modellfamilie",
+  mdl_title: "OpenAmer-Max — eine Stufe für jedes Gerät",
+  mdl_sub: "Benannt nach der Parameterzahl, nicht nach Marketing. Jede Stufe läuft auf ihrem Zielgerät — lokal, ohne Cloud, ohne Konto.",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer für deinen PC",
   dl_win_sub: "Die komplette Desktop-App: Agent-Kern, Terminal, Browser-Steuerung, Skills und Plugins.",
@@ -68,6 +76,14 @@ de: {
   folge: "Folge OpenAmer", folge_sub: "Werde Teil der Reise."
 },
 en: {
+  mdl_state_live: "Live",
+  mdl_state_soon: "In progress",
+  mdl_state_planned: "Planned",
+  nav_models: "Models",
+
+  mdl_eyebrow: "Model family",
+  mdl_title: "OpenAmer-Max — one tier for every device",
+  mdl_sub: "Named after parameter count, not after marketing. Every tier runs on its target device — locally, no cloud, no account.",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer for your PC",
   dl_win_sub: "The complete desktop app: agent core, terminal, browser control, skills and plugins.",
