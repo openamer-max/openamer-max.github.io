@@ -597,9 +597,11 @@ header[id] {
 }
 
 /* ---- Modellfamilie / Stufenleiter ---------------------------------- */
-.tiers { display: grid; gap: 18px; grid-template-columns: repeat(4, 1fr); }
-@media (max-width: 1100px) { .tiers { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 620px)  { .tiers { grid-template-columns: 1fr; } }
+.tiers { display: grid; gap: 22px; grid-template-columns: repeat(2, 1fr); }
+/* 2x2: Watch + Phone oben, Tab + Desktop unten (Reihenfolge im HTML).
+   Bei 2 Spalten ist jede Karte doppelt so breit - die SVG-Geraete werden dadurch
+   gross genug, um sie ohne Text zu erkennen. */
+@media (max-width: 760px) { .tiers { grid-template-columns: 1fr; gap: 18px; } }
 
 .tier { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
         overflow: hidden; display: flex; flex-direction: column;
