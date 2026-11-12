@@ -624,7 +624,12 @@ header[id] {
 .tier-meta { font-size: 12.5px; color: var(--muted); margin: 0; }
 .tier-facts { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; }
 .tier-facts li { font-size: 12.5px; color: var(--text); opacity: .85; padding-left: 15px; position: relative; }
-.tier-facts li::before { content: "B8"; position: absolute; left: 0; color: var(--accent); }
+/* Punkt gezeichnet statt als Zeichen: ein Sonderzeichen wie "\25B8" landete als
+   Steuerzeichen "\u0015B8" in der Datei und wurde als Ersatzkaestchen gerendert
+   (sichtbar in Screenshot 12.11. 14:34: "\u25af23/23 eingefrorener Pruefstand").
+   Ein 5-px-Kreis haengt an keiner Schrift und sieht auf jeder Plattform gleich aus. */
+.tier-facts li::before { content: ""; position: absolute; left: 1px; top: .5em;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 .tier-links { margin-top: auto; padding-top: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .btn-sm { padding: 8px 12px; font-size: 12.5px; }
 .tier-mini { font-size: 12px; color: var(--muted); text-decoration: none; }
