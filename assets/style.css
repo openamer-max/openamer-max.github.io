@@ -666,3 +666,26 @@ header[id] {
 .tiers-note { margin: 26px auto 0; max-width: 780px; text-align: center;
               font-size: 13.5px; color: var(--muted); line-height: 1.7; }
 .tiers-note b { color: var(--text); }
+
+/* Ein-Befehl-Installation pro Modellstufe (13.11.2026) */
+.tier-run { display: flex; align-items: center; gap: 8px; margin: 12px 0 4px;
+            background: rgba(91,140,255,.07); border: 1px solid var(--border);
+            border-radius: var(--radius-sm); padding: 8px 10px; }
+.tier-run code { font-family: var(--mono); font-size: .78rem; color: var(--accent);
+                 overflow-x: auto; white-space: nowrap; flex: 1 1 auto; }
+.tier-copy { flex: 0 0 auto; background: transparent; border: 1px solid var(--border-strong);
+             color: var(--muted); border-radius: 6px; width: 28px; height: 26px;
+             cursor: pointer; font-size: .85rem; line-height: 1; }
+.tier-copy:hover { color: var(--accent); border-color: var(--accent); }
+
+.run-list { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+.run-row { display: flex; align-items: center; gap: 10px; padding: 6px 8px;
+           background: rgba(255,255,255,.03); border-radius: 8px; }
+.run-tier { flex: 0 0 74px; font-weight: 600; font-size: .8rem; }
+.run-row code { font-family: var(--mono); font-size: .74rem; color: var(--accent);
+                flex: 1 1 auto; overflow-x: auto; white-space: nowrap; }
+.run-size { flex: 0 0 auto; font-size: .72rem; color: var(--muted); }
+@media (max-width: 760px) {
+  .run-row { flex-wrap: wrap; }
+  .run-row code { flex-basis: 100%; order: 3; }
+}
