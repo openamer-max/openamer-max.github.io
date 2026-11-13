@@ -622,6 +622,15 @@ header[id] {
    Bei 2 Spalten ist jede Karte doppelt so breit - die SVG-Geraete werden dadurch
    gross genug, um sie ohne Text zu erkennen. */
 @media (max-width: 760px) { .tiers { grid-template-columns: 1fr; gap: 18px; } }
+/* Bei ungerader Kartenzahl steht die letzte allein links. Sie wird zentriert,
+   damit die Reihe nicht halb leer wirkt (aktuell 5 Karten: Watch, Phone, Tab,
+   Desktop, Pro). */
+.tiers > .tier:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: calc(50% - 11px);
+  margin-inline: auto;
+}
+@media (max-width: 760px) { .tiers > .tier:last-child:nth-child(odd) { width: 100%; } }
 
 .tier { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
         overflow: hidden; display: flex; flex-direction: column;
