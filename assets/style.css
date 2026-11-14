@@ -689,3 +689,9 @@ header[id] {
   .run-row { flex-wrap: wrap; }
   .run-row code { flex-basis: 100%; order: 3; }
 }
+
+/* ZeroGPU-Demo und Pruefstand (14.11.2026) */
+.dl-extra { display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+            justify-content: center; margin: 14px 0 4px; }
+.dl-extra-note { flex-basis: 100%; text-align: center; margin: 0;
+                 font-size: .78rem; color: var(--muted); }
