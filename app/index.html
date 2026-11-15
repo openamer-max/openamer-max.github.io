@@ -579,7 +579,7 @@ const DEFAULT_SETTINGS = {
   // Live-Test-Vorbelegung: wer die App zum ersten Mal oeffnet, kann sofort
   // schreiben, ohne etwas einzurichten. Der Key ist bewusst im Quelltext --
   // er ist damit oeffentlich. Wer ihn ersetzt, nutzt sein eigenes Kontingent.
-  baseUrl: 'https://openamer-max-openamer-max-chat.hf.space/v1',
+  baseUrl: 'https://openamer-max-openamer-max-api.hf.space/v1',
   apiKey: '',
   model: 'watch',
   temperature: 0.7,
@@ -1804,9 +1804,9 @@ function bind() {
    ================================================================ */
 const PROVIDERS = [
   { id: 'openamer-server', name: 'OpenAmer Server (kostenlos)', tag: 'free', free: true,
-    base: 'https://openamer-max-openamer-max-chat.hf.space/v1', key: false,
-    note: 'ohne Schlüssel, 0 €, 5-25 Token/s, Modell lädt beim 1. Aufruf ca. 20 s',
-    models: ['watch'] },
+    base: 'https://openamer-max-openamer-max-api.hf.space/v1', key: false,
+    note: 'ohne Schlüssel: watch sofort · desktop/pro/ultra auf GPU (1. Aufruf 45-60 s)',
+    models: ['watch', 'desktop', 'pro', 'ultra'] },
   { id: 'ollama', name: 'Ollama (dieses Gerät)', tag: 'local', free: true,
     base: 'http://127.0.0.1:11434/v1', key: false,
     note: 'openamer-max = eigenes Modell, keine Kosten',
