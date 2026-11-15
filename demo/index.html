@@ -11,8 +11,8 @@
   --amber:#fbbf24;--red:#f87171;--radius:16px}
 *{box-sizing:border-box}
 body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);
-  font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;
-  display:flex;flex-direction:column}
+  font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  height:100vh;height:100dvh;overflow:hidden;display:flex;flex-direction:column}
 a{color:var(--cyan);text-decoration:none}
 a:hover{text-decoration:underline}
 .kopf{display:flex;align-items:center;justify-content:space-between;gap:16px;
@@ -22,7 +22,8 @@ a:hover{text-decoration:underline}
 .punkt{width:9px;height:9px;border-radius:50%;background:var(--green);
   box-shadow:0 0 12px var(--green)}
 .zustand{font-size:13px;color:var(--muted)}
-main{max-width:840px;margin:0 auto;padding:26px 18px 30px;flex:1 0 auto;width:100%}
+main{max-width:840px;margin:0 auto;padding:26px 18px 26px;flex:1 1 auto;width:100%;
+  overflow-y:auto;overscroll-behavior:contain}
 h1{font-size:clamp(22px,4vw,30px);margin:6px 0 8px;letter-spacing:-.3px}
 .unter{color:var(--muted);margin:0 0 22px;font-size:15px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
@@ -39,9 +40,8 @@ h1{font-size:clamp(22px,4vw,30px);margin:6px 0 8px;letter-spacing:-.3px}
   border-bottom-left-radius:5px}
 .antwort.leer{color:var(--dim);font-style:italic}
 .hinweis{font-size:12.5px;color:var(--dim);margin-top:6px}
-.eingabe{position:sticky;bottom:0;width:100%;background:rgba(5,7,13,.96);
-  border-top:1px solid var(--line);backdrop-filter:blur(10px);padding:14px 18px;
-  margin-top:auto}
+.eingabe{position:static;flex:0 0 auto;width:100%;background:rgba(5,7,13,.96);
+  border-top:1px solid var(--line);padding:14px 18px}
 .form{max-width:840px;margin:0 auto;display:flex;gap:10px;align-items:flex-end}
 textarea{flex:1;resize:none;min-height:48px;max-height:140px;padding:13px 15px;
   background:var(--panel);border:1px solid var(--line);border-radius:12px;
@@ -51,7 +51,7 @@ button.senden{height:48px;padding:0 22px;border:0;border-radius:12px;cursor:poin
   background:linear-gradient(135deg,var(--cyan),var(--violet));color:#05070d;
   font-weight:700;font-size:15px}
 button.senden:disabled{opacity:.45;cursor:not-allowed}
-.fuss{max-width:840px;margin:26px auto 96px;position:relative;z-index:1;color:var(--dim);font-size:13px;
+.fuss{max-width:840px;margin:26px auto 0;color:var(--dim);font-size:13px;
   border-top:1px solid var(--line);padding-top:16px}
 .fuss strong{color:var(--muted);font-weight:600}
 .warnung{background:rgba(251,191,36,.09);border:1px solid rgba(251,191,36,.35);
