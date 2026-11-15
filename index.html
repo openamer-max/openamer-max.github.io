@@ -544,7 +544,17 @@
     <div class="dl-extra">
 
       <a class="btn btn-primary" href="/demo/" target="_blank" rel="noopener">🧠 <span data-i18n="dl_space_btn">Im Browser testen</span></a>
-      <a class="btn btn-ghost" href="https://github.com/openamer-max/models/releases/download/android-v1.1.0/OpenAmer-Agent-1.1.0.apk" rel="noopener">📱 <span>Android-App (APK)</span></a>
+      <div class="downloads" style="display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px">
+        <a class="btn btn-ghost" href="https://github.com/openamer-max/models/releases/latest/download/OpenAmer-Windows-Setup.exe" rel="noopener">🪟 Windows</a>
+        <a class="btn btn-ghost" href="https://github.com/openamer-max/models/releases/latest/download/OpenAmer-linux.AppImage" rel="noopener">🐧 Linux</a>
+        <a class="btn btn-ghost" href="https://github.com/openamer-max/models/releases/latest/download/OpenAmer-mac-arm64.zip" rel="noopener">🍎 macOS</a>
+        <a class="btn btn-ghost" href="https://github.com/openamer-max/models/releases/latest/download/OpenAmer-Android.apk" rel="noopener">📱 Android</a>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin:0 0 18px">
+        Alle Pakete sind unsigniert — beim ersten Start warnt das System
+        (Windows: „Weitere Informationen" → „Trotzdem ausführen"; macOS: Rechtsklick → „Öffnen").
+        Linux: <code>chmod +x</code> und starten.
+      </p>
 
       <a class="btn btn-ghost" href="https://huggingface.co/datasets/openamer-max/openamer-max-benchmark" target="_blank" rel="noopener">⬇ <span data-i18n="dl_bench_btn">Prüfstand herunterladen</span></a>
 
