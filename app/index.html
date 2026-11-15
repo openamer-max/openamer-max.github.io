@@ -1880,30 +1880,17 @@ const PROVIDERS = [
     note: 'Free-Tier (experimentell)',
     models: ['mistral-small-latest', 'open-mistral-nemo', 'mistral-large-latest'] },
 
-  { id: 'deepseek', name: 'DeepSeek', tag: 'cloud', free: false,
-    base: 'https://api.deepseek.com/v1', key: true, keyUrl: 'https://platform.deepseek.com',
-    note: 'V4.1 Flash, sehr guenstig',
-    models: ['deepseek-chat', 'deepseek-reasoner'] },
+  
 
-  { id: 'openai', name: 'OpenAI', tag: 'cloud', free: false,
-    base: 'https://api.openai.com/v1', key: true, keyUrl: 'https://platform.openai.com/api-keys',
-    note: 'GPT-Modelle', models: ['gpt-4o-mini', 'gpt-4o', 'gpt-4.1-mini'] },
+  
 
-  { id: 'xai', name: 'xAI (Grok)', tag: 'cloud', free: false,
-    base: 'https://api.x.ai/v1', key: true, keyUrl: 'https://console.x.ai',
-    note: 'Grok-Modelle', models: ['grok-4', 'grok-3-mini'] },
+  
 
-  { id: 'kimi', name: 'Moonshot / Kimi', tag: 'cloud', free: false,
-    base: 'https://api.moonshot.ai/v1', key: true, keyUrl: 'https://platform.moonshot.ai',
-    note: 'Kimi K-Serie', models: ['kimi-k2-turbo-preview', 'moonshot-v1-8k'] },
+  
 
-  { id: 'zai', name: 'Z.AI (GLM)', tag: 'cloud', free: false,
-    base: 'https://api.z.ai/api/paas/v4', key: true, keyUrl: 'https://z.ai/manage-apikey/apikey-list',
-    note: 'GLM-4/5', models: ['glm-4.6', 'glm-4.5-air'] },
+  
 
-  { id: 'minimax', name: 'MiniMax', tag: 'cloud', free: false,
-    base: 'https://api.minimax.io/v1', key: true, keyUrl: 'https://platform.minimax.io',
-    note: 'M-Serie', models: ['MiniMax-M2', 'MiniMax-Text-01'] },
+  
 ];
 
 function currentProvider() {
