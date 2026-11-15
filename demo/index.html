@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenAmer Chat — 0,6B, kostenlos im Browser</title>
+<meta name="description" content="Das kleinste OpenAmer-Modell direkt im Browser ausprobieren. 0,6B, ohne Anmeldung, auf einem kostenlosen Server.">
+<style>
+:root{--bg:#05070d;--bg2:#080b13;--panel:#0b1018;--line:#1b2434;--text:#e6edf7;
+  --muted:#8b9bb4;--dim:#5d6b82;--cyan:#22d3ee;--violet:#7c5cff;--green:#34d399;
+  --amber:#fbbf24;--red:#f87171;--radius:16px}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);
+  font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline}
+.kopf{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:18px 22px;border-bottom:1px solid var(--line);background:rgba(5,7,13,.85);
+  position:sticky;top:0;backdrop-filter:blur(10px);z-index:5}
+.marke{display:flex;align-items:center;gap:10px;font-weight:650;letter-spacing:.2px}
+.punkt{width:9px;height:9px;border-radius:50%;background:var(--green);
+  box-shadow:0 0 12px var(--green)}
+.zustand{font-size:13px;color:var(--muted)}
+main{max-width:840px;margin:0 auto;padding:26px 18px 120px}
+h1{font-size:clamp(22px,4vw,30px);margin:6px 0 8px;letter-spacing:-.3px}
+.unter{color:var(--muted);margin:0 0 22px;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--text);
+  padding:8px 13px;border-radius:999px;font-size:13.5px;cursor:pointer;
+  transition:.15s}
+.chip:hover{border-color:var(--cyan);color:var(--cyan)}
+.verlauf{display:flex;flex-direction:column;gap:14px;min-height:120px}
+.msg{max-width:88%;padding:12px 15px;border-radius:var(--radius);white-space:pre-wrap;
+  word-wrap:break-word;font-size:15px;line-height:1.5}
+.frage{align-self:flex-end;background:linear-gradient(135deg,var(--violet),#5b3ee8);
+  color:#fff;border-bottom-right-radius:5px}
+.antwort{align-self:flex-start;background:var(--panel);border:1px solid var(--line);
+  border-bottom-left-radius:5px}
+.antwort.leer{color:var(--dim);font-style:italic}
+.hinweis{font-size:12.5px;color:var(--dim);margin-top:6px}
+.eingabe{position:fixed;left:0;right:0;bottom:0;background:rgba(5,7,13,.94);
+  border-top:1px solid var(--line);backdrop-filter:blur(10px);padding:14px 18px}
+.form{max-width:840px;margin:0 auto;display:flex;gap:10px;align-items:flex-end}
+textarea{flex:1;resize:none;min-height:48px;max-height:140px;padding:13px 15px;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  color:var(--text);font:inherit;outline:none}
+textarea:focus{border-color:var(--cyan)}
+button.senden{height:48px;padding:0 22px;border:0;border-radius:12px;cursor:pointer;
+  background:linear-gradient(135deg,var(--cyan),var(--violet));color:#05070d;
+  font-weight:700;font-size:15px}
+button.senden:disabled{opacity:.45;cursor:not-allowed}
+.fuss{max-width:840px;margin:26px auto 0;color:var(--dim);font-size:13px;
+  border-top:1px solid var(--line);padding-top:16px}
+.fuss strong{color:var(--muted);font-weight:600}
+.warnung{background:rgba(251,191,36,.09);border:1px solid rgba(251,191,36,.35);
+  color:#f4d58a;padding:11px 14px;border-radius:12px;font-size:13.5px;margin-bottom:18px;
+  display:none}
+.warnung.an{display:block}
+</style>
+</head>
+<body>
+<div class="kopf">
+  <div class="marke"><span class="punkt" id="punkt"></span> OpenAmer Chat</div>
+  <div class="zustand" id="zustand">bereit</div>
+</div>
+
+<main>
+  <h1>Das kleinste Modell, direkt im Browser</h1>
+  <p class="unter">OpenAmer-Max-Watch · 0,6B Parameter · ohne Anmeldung · läuft auf einem
+  kostenlosen Server mit zwei Kernen.</p>
+
+  <div class="warnung" id="warnung"></div>
+
+  <div class="chips">
+    <button class="chip" data-frage="Ist OpenAmer kostenlos?">Ist OpenAmer kostenlos?</button>
+    <button class="chip" data-frage="Wo liegen meine Daten?">Wo liegen meine Daten?</button>
+    <button class="chip" data-frage="Was kann OpenAmer?">Was kann OpenAmer?</button>
+    <button class="chip" data-frage="Läuft OpenAmer auf meinem Mac?">Auf dem Mac?</button>
+    <button class="chip" data-frage="Wer ist der Entwickler?">Wer hat es gebaut?</button>
+  </div>
+
+  <div class="verlauf" id="verlauf">
+    <div class="msg antwort">Frag mich etwas — zum Beispiel, ob OpenAmer etwas kostet
+oder wo deine Daten bleiben. Ich antworte kurz und sage auch, wenn ich etwas nicht weiß.</div>
+  </div>
+
+  <div class="fuss">
+    <p><strong>Zur Geschwindigkeit, ehrlich:</strong> Der Server hat zwei Kerne und keine
+    Grafikkarte. Nach einer Ruhephase lädt das Modell etwa 20 Sekunden, danach antwortet es
+    mit rund 25 Token pro Sekunde — eine kurze Antwort in ein bis zwei Sekunden.</p>
+    <p><strong>Diese Demo rechnet mit Q4</strong> (378 MB, 44 von 45 Punkten auf dem
+    eingefrorenen Prüfstand). Die ausgelieferte Datei ist Q8 (639 MB, 45 von 45) — sie liegt
+    auf <a href="https://huggingface.co/openamer-max/openamer-max-watch" target="_blank" rel="noopener">HuggingFace</a>.
+    Für Tempo ohne Wartezeit:
+    <code>ollama run amersacirovic/openamer-max-watch</code></p>
+  </div>
+</main>
+
+<div class="eingabe">
+  <form class="form" id="form">
+    <textarea id="feld" rows="1" placeholder="Deine Frage…" autocomplete="off"></textarea>
+    <button class="senden" id="senden" type="submit">Senden</button>
+  </form>
+</div>
+
+<script>
+const API = "https://openamer-max-openamer-max-chat.hf.space/v1/chat/completions";
+const verlauf = document.getElementById("verlauf");
+const feld = document.getElementById("feld");
+const senden = document.getElementById("senden");
+const zustand = document.getElementById("zustand");
+const punkt = document.getElementById("punkt");
+const warnung = document.getElementById("warnung");
+const verlaufDaten = [{role: "system", content:
+  "Du bist OpenAmer, ein lokaler KI-Assistent. Antworte knapp und sachlich auf Deutsch. " +
+  "Wenn du etwas nicht weisst, sage das."}];
+
+function blase(text, art) {
+  const d = document.createElement("div");
+  d.className = "msg " + art;
+  d.textContent = text;
+  verlauf.appendChild(d);
+  d.scrollIntoView({block: "end", behavior: "smooth"});
+  return d;
+}
+
+async function frage(text) {
+  blase(text, "frage");
+  verlaufDaten.push({role: "user", content: text});
+  const antwort = blase("…", "antwort leer");
+  senden.disabled = true;
+  zustand.textContent = "denkt…";
+  punkt.style.background = "var(--amber)";
+
+  const uhr = setTimeout(() => {
+    warnung.textContent = "Der Server war in Ruhe — das Modell lädt gerade. " +
+                          "Der erste Aufruf dauert etwa 20 Sekunden.";
+    warnung.classList.add("an");
+  }, 4000);
+
+  let inhalt = "";
+  try {
+    const r = await fetch(API, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({model: "watch", messages: verlaufDaten,
+                            max_tokens: 220, temperature: 0, stream: true})
+    });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const leser = r.body.getReader();
+    const dekoder = new TextDecoder();
+    let puffer = "";
+    while (true) {
+      const {value, done} = await leser.read();
+      if (done) break;
+      puffer += dekoder.decode(value, {stream: true});
+      const zeilen = puffer.split("\n");
+      puffer = zeilen.pop();
+      for (const z of zeilen) {
+        const t = z.trim();
+        if (!t.startsWith("data:")) continue;
+        const nutz = t.slice(5).trim();
+        if (nutz === "[DONE]") continue;
+        try {
+          const d = JSON.parse(nutz);
+          const stueck = d.choices?.[0]?.delta?.content || "";
+          if (stueck) {
+            inhalt += stueck;
+            antwort.textContent = inhalt;
+            antwort.classList.remove("leer");
+            antwort.scrollIntoView({block: "end", behavior: "smooth"});
+          }
+        } catch (e) {}
+      }
+    }
+    if (!inhalt) antwort.textContent = "(keine Antwort erhalten)";
+    verlaufDaten.push({role: "assistant", content: inhalt});
+  } catch (e) {
+    antwort.textContent = "Verbindung fehlgeschlagen (" + e.message + "). " +
+      "Der kostenlose Server schläft nach längerer Ruhe ein und braucht beim Aufwachen " +
+      "einen Moment — bitte noch einmal senden.";
+  } finally {
+    clearTimeout(uhr);
+    warnung.classList.remove("an");
+    senden.disabled = false;
+    zustand.textContent = "bereit";
+    punkt.style.background = "var(--green)";
+    feld.focus();
+  }
+}
+
+document.getElementById("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const text = feld.value.trim();
+  if (!text) return;
+  feld.value = "";
+  frage(text);
+});
+feld.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault();
+    document.getElementById("form").requestSubmit(); }
+});
+document.querySelectorAll(".chip").forEach((c) => {
+  c.addEventListener("click", () => frage(c.dataset.frage));
+});
+// Aufwachen anstossen, damit der erste Klick nicht 20 Sekunden wartet
+fetch(API.replace("/v1/chat/completions", "/health")).catch(() => {});
+</script>
+</body>
+</html>
