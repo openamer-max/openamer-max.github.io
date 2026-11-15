@@ -1803,6 +1803,10 @@ function bind() {
    18/18 erreichbar, OpenRouter/HF/NVIDIA liefern Modelle ohne Key)
    ================================================================ */
 const PROVIDERS = [
+  { id: 'openamer-server', name: 'OpenAmer Server (kostenlos)', tag: 'free', free: true,
+    base: 'https://openamer-max-openamer-max-chat.hf.space/v1', key: false,
+    note: 'ohne Schlüssel, 0 €, 5-25 Token/s, Modell lädt beim 1. Aufruf ca. 20 s',
+    models: ['watch'] },
   { id: 'ollama', name: 'Ollama (dieses Gerät)', tag: 'local', free: true,
     base: 'http://127.0.0.1:11434/v1', key: false,
     note: 'openamer-max = eigenes Modell, keine Kosten',
@@ -1833,7 +1837,7 @@ const PROVIDERS = [
   { id: 'groq', name: 'Groq', tag: 'free', free: true,
     base: 'https://api.groq.com/openai/v1', key: true, keyUrl: 'https://console.groq.com/keys',
     note: 'Free-Tier, sehr schnell',
-    models: ['llama-3.1-8b-instant', 'llama-3.3-70b-versatile', 'openai/gpt-oss-20b'] },
+    models: ['llama-3.1-8b-instant', 'openai/gpt-oss-20b'] },
 
   { id: 'google', name: 'Google AI Studio', tag: 'free', free: true,
     base: 'https://generativelanguage.googleapis.com/v1beta/openai', key: true,
