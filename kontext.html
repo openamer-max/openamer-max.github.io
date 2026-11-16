@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontextmessung — wie viel Text tragen die OpenAmer-Modelle?</title>
+<meta name="description" content="Gemessen, nicht geschätzt: OpenAmer-Max trägt zwischen 25.336 und 39.322 Token Kontext. Der Agent verlangt 64.000 — keine Stufe erreicht das. Methode, Rohdaten und Grenzen offen.">
+<meta name="theme-color" content="#07080c">
+<link rel="canonical" href="https://openamer-max.github.io/kontext.html">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="/assets/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/logo.png">
+<style>
+  table { width:100%; border-collapse:collapse; margin:18px 0; font-size:14.5px; }
+  th, td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--border); color:var(--muted); }
+  th { color:#fff; font-weight:600; }
+  td.zahl { font-family:var(--mono); color:#E6EDF7; }
+  .grafik { background:#05070D; border:1px solid var(--border-strong); border-radius:14px; padding:10px; margin:22px 0; }
+  .grafik img { display:block; width:100%; height:auto; border-radius:10px; }
+  pre { background:#0a0d14; border:1px solid var(--border-strong); border-radius:10px; padding:14px 16px; overflow-x:auto; font-family:var(--mono); font-size:13.5px; color:#c8e1ff; }
+  .warnung { background:#1a0f12; border:1px solid #7f1d1d; border-radius:12px; padding:18px 20px; margin:20px 0; }
+  .warnung strong { color:#fca5a5; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img class="brand-mark" src="/assets/logo.png" width="30" height="30" alt="" decoding="async"><span>OpenAmer</span></a>
+    <div class="nav-links">
+      <a href="android.html">Android</a>
+      <a href="installation.html">Installation</a>
+      <a href="https://github.com/openamer-max/models" target="_blank" rel="noopener">Modelle</a>
+    </div>
+    <div class="nav-cta"><a class="btn btn-primary btn-sm" href="index.html">Zur Startseite</a></div>
+  </div>
+</nav>
+
+<main class="wrap legal">
+  <h1>Wie viel Text tragen die Modelle wirklich?</h1>
+  <p class="lead">Gemessen am 16.11.2026 — nicht aus Modellkarten abgeschrieben. Ein Fakt steht bei 50 % Tiefe in einem langen Text, das Modell muss ihn zurückgeben.</p>
+
+  <div class="grafik"><img src="assets/kontext.svg" alt="Balkendiagramm: größter gemessener Kontext je Modellstufe, mit 64.000-Token-Linie des Agenten"></div>
+
+  <table>
+    <tr><th>Stufe</th><th>Parameter</th><th>Maximum</th><th>gemessen</th><th>Anteil</th></tr>
+    <tr><td>Watch</td><td>0,60B</td><td class="zahl">40.960</td><td class="zahl">39.322</td><td>96 %</td></tr>
+    <tr><td>Phone</td><td>3,1B</td><td class="zahl">32.768</td><td class="zahl">30.655</td><td>94 %</td></tr>
+    <tr><td>Tab</td><td>7,6B</td><td class="zahl">32.768</td><td class="zahl">30.643</td><td>94 %</td></tr>
+    <tr><td>Desktop</td><td>14,8B</td><td class="zahl">32.768</td><td class="zahl">30.657</td><td>94 %</td></tr>
+    <tr><td>Pro</td><td>23,6B</td><td class="zahl">32.768</td><td class="zahl">25.336</td><td>77 %</td></tr>
+    <tr><td>Ultra</td><td>32,8B</td><td class="zahl">32.768</td><td class="zahl">30.067</td><td>92 %</td></tr>
+  </table>
+
+  <h2>Was das belegt</h2>
+  <p>Der Kontext wird nicht abgeschnitten, und ein Fakt an 50 % Tiefe bleibt bis 39.322 Token auffindbar. Jede Stufe trägt ihren dokumentierten Kontext — fünf von sechs zu über 90 %, Pro wegen Speicherdeckelung zu 77 %.</p>
+
+  <div class="warnung">
+    <strong>Die unbequeme Zahl:</strong> OpenAmer Agent verlangt mindestens 64.000 Token
+    Kontext (Konstante im Code). Keine Stufe erreicht das — 39.322 ist unser Maximum.
+    Für den Agenten auf einem eigenen Modell ist die Familie damit zu klein, unabhängig
+    von Konfiguration oder Hardware.
+  </div>
+
+  <h2>Was das <em>nicht</em> belegt</h2>
+  <ul>
+    <li><strong>Kein Verständnisbeweis.</strong> Ein Faktenabruf ist der einfachste Kontexttest. Wer ihn besteht, kann an einer Aufgabe scheitern, die den ganzen Text verstehen muss.</li>
+    <li><strong>Ein Testfall, nicht zwanzig.</strong> Ein einzelner Fakt an einer Stelle — kein Beweis für Robustheit bei mehreren Fakten oder Widersprüchen im Text.</li>
+    <li><strong>Keine Qualitätsaussage.</strong> Der Test misst nur: wird der Text überhaupt verarbeitet.</li>
+  </ul>
+
+  <h2>Zwei Fehler im Prüfstand (dokumentiert)</h2>
+  <p>Weil sie zu falschen Ergebnissen führten und ein Bericht ohne diese Offenlegung wertlos wäre:</p>
+  <ol>
+    <li><strong>Kontextfenster ohne Reserve.</strong> Bei <code>num_ctx</code> gleich der Zielgröße schneidet Ollama den Prompt ab (gemessen: 1.026 statt 2.128 Token) — die Nadel fiel weg. Die erste Messreihe zeigte deshalb fälschlich „0 von 9 richtig".</li>
+    <li><strong>Deckelung bei 32k.</strong> Bei Ziel 32.768 schnitt Ollama erneut ab (16.386 statt ~39k), weil die Modelle bei 32.768 deckeln. Die Zielgröße muss darunter liegen.</li>
+  </ol>
+
+  <h2>Ultra: erst falsch eingestellt, dann repariert</h2>
+  <p>Fassung 1 erzwang <code>num_gpu 0</code> — alles auf der CPU, rund 17 Token/s, Abbruch bei 16k. Fassung 2 legt 10 von 64 Schichten in den VRAM: rund 200 Token/s, 30.067 Token in 148 Sekunden. Die alten Werte bleiben als Historie in den Rohdaten.</p>
+
+  <h2>Nachrechnen</h2>
+  <p>Alle Rohdaten und der Prüfstand liegen offen:</p>
+  <pre>github.com/openamer-max/models
+  docs/KONTEXT-MESSUNG.md     Bericht
+  tools/kontexttest.py        Prüfstand
+  reports/kontext_*.json      Rohdaten je Stufe</pre>
+  <pre>python tools/kontexttest.py --modell watch --groessen 2500,10000,20000,32768</pre>
+
+  <p style="margin-top:26px"><a class="btn btn-ghost" href="index.html#modelle">Modelle ansehen</a></p>
+</main>
+
+</body>
+</html>
