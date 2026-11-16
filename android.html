@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenAmer auf Android — vollständiger Agent im Telefon</title>
+<meta name="description" content="OpenAmer auf Android: der vollständige Agent mit Werkzeugen und Skills läuft im Debian-Userspace. Launcher-APK, Termux-Anleitung, gemessene Version und ehrliche Grenzen.">
+<meta name="theme-color" content="#07080c">
+<link rel="canonical" href="https://openamer-max.github.io/android.html">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="/assets/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/logo.png">
+<style>
+  .step-block { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 26px; margin-bottom: 18px; }
+  .step-block h3 { font-size: 18px; margin-bottom: 10px; color: #fff; }
+  .step-block p { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+  .step-num { display:inline-block; width: 28px; height: 28px; line-height: 28px; text-align:center; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:#fff; font-weight:700; font-size:14px; margin-right:10px; }
+  pre { background: #0a0d14; border: 1px solid var(--border-strong); border-radius: 10px; padding: 14px 16px; overflow-x: auto; font-family: var(--mono); font-size: 13.5px; color: #c8e1ff; margin: 10px 0; }
+  code { font-family: var(--mono); background: rgba(91,140,255,.12); padding: 2px 6px; border-radius: 5px; font-size: 13.5px; color: #a8c2ff; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--muted); }
+  th { color: #fff; font-weight: 600; }
+  .proof { background:#08110d; border:1px solid #1d4d38; border-radius:12px; padding:16px 18px; font-family:var(--mono); font-size:13px; color:#8ff0c0; overflow-x:auto; }
+  .dl-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin:22px 0; }
+  .dl-card { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px; }
+  .dl-card h3 { color:#fff; font-size:17px; margin-bottom:8px; }
+  .dl-card p { color:var(--muted); font-size:14px; margin-bottom:14px; }
+  .spende { background:linear-gradient(135deg,rgba(124,92,255,.13),rgba(34,211,238,.09)); border:1px solid var(--border-strong); border-radius:16px; padding:26px; margin:34px 0 10px; text-align:center; }
+  .spende h2 { color:#fff; margin-bottom:8px; }
+  .spende p { color:var(--muted); margin-bottom:18px; }
+  .folgen { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:14px; }
+</style>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img class="brand-mark" src="/assets/logo.png" width="30" height="30" alt="" decoding="async"><span>OpenAmer</span></a>
+    <div class="nav-links">
+      <a href="installation.html">Installation</a>
+      <a href="index.html#funktionen">Funktionen</a>
+      <a href="https://github.com/openamer-max/openamer" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="nav-cta"><a class="btn btn-primary btn-sm" href="index.html">Zur Startseite</a></div>
+  </div>
+</nav>
+
+<main class="wrap legal">
+  <h1>OpenAmer auf Android</h1>
+  <p class="lead">Nicht ferngesteuert und keine Hülle um eine Webseite: derselbe Agent, der unter Windows und Linux läuft — auf dem Telefon, mit Werkzeugen, Skills, Erinnerungen und Zeitplänen.</p>
+
+  <h2>Gemessen, nicht behauptet</h2>
+  <p>Im Android-Emulator (Android 14) ausgeführt, nicht abgeschrieben:</p>
+  <div class="proof">$ proot-distro login debian -- /root/venv/bin/openamer --version
+OpenAmer Agent v2026.11.16 (2026.11.16) · upstream 8be94c32
+Install directory: /root/openamer
+Install method: git
+Python: 3.13.5
+OpenAI SDK: 2.24.0</div>
+
+  <h2>Warum ein Debian-Userspace</h2>
+  <p>Zwei Grenzen von Termux sind gemessen, nicht vermutet:</p>
+  <ul>
+    <li><strong>libc:</strong> Termux läuft auf Androids bionic. manylinux-Räder verlangen glibc — <code>cryptography</code> ließ sich dort nicht bauen.</li>
+    <li><strong>Python-Version:</strong> Termux liefert 3.14, der Agent verlangt <code>&lt;3.14</code>.</li>
+  </ul>
+  <p>Debian in <code>proot</code> bringt glibc und Python 3.13. Dort greifen die fertigen Räder, und der Agent startet. Kein Root nötig.</p>
+
+  <h2>Die fünf Schritte</h2>
+
+  <div class="step-block">
+    <h3><span class="step-num">1</span>Termux installieren</h3>
+    <p>Aus <a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener">F-Droid</a> — nicht aus dem Play Store, dort ist die Fassung veraltet.</p>
+  </div>
+
+  <div class="step-block">
+    <h3><span class="step-num">2</span>Termux Befehle erlauben</h3>
+    <p>Einmalig in Termux eintippen — sonst darf der Launcher nichts starten:</p>
+    <pre>echo "allow-external-apps=true" &gt;&gt; ~/.termux/termux.properties</pre>
+  </div>
+
+  <div class="step-block">
+    <h3><span class="step-num">3</span>Launcher installieren</h3>
+    <p>Die APK unten herunterladen und öffnen. Android fragt beim ersten Start nach der Berechtigung „Befehle in Termux ausführen" — erlauben.</p>
+  </div>
+
+  <div class="step-block">
+    <h3><span class="step-num">4</span>Agent installieren</h3>
+    <p>Im Launcher auf <strong>Agent installieren</strong> tippen. Termux lädt Debian und den Agenten — einige Minuten, einmalig.</p>
+  </div>
+
+  <div class="step-block">
+    <h3><span class="step-num">5</span>Starten</h3>
+    <p>Auf <strong>OpenAmer starten</strong> tippen. Es öffnet sich dieselbe Textoberfläche wie unter Windows und Linux.</p>
+  </div>
+
+  <h2>Downloads</h2>
+  <div class="dl-grid">
+    <div class="dl-card">
+      <h3>Launcher-APK</h3>
+      <p>Prüft Termux, richtet Debian ein, installiert und startet den Agenten. 4,8 MB, signiert.</p>
+      <a class="btn btn-primary btn-sm" href="https://github.com/openamer-max/models/releases/download/launcher-1.0.0/OpenAmer-Launcher.apk">OpenAmer-Launcher.apk</a>
+    </div>
+    <div class="dl-card">
+      <h3>Ohne Launcher</h3>
+      <p>Wer lieber im Terminal arbeitet: der vollständige Weg als ein Befehl.</p>
+      <pre style="font-size:12px;margin:0">curl -sL https://raw.githubusercontent.com/openamer-max/models/main/docs/termux-openamer.sh | bash</pre>
+    </div>
+  </div>
+
+  <h2>Was läuft — und was nicht</h2>
+  <table>
+    <tr><th>Bereich</th><th>Android</th><th>Grund</th></tr>
+    <tr><td>Chat, Skills, Erinnerungen, Zeitpläne</td><td>ja</td><td>reines Python</td></tr>
+    <tr><td>Dateien, Shell, Git</td><td>ja</td><td>Termux liefert das PTY</td></tr>
+    <tr><td>Selbstkuratierung, Lernen</td><td>ja</td><td>derselbe Code wie am Desktop</td></tr>
+    <tr><td>Modelle lokal</td><td>nur CPU</td><td>Apps bekommen keine GPU; sinnvoll ist die kleinste Stufe</td></tr>
+    <tr><td>Browser-Steuerung (CDP), computer_use</td><td>nein</td><td>Android erlaubt keinen Bildschirm- und Debug-Zugriff für Apps</td></tr>
+    <tr><td>Electron-Fenster</td><td>nein</td><td>Electron gibt es für Android nicht — die Textoberfläche ersetzt es</td></tr>
+    <tr><td>Dauerbetrieb im Hintergrund</td><td>eingeschränkt</td><td>Android beendet Prozesse ohne Wake-Lock</td></tr>
+  </table>
+
+  <div class="spende">
+    <h2>OpenAmer am Leben halten</h2>
+    <p>Kein Unternehmen, kein Investor: Rechenzeit, Server und Veröffentlichungen zahlt eine Person. Wenn dir das nützt, hilft jede Spende — und jedes Teilen bringt mehr als Geld.</p>
+    <a class="btn btn-primary" href="https://www.paypal.com/qrcodes/managed/bfb5b6b5-c04c-4836-af60-987dff8cff61" target="_blank" rel="noopener">Spenden (PayPal)</a>
+    <div class="folgen">
+      <a class="btn btn-ghost btn-sm" href="https://github.com/openamer-max/openamer" target="_blank" rel="noopener">★ GitHub</a>
+      <a class="btn btn-ghost btn-sm" href="https://huggingface.co/openamer-max" target="_blank" rel="noopener">Hugging Face folgen</a>
+      <a class="btn btn-ghost btn-sm" href="https://ollama.com/amersacirovic" target="_blank" rel="noopener">Ollama</a>
+      <a class="btn btn-ghost btn-sm" href="https://www.kaggle.com/amersacirovic" target="_blank" rel="noopener">Kaggle</a>
+    </div>
+  </div>
+
+  <p style="margin-top:26px"><a class="btn btn-ghost" href="installation.html">Installation für Desktop lesen</a></p>
+</main>
+
+</body>
+</html>
