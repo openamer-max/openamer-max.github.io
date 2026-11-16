@@ -58,7 +58,11 @@ OpenAmer Agent v2026.11.16 (2026.11.16) · upstream 8be94c32
 Install directory: /root/openamer
 Install method: git
 Python: 3.13.5
-OpenAI SDK: 2.24.0</div>
+OpenAI SDK: 2.24.0
+
+# Werkzeug-Aufruf im Emulator geprueft:
+$ openamer -z "Fuehre uname -m aus und antworte nur mit der Ausgabe."
+x86_64</div>
 
   <h2>Warum ein Debian-Userspace</h2>
   <p>Zwei Grenzen von Termux sind gemessen, nicht vermutet:</p>
@@ -68,7 +72,7 @@ OpenAI SDK: 2.24.0</div>
   </ul>
   <p>Debian in <code>proot</code> bringt glibc und Python 3.13. Dort greifen die fertigen Räder, und der Agent startet. Kein Root nötig.</p>
 
-  <h2>Die fünf Schritte</h2>
+  <h2>Die sechs Schritte</h2>
 
   <div class="step-block">
     <h3><span class="step-num">1</span>Termux installieren</h3>
@@ -87,12 +91,25 @@ OpenAI SDK: 2.24.0</div>
   </div>
 
   <div class="step-block">
-    <h3><span class="step-num">4</span>Agent installieren</h3>
+    <h3><span class="step-num">4</span>AI-Studio-Schlüssel eintragen</h3>
+    <p>OpenAmer Agent verlangt mindestens <strong>64.000 Token Kontext</strong>.
+       Unsere eigenen Modelle erreichen gemessen 39.322 — deshalb braucht der
+       Agent ein größeres Modell. Mit einem kostenlosen Schlüssel von
+       <a href="https://aistudio.google.com/api-keys" target="_blank" rel="noopener">aistudio.google.com</a>
+       läuft er auf Gemini mit <strong>1.048.576 Token</strong>.</p>
+    <p>Schlüssel in das Feld im Launcher eintragen — er bleibt auf dem Gerät
+       (im Debian-Userspace, Datei <code>config.yaml</code> mit Rechten 600) und
+       wird nirgendwo hochgeladen. Ohne Schlüssel installiert der Launcher
+       trotzdem, der Agent kann dann aber nicht antworten.</p>
+  </div>
+
+  <div class="step-block">
+    <h3><span class="step-num">5</span>Agent installieren</h3>
     <p>Im Launcher auf <strong>Agent installieren</strong> tippen. Termux lädt Debian und den Agenten — einige Minuten, einmalig.</p>
   </div>
 
   <div class="step-block">
-    <h3><span class="step-num">5</span>Starten</h3>
+    <h3><span class="step-num">6</span>Starten</h3>
     <p>Auf <strong>OpenAmer starten</strong> tippen. Es öffnet sich dieselbe Textoberfläche wie unter Windows und Linux.</p>
   </div>
 
@@ -101,7 +118,7 @@ OpenAI SDK: 2.24.0</div>
     <div class="dl-card">
       <h3>Launcher-APK</h3>
       <p>Prüft Termux, richtet Debian ein, installiert und startet den Agenten. 4,8 MB, signiert.</p>
-      <a class="btn btn-primary btn-sm" href="https://github.com/openamer-max/models/releases/download/launcher-1.0.0/OpenAmer-Launcher.apk">OpenAmer-Launcher.apk</a>
+      <a class="btn btn-primary btn-sm" href="https://github.com/openamer-max/models/releases/download/launcher-1.3.1/OpenAmer-Launcher.apk">OpenAmer-Launcher.apk</a>
     </div>
     <div class="dl-card">
       <h3>Ohne Launcher</h3>
