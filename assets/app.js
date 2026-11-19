@@ -35,10 +35,16 @@
   }
 
   function apply(lang) {
-    var d = STR[lang] || STR.de;
+    // Fallback-Kette: gewuenschte Sprache -> Englisch -> Deutsch.
+    // Die Website bietet 185 Sprachen an; noch nicht uebersetzte zeigen
+    // englischen Text statt deutsch, damit internationale Besucher
+    // wenigstens verstehen, was dasteht.
+    var d = STR[lang] || STR.en || STR.de;
+    var fb = STR.en || STR.de;
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var k = el.getAttribute("data-i18n");
       if (d[k]) el.textContent = d[k];
+      else if (fb[k]) el.textContent = fb[k];
     });
     document.documentElement.lang = lang;
     document.documentElement.dir = d.rtl ? "rtl" : "ltr";
