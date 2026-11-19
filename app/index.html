@@ -579,9 +579,9 @@ const DEFAULT_SETTINGS = {
   // Live-Test-Vorbelegung: wer die App zum ersten Mal oeffnet, kann sofort
   // schreiben, ohne etwas einzurichten. Der Key ist bewusst im Quelltext --
   // er ist damit oeffentlich. Wer ihn ersetzt, nutzt sein eigenes Kontingent.
-  baseUrl: 'https://openamer-max-openamer-max-api.hf.space/v1',
-  apiKey: '',
-  model: 'watch',
+  baseUrl: 'https://tokenharbor.ai/v1',
+  apiKey: 'thk_live_I3pPPYh6BMkGCh2n4G71FctMYxfQ04cOAtxldrDeiEsAIIIUpWdbjcPiD01FcHfA',
+  model: 'deepseek-v4.1-flash:free',
   temperature: 0.7,
   systemPrompt: '',
   stream: true,
@@ -1824,7 +1824,7 @@ const PROVIDERS = [
 
   { id: 'tokenharbor', name: 'TokenHarbor', tag: 'free', free: true,
     base: 'https://tokenharbor.ai/v1', key: true, keyUrl: 'https://tokenharbor.ai',
-    note: 'gesperrt: frei 403, bezahlt 402 (kein Plan)',
+    note: 'kostenlos ueber :free-Modelle; bei Andrang 503 "service_busy" (erneut versuchen)',
     models: ['deepseek-v4.1-flash:free', 'mimo-v2.6-flash:free', 'deepseek-v4.1-flash'] },
 
   { id: 'openrouter', name: 'OpenRouter', tag: 'free', free: true,
