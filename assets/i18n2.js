@@ -1,6 +1,8 @@
 /* OpenAmer i18n — Teil 2: RU, AR, ZH, TR, BS, SQ */
 window.I18N2 = {
 ru: {
+  dl_oneline: "Установка одной строкой",
+  dl_oneline_note: "Linux, macOS, Termux — или Windows в PowerShell (без WSL, без прав админа). Затем:",
   nav_models: "Модели",
   mdl_eyebrow: "Семейство моделей",
   mdl_title: "OpenAmer-Max — уровень для каждого устройства",
@@ -77,6 +79,8 @@ ru: {
   folge: "Следи за OpenAmer", folge_sub: "Стань частью пути."
 },
 ar: {
+  dl_oneline: "تثبيت بسطر واحد",
+  dl_oneline_note: "لينكس أو macOS أو Termux — أو ويندوز عبر PowerShell (بدون WSL وبدون صلاحيات مدير). ثم:",
   nav_models: "النماذج",
   mdl_eyebrow: "عائلة النماذج",
   mdl_title: "OpenAmer-Max — مستوى لكل جهاز",
@@ -153,6 +157,8 @@ ar: {
   folge: "تابع OpenAmer", folge_sub: "كن جزءًا من الرحلة."
 },
 zh: {
+  dl_oneline: "一行安装",
+  dl_oneline_note: "Linux、macOS、Termux —— 或在 PowerShell 中安装 Windows 版（无需 WSL，无需管理员权限）。然后：",
   nav_models: "模型",
   mdl_eyebrow: "模型家族",
   mdl_title: "OpenAmer-Max —— 每个设备一个档位",
@@ -229,6 +235,8 @@ zh: {
   folge: "关注 OpenAmer", folge_sub: "加入这段旅程。"
 },
 tr: {
+  dl_oneline: "Tek satırda kurulum",
+  dl_oneline_note: "Linux, macOS, Termux — veya PowerShell'de Windows (WSL yok, yönetici yok). Sonra:",
   nav_models: "Modeller",
   mdl_eyebrow: "Model ailesi",
   mdl_title: "OpenAmer-Max — her cihaz için bir kademe",
@@ -305,6 +313,8 @@ tr: {
   folge: "OpenAmer'i takip et", folge_sub: "Yolculuğun parçası ol."
 },
 bs: {
+  dl_oneline: "Instalacija u jednoj liniji",
+  dl_oneline_note: "Linux, macOS, Termux — ili Windows u PowerShellu (bez WSL, bez admina). Zatim:",
   nav_models: "Modeli",
   mdl_eyebrow: "Porodica modela",
   mdl_title: "OpenAmer-Max — nivo za svaki uređaj",
@@ -381,6 +391,8 @@ bs: {
   folge: "Prati OpenAmer", folge_sub: "Postani dio putovanja."
 },
 sq: {
+  dl_oneline: "Instalim në një rresht",
+  dl_oneline_note: "Linux, macOS, Termux — ose Windows në PowerShell (pa WSL, pa admin). Më pas:",
   nav_models: "Modelet",
   mdl_eyebrow: "Familja e modeleve",
   mdl_title: "OpenAmer-Max — një nivel për çdo pajisje",

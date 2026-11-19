@@ -1,6 +1,8 @@
 /* OpenAmer i18n — Teil 1: DE, EN, ES, FR, IT, PT */
 window.I18N = {
 de: {
+  dl_oneline: "Installation in einer Zeile",
+  dl_oneline_note: "Linux, macOS, Termux — bzw. Windows in PowerShell (ohne WSL, ohne Admin). Danach:",
   mdl_state_live: "Live",
   mdl_state_soon: "In Arbeit",
   mdl_state_planned: "Geplant",
@@ -78,6 +80,8 @@ de: {
   folge: "Folge OpenAmer", folge_sub: "Werde Teil der Reise."
 },
 en: {
+  dl_oneline: "Install in one line",
+  dl_oneline_note: "Linux, macOS, Termux — or Windows in PowerShell (no WSL, no admin). Then:",
   mdl_state_live: "Live",
   mdl_state_soon: "In progress",
   mdl_state_planned: "Planned",
@@ -155,6 +159,8 @@ en: {
   folge: "Follow OpenAmer", folge_sub: "Join the journey."
 },
 es: {
+  dl_oneline: "Instalación en una línea",
+  dl_oneline_note: "Linux, macOS, Termux — o Windows en PowerShell (sin WSL, sin admin). Después:",
   nav_models: "Modelos",
   mdl_eyebrow: "Familia de modelos",
   mdl_title: "OpenAmer-Max: un nivel para cada dispositivo",
@@ -231,6 +237,8 @@ es: {
   folge: "Sigue OpenAmer", folge_sub: "Forma parte del viaje."
 },
 fr: {
+  dl_oneline: "Installation en une ligne",
+  dl_oneline_note: "Linux, macOS, Termux — ou Windows dans PowerShell (sans WSL, sans admin). Ensuite :",
   nav_models: "Modèles",
   mdl_eyebrow: "Famille de modèles",
   mdl_title: "OpenAmer-Max : un niveau pour chaque appareil",
@@ -307,6 +315,8 @@ fr: {
   folge: "Suivez OpenAmer", folge_sub: "Rejoignez l'aventure."
 },
 it: {
+  dl_oneline: "Installazione in una riga",
+  dl_oneline_note: "Linux, macOS, Termux — o Windows in PowerShell (senza WSL, senza admin). Poi:",
   nav_models: "Modelli",
   mdl_eyebrow: "Famiglia di modelli",
   mdl_title: "OpenAmer-Max: un livello per ogni dispositivo",
@@ -383,6 +393,8 @@ it: {
   folge: "Segui OpenAmer", folge_sub: "Entra nel viaggio."
 },
 pt: {
+  dl_oneline: "Instalação em uma linha",
+  dl_oneline_note: "Linux, macOS, Termux — ou Windows no PowerShell (sem WSL, sem admin). Depois:",
   nav_models: "Modelos",
   mdl_eyebrow: "Família de modelos",
   mdl_title: "OpenAmer-Max: um nível para cada dispositivo",

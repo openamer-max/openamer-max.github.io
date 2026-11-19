@@ -2,6 +2,8 @@
    Wird wie Teil 2 per Object.assign in window.I18N gemischt. */
 window.I18N3 = {
 pl: {
+  dl_oneline: "Instalacja w jednej linii",
+  dl_oneline_note: "Linux, macOS, Termux — lub Windows w PowerShell (bez WSL, bez admina). Następnie:",
   nav_models: "Modele",
   mdl_eyebrow: "Rodzina modeli",
   mdl_title: "OpenAmer-Max — poziom dla każdego urządzenia",
@@ -104,6 +106,8 @@ pl: {
   folge: "Obserwuj OpenAmer", folge_sub: "Bądź częścią drogi."
 },
 id: {
+  dl_oneline: "Instalasi satu baris",
+  dl_oneline_note: "Linux, macOS, Termux — atau Windows di PowerShell (tanpa WSL, tanpa admin). Lalu:",
   nav_models: "Model",
   mdl_eyebrow: "Keluarga model",
   mdl_title: "OpenAmer-Max — satu tingkatan untuk setiap perangkat",
@@ -208,6 +212,8 @@ id: {
   folge: "Ikuti OpenAmer", folge_sub: "Jadilah bagian dari perjalanan."
 },
 hi: {
+  dl_oneline: "एक पंक्ति में इंस्टॉल",
+  dl_oneline_note: "Linux, macOS, Termux — या PowerShell में Windows (WSL नहीं, एडमिन नहीं)। फिर:",
   nav_models: "मॉडल",
   mdl_eyebrow: "मॉडल परिवार",
   mdl_title: "OpenAmer-Max — हर डिवाइस के लिए एक स्तर",
@@ -312,6 +318,8 @@ hi: {
   folge: "OpenAmer को फ़ॉलो करें", folge_sub: "इस सफ़़र का हिस्सा बनें।"
 },
 ja: {
+  dl_oneline: "1 行でインストール",
+  dl_oneline_note: "Linux、macOS、Termux — または PowerShell で Windows 版（WSL 不要、管理者権限不要）。その後：",
   nav_models: "モデル",
   mdl_eyebrow: "モデルファミリー",
   mdl_title: "OpenAmer-Max — デバイスごとに 1 つのティア",

@@ -2,6 +2,8 @@
 window.I18N5 = {
 
 nl: {
+  dl_oneline: "Installatie in één regel",
+  dl_oneline_note: "Linux, macOS, Termux — of Windows in PowerShell (geen WSL, geen admin). Daarna:",
   nav_features: "Functies", nav_how: "Hoe het werkt", nav_video: "Video", nav_models: "Modellen",
   nav_faq: "FAQ", nav_vs: "vs. concurrentie", nav_docs: "Documentatie", nav_start: "Nu starten",
   badge: "Nieuw tijdperk van digitale assistenten",
@@ -73,6 +75,8 @@ nl: {
 },
 
 uk: {
+  dl_oneline: "Встановлення одним рядком",
+  dl_oneline_note: "Linux, macOS, Termux — або Windows у PowerShell (без WSL, без прав адміністратора). Далі:",
   nav_features: "Функції", nav_how: "Як працює", nav_video: "Відео", nav_models: "Моделі",
   nav_faq: "FAQ", nav_vs: "проти конкурентів", nav_docs: "Документація", nav_start: "Почати",
   badge: "Нова ера цифрових асистентів",
@@ -144,6 +148,8 @@ uk: {
 },
 
 ro: {
+  dl_oneline: "Instalare într-o singură linie",
+  dl_oneline_note: "Linux, macOS, Termux — sau Windows în PowerShell (fără WSL, fără admin). Apoi:",
   nav_features: "Funcții", nav_how: "Cum funcționează", nav_video: "Video", nav_models: "Modele",
   nav_faq: "FAQ", nav_vs: "vs. concurență", nav_docs: "Documentație", nav_start: "Începe",
   badge: "O eră nouă a asistenților digitali",
@@ -214,6 +220,8 @@ ro: {
 },
 
 sv: {
+  dl_oneline: "Installation på en rad",
+  dl_oneline_note: "Linux, macOS, Termux — eller Windows i PowerShell (utan WSL, utan admin). Sedan:",
   nav_features: "Funktioner", nav_how: "Så funkar det", nav_video: "Video", nav_models: "Modeller",
   nav_faq: "FAQ", nav_vs: "vs. konkurrens", nav_docs: "Dokumentation", nav_start: "Börja nu",
   badge: "Digitala assistenters nya era",
@@ -284,6 +292,8 @@ sv: {
 },
 
 cs: {
+  dl_oneline: "Instalace na jeden řádek",
+  dl_oneline_note: "Linux, macOS, Termux — nebo Windows v PowerShellu (bez WSL, bez admina). Poté:",
   nav_features: "Funkce", nav_how: "Jak to funguje", nav_video: "Video", nav_models: "Modely",
   nav_faq: "FAQ", nav_vs: "vs. konkurence", nav_docs: "Dokumentace", nav_start: "Začít",
   badge: "Nová éra digitálních asistentů",
@@ -354,6 +364,8 @@ cs: {
 },
 
 hu: {
+  dl_oneline: "Telepítés egy sorban",
+  dl_oneline_note: "Linux, macOS, Termux — vagy Windows PowerShellben (WSL nélkül, admin nélkül). Utána:",
   nav_features: "Funkciók", nav_how: "Hogyan működik", nav_video: "Videó", nav_models: "Modellek",
   nav_faq: "GYIK", nav_vs: "vs. versenytársak", nav_docs: "Dokumentáció", nav_start: "Kezdés",
   badge: "A digitális asszisztensek új korszaka",

@@ -2,6 +2,8 @@
 window.I18N4 = {
 
 ko: {
+  dl_oneline: "한 줄 설치",
+  dl_oneline_note: "Linux, macOS, Termux — 또는 PowerShell에서 Windows( WSL 없이, 관리자 권한 없이). 그다음:",
   nav_features: "기능", nav_how: "작동 방식", nav_video: "영상", nav_models: "모델",
   nav_faq: "FAQ", nav_vs: "경쟁 제품 비교", nav_docs: "문서", nav_start: "시작하기",
   badge: "디지털 어시스턴트의 새로운 시대",
@@ -74,6 +76,8 @@ ko: {
 },
 
 vi: {
+  dl_oneline: "Cài đặt một dòng",
+  dl_oneline_note: "Linux, macOS, Termux — hoặc Windows trong PowerShell (không cần WSL, không cần admin). Sau đó:",
   nav_features: "Tính năng", nav_how: "Cách hoạt động", nav_video: "Video", nav_models: "Mô hình",
   nav_faq: "FAQ", nav_vs: "So với đối thủ", nav_docs: "Tài liệu", nav_start: "Bắt đầu",
   badge: "Kỷ nguyên mới của trợ lý số",
@@ -144,6 +148,8 @@ vi: {
 },
 
 th: {
+  dl_oneline: "ติดตั้งในบรรทัดเดียว",
+  dl_oneline_note: "Linux, macOS, Termux — หรือ Windows ใน PowerShell (ไม่ต้องใช้ WSL ไม่ต้องสิทธิ์ผู้ดูแล) จากนั้น:",
   nav_features: "ฟีเจอร์", nav_how: "วิธีการทำงาน", nav_video: "วิดีโอ", nav_models: "โมเดล",
   nav_faq: "คำถามที่พบบ่อย", nav_vs: "เทียบกับคู่แข่ง", nav_docs: "เอกสาร", nav_start: "เริ่มต้น",
   badge: "ยุคใหม่ของผู้ช่วยดิจิทัล",

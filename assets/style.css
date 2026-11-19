@@ -695,3 +695,21 @@ header[id] {
             justify-content: center; margin: 14px 0 4px; }
 .dl-extra-note { flex-basis: 100%; text-align: center; margin: 0;
                  font-size: .78rem; color: var(--muted); }
+
+/* Ein-Zeilen-Installation */
+.dl-oneline { max-width: 900px; margin: 26px auto 8px; padding: 16px 18px;
+              border: 1px solid rgba(255,255,255,.08); border-radius: 14px;
+              background: rgba(255,255,255,.02); text-align: left; }
+.dl-oneline-title { margin: 0 0 10px; font-size: .92rem; font-weight: 700;
+                    color: #e8eef7; }
+.dl-oneline .tier-run { margin: 8px 0; flex-wrap: nowrap; }
+.dl-oneline .tier-run code { flex: 1 1 auto; min-width: 0; font-size: .72rem;
+                             white-space: nowrap; overflow-x: auto;
+                             word-break: normal; }
+.dl-oneline-note { margin: 12px 0 0; font-size: .78rem; color: var(--muted); }
+.dl-oneline-note code { font-family: var(--mono); font-size: .78rem;
+                        color: var(--accent); }
+@media (max-width: 640px) {
+  .dl-oneline { padding: 14px 12px; margin: 20px 0 6px; }
+  .dl-oneline .tier-run code { font-size: .72rem; }
+}
