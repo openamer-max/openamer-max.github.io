@@ -9,7 +9,7 @@ de: {
   nav_models: "Modelle",
 
   mdl_eyebrow: "Modellfamilie",
-  mdl_title: "OpenAmer-Max — eine Stufe für jedes Gerät",
+  mdl_title: "OpenAmer — eine Stufe für jedes Gerät",
   mdl_sub: "Benannt nach der Parameterzahl, nicht nach Marketing. Jede Stufe läuft auf ihrem Zielgerät — lokal, ohne Cloud, ohne Konto.",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer für deinen PC",
@@ -33,7 +33,7 @@ de: {
   dl_demo: "Live-Demo: 4 Minuten mit TokenHarbor — damit jeder ausprobieren kann.",
   dl_byok: "OpenAmer selbst ist offen und läuft lokal. Für Cloud-Anbieter (OpenAI, TokenHarbor …) besorgst du dir deinen eigenen API-Key.",
   model_eyebrow: "Eigenes Modell",
-  model_title: "OpenAmer-Max — unser eigenes Sprachmodell",
+  model_title: "OpenAmer — unser eigenes Sprachmodell",
   dl_space_btn: "Im Browser testen",
   dl_bench_btn: "Prüfstand herunterladen",
   model_desc: "Fünf Stufen von 0,6 bis 24 Milliarden Parametern — jede läuft lokal in Ollama, ohne Cloud und ohne API-Key. Ein Befehl pro Stufe.",
@@ -76,7 +76,7 @@ de: {
   q6: "Wie starte ich?", a6: "Folge der Dokumentation auf GitHub. Dort findest du die Installation für Windows, macOS, Linux und Android.",
   cta_title: "Bereit für die neue Ära?", cta_sub: "Installiere OpenAmer und übergib die Arbeit, die dir Zeit stiehlt.", cta_b1: "Jetzt installieren", cta_b2: "Video ansehen",
   foot_desc: "Dein persönlicher KI-Assistent. Lokal, privat und ehrlich — gebaut in der Schweiz.",
-  foot_product: "Produkt", foot_res: "Ressourcen", foot_legal: "Rechtliches", rights: "© 2026 OpenAmer · Amer Sacirovic · Schweiz",
+  foot_product: "Produkt", foot_res: "Ressourcen", foot_legal: "Rechtliches", rights: "© 2026 OpenAmer · Schweiz",
   folge: "Folge OpenAmer", folge_sub: "Werde Teil der Reise."
 },
 en: {
@@ -88,7 +88,7 @@ en: {
   nav_models: "Models",
 
   mdl_eyebrow: "Model family",
-  mdl_title: "OpenAmer-Max — one tier for every device",
+  mdl_title: "OpenAmer — one tier for every device",
   mdl_sub: "Named after parameter count, not after marketing. Every tier runs on its target device — locally, no cloud, no account.",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer for your PC",
@@ -112,7 +112,7 @@ en: {
   dl_demo: "Live demo: 4 minutes with TokenHarbor — so everyone can try it.",
   dl_byok: "OpenAmer itself is open and runs locally. For cloud providers (OpenAI, TokenHarbor …) you get your own API key.",
   model_eyebrow: "Own model",
-  model_title: "OpenAmer-Max — our own language model",
+  model_title: "OpenAmer — our own language model",
   dl_space_btn: "Try in browser",
   dl_bench_btn: "Download benchmark",
   model_desc: "Five tiers from 0.6 to 24 billion parameters — each runs locally in Ollama, no cloud, no API key. One command per tier.",
@@ -155,7 +155,7 @@ en: {
   q6: "How do I start?", a6: "Follow the documentation on GitHub. You'll find installation steps for Windows, macOS, Linux and Android.",
   cta_title: "Ready for the new era?", cta_sub: "Install OpenAmer and hand over the work that steals your time.", cta_b1: "Install now", cta_b2: "Watch video",
   foot_desc: "Your personal AI assistant. Local, private and honest — built in Switzerland.",
-  foot_product: "Product", foot_res: "Resources", foot_legal: "Legal", rights: "© 2026 OpenAmer · Amer Sacirovic · Switzerland",
+  foot_product: "Product", foot_res: "Resources", foot_legal: "Legal", rights: "© 2026 OpenAmer · Switzerland",
   folge: "Follow OpenAmer", folge_sub: "Join the journey."
 },
 es: {
@@ -163,7 +163,7 @@ es: {
   dl_oneline_note: "Linux, macOS, Termux — o Windows en PowerShell (sin WSL, sin admin). Después:",
   nav_models: "Modelos",
   mdl_eyebrow: "Familia de modelos",
-  mdl_title: "OpenAmer-Max: un nivel para cada dispositivo",
+  mdl_title: "OpenAmer: un nivel para cada dispositivo",
   mdl_sub: "Nombres según el número de parámetros, no según el marketing. Cada nivel corre en su dispositivo objetivo: local, sin nube, sin cuenta.",
   mdl_state_live: "Disponible",
   mdl_state_soon: "En desarrollo",
@@ -190,7 +190,7 @@ es: {
   dl_demo: "Demo en vivo: 4 minutos con TokenHarbor — para que todos puedan probarlo.",
   dl_byok: "OpenAmer es abierto y funciona en local. Para proveedores en la nube (OpenAI, TokenHarbor …) consigues tu propia clave API.",
   model_eyebrow: "Modelo propio",
-  model_title: "OpenAmer-Max — nuestro propio modelo",
+  model_title: "OpenAmer — nuestro propio modelo",
   dl_space_btn: "Probar en el navegador",
   dl_bench_btn: "Descargar el banco de pruebas",
   model_desc: "Cinco niveles de 0,6 a 24 mil millones de parámetros: cada uno funciona localmente en Ollama, sin nube ni clave API. Un comando por nivel.",
@@ -233,7 +233,7 @@ es: {
   q6: "¿Cómo empiezo?", a6: "Sigue la documentación en GitHub. Allí encontrarás la instalación para Windows, macOS, Linux y Android.",
   cta_title: "¿Listo para la nueva era?", cta_sub: "Instala OpenAmer y delega el trabajo que te roba el tiempo.", cta_b1: "Instalar ahora", cta_b2: "Ver vídeo",
   foot_desc: "Tu asistente personal de IA. Local, privado y honesto — hecho en Suiza.",
-  foot_product: "Producto", foot_res: "Recursos", foot_legal: "Legal", rights: "© 2026 OpenAmer · Amer Sacirovic · Suiza",
+  foot_product: "Producto", foot_res: "Recursos", foot_legal: "Legal", rights: "© 2026 OpenAmer · Suiza",
   folge: "Sigue OpenAmer", folge_sub: "Forma parte del viaje."
 },
 fr: {
@@ -241,7 +241,7 @@ fr: {
   dl_oneline_note: "Linux, macOS, Termux — ou Windows dans PowerShell (sans WSL, sans admin). Ensuite :",
   nav_models: "Modèles",
   mdl_eyebrow: "Famille de modèles",
-  mdl_title: "OpenAmer-Max : un niveau pour chaque appareil",
+  mdl_title: "OpenAmer : un niveau pour chaque appareil",
   mdl_sub: "Nommés d'après le nombre de paramètres, pas selon le marketing. Chaque niveau tourne sur son appareil cible : local, sans cloud, sans compte.",
   mdl_state_live: "Disponible",
   mdl_state_soon: "En cours",
@@ -268,7 +268,7 @@ fr: {
   dl_demo: "Démo en direct : 4 minutes avec TokenHarbor — pour que chacun puisse essayer.",
   dl_byok: "OpenAmer est ouvert et fonctionne en local. Pour les fournisseurs cloud (OpenAI, TokenHarbor …), tu utilises ta propre clé API.",
   model_eyebrow: "Modèle maison",
-  model_title: "OpenAmer-Max — notre propre modèle",
+  model_title: "OpenAmer — notre propre modèle",
   dl_space_btn: "Essayer dans le navigateur",
   dl_bench_btn: "Télécharger le banc d'essai",
   model_desc: "Cinq paliers de 0,6 à 24 milliards de paramètres : chacun tourne localement dans Ollama, sans cloud ni clé API. Une commande par palier.",
@@ -311,7 +311,7 @@ fr: {
   q6: "Comment commencer ?", a6: "Suivez la documentation sur GitHub. Vous y trouverez l'installation pour Windows, macOS, Linux et Android.",
   cta_title: "Prêt pour la nouvelle ère ?", cta_sub: "Installez OpenAmer et confiez le travail qui vous vole du temps.", cta_b1: "Installer maintenant", cta_b2: "Voir la vidéo",
   foot_desc: "Votre assistant IA personnel. Local, privé et honnête — conçu en Suisse.",
-  foot_product: "Produit", foot_res: "Ressources", foot_legal: "Mentions légales", rights: "© 2026 OpenAmer · Amer Sacirovic · Suisse",
+  foot_product: "Produit", foot_res: "Ressources", foot_legal: "Mentions légales", rights: "© 2026 OpenAmer · Suisse",
   folge: "Suivez OpenAmer", folge_sub: "Rejoignez l'aventure."
 },
 it: {
@@ -319,7 +319,7 @@ it: {
   dl_oneline_note: "Linux, macOS, Termux — o Windows in PowerShell (senza WSL, senza admin). Poi:",
   nav_models: "Modelli",
   mdl_eyebrow: "Famiglia di modelli",
-  mdl_title: "OpenAmer-Max: un livello per ogni dispositivo",
+  mdl_title: "OpenAmer: un livello per ogni dispositivo",
   mdl_sub: "Nomi basati sul numero di parametri, non sul marketing. Ogni livello gira sul suo dispositivo: locale, senza cloud, senza account.",
   mdl_state_live: "Attivo",
   mdl_state_soon: "In sviluppo",
@@ -346,7 +346,7 @@ it: {
   dl_demo: "Demo dal vivo: 4 minuti con TokenHarbor — così tutti possono provarlo.",
   dl_byok: "OpenAmer è aperto e funziona in locale. Per i provider cloud (OpenAI, TokenHarbor …) usi la tua chiave API.",
   model_eyebrow: "Modello proprietario",
-  model_title: "OpenAmer-Max — il nostro modello",
+  model_title: "OpenAmer — il nostro modello",
   dl_space_btn: "Prova nel browser",
   dl_bench_btn: "Scarica il benchmark",
   model_desc: "Cinque livelli da 0,6 a 24 miliardi di parametri: ognuno gira in locale in Ollama, senza cloud e senza chiave API. Un comando per livello.",
@@ -389,7 +389,7 @@ it: {
   q6: "Come inizio?", a6: "Segui la documentazione su GitHub. Trovi l'installazione per Windows, macOS, Linux e Android.",
   cta_title: "Pronto per la nuova era?", cta_sub: "Installa OpenAmer e delega il lavoro che ti ruba tempo.", cta_b1: "Installa ora", cta_b2: "Guarda il video",
   foot_desc: "Il tuo assistente IA personale. Locale, privato e onesto — costruito in Svizzera.",
-  foot_product: "Prodotto", foot_res: "Risorse", foot_legal: "Note legali", rights: "© 2026 OpenAmer · Amer Sacirovic · Svizzera",
+  foot_product: "Prodotto", foot_res: "Risorse", foot_legal: "Note legali", rights: "© 2026 OpenAmer · Svizzera",
   folge: "Segui OpenAmer", folge_sub: "Entra nel viaggio."
 },
 pt: {
@@ -397,7 +397,7 @@ pt: {
   dl_oneline_note: "Linux, macOS, Termux — ou Windows no PowerShell (sem WSL, sem admin). Depois:",
   nav_models: "Modelos",
   mdl_eyebrow: "Família de modelos",
-  mdl_title: "OpenAmer-Max: um nível para cada dispositivo",
+  mdl_title: "OpenAmer: um nível para cada dispositivo",
   mdl_sub: "Nomeados pelo número de parâmetros, não por marketing. Cada nível roda no seu dispositivo: local, sem nuvem, sem conta.",
   mdl_state_live: "Disponível",
   mdl_state_soon: "Em desenvolvimento",
@@ -424,7 +424,7 @@ pt: {
   dl_demo: "Demo ao vivo: 4 minutos com TokenHarbor — para que todos possam experimentar.",
   dl_byok: "O OpenAmer é aberto e funciona localmente. Para fornecedores na nuvem (OpenAI, TokenHarbor …) usas a tua própria chave API.",
   model_eyebrow: "Modelo próprio",
-  model_title: "OpenAmer-Max — o nosso próprio modelo",
+  model_title: "OpenAmer — o nosso próprio modelo",
   dl_space_btn: "Experimentar no navegador",
   dl_bench_btn: "Baixar o benchmark",
   model_desc: "Cinco níveis de 0,6 a 24 mil milhões de parâmetros: cada um corre localmente no Ollama, sem nuvem e sem chave API. Um comando por nível.",
@@ -467,7 +467,7 @@ pt: {
   q6: "Como começo?", a6: "Segue a documentação no GitHub. Encontras lá a instalação para Windows, macOS, Linux e Android.",
   cta_title: "Pronto para a nova era?", cta_sub: "Instala o OpenAmer e entrega o trabalho que te rouba tempo.", cta_b1: "Instalar agora", cta_b2: "Ver vídeo",
   foot_desc: "O teu assistente pessoal de IA. Local, privado e honesto — feito na Suíça.",
-  foot_product: "Produto", foot_res: "Recursos", foot_legal: "Informação legal", rights: "© 2026 OpenAmer · Amer Sacirovic · Suíça",
+  foot_product: "Produto", foot_res: "Recursos", foot_legal: "Informação legal", rights: "© 2026 OpenAmer · Suíça",
   folge: "Segue o OpenAmer", folge_sub: "Faz parte da viagem."
 }
 };

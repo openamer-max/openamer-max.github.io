@@ -6,7 +6,7 @@ pl: {
   dl_oneline_note: "Linux, macOS, Termux — lub Windows w PowerShell (bez WSL, bez admina). Następnie:",
   nav_models: "Modele",
   mdl_eyebrow: "Rodzina modeli",
-  mdl_title: "OpenAmer-Max — poziom dla każdego urządzenia",
+  mdl_title: "OpenAmer — poziom dla każdego urządzenia",
   mdl_sub: "Nazwy od liczby parametrów, nie od marketingu. Każdy poziom działa na swoim urządzeniu: lokalnie, bez chmury, bez konta.",
   mdl_state_live: "Dostępny",
   mdl_state_soon: "W przygotowaniu",
@@ -32,7 +32,7 @@ pl: {
   dl_demo: "Demo na żywo: 4 minuty z TokenHarbor — aby każdy mógł wypróbować.",
   dl_byok: "OpenAmer jest otwarty i działa lokalnie. Dla dostawców chmurowych (OpenAI, TokenHarbor …) używasz własnego klucza API.",
   model_eyebrow: "Nasz własny model",
-  model_title: "OpenAmer-Max — nasz własny model językowy",
+  model_title: "OpenAmer — nasz własny model językowy",
   dl_space_btn: "Wypróbuj w przeglądarce",
   dl_bench_btn: "Pobierz zestaw testowy",
   model_desc: "Pięć poziomów od 0,6 do 24 miliardów parametrów — każdy działa lokalnie w Ollama, bez chmury i bez klucza API. Jedna komenda na poziom.",
@@ -102,7 +102,7 @@ pl: {
   cta_b1: "Zainstaluj teraz", cta_b2: "Obejrzyj wideo",
   foot_desc: "Twój osobisty asystent AI. Lokalnie, prywatnie i uczciwie — zbudowany w Szwajcarii.",
   foot_product: "Produkt", foot_res: "Zasoby", foot_legal: "Prawo",
-  rights: "© 2026 OpenAmer · Amer Sacirovic · Szwajcaria",
+  rights: "© 2026 OpenAmer · Szwajcaria",
   folge: "Obserwuj OpenAmer", folge_sub: "Bądź częścią drogi."
 },
 id: {
@@ -110,7 +110,7 @@ id: {
   dl_oneline_note: "Linux, macOS, Termux — atau Windows di PowerShell (tanpa WSL, tanpa admin). Lalu:",
   nav_models: "Model",
   mdl_eyebrow: "Keluarga model",
-  mdl_title: "OpenAmer-Max — satu tingkatan untuk setiap perangkat",
+  mdl_title: "OpenAmer — satu tingkatan untuk setiap perangkat",
   mdl_sub: "Dinamai menurut jumlah parameter, bukan pemasaran. Setiap tingkatan berjalan di perangkat targetnya: lokal, tanpa cloud, tanpa akun.",
   mdl_state_live: "Aktif",
   mdl_state_soon: "Sedang dikerjakan",
@@ -136,7 +136,7 @@ id: {
   dl_demo: "Demo langsung: 4 menit dengan TokenHarbor — agar semua bisa mencoba.",
   dl_byok: "OpenAmer terbuka dan berjalan lokal. Untuk penyedia cloud (OpenAI, TokenHarbor …) kau memakai kunci API sendiri.",
   model_eyebrow: "Model kami",
-  model_title: "OpenAmer-Max — model bahasa kami sendiri",
+  model_title: "OpenAmer — model bahasa kami sendiri",
   dl_space_btn: "Coba di browser",
   dl_bench_btn: "Unduh benchmark",
   model_desc: "Lima tingkat dari 0,6 hingga 24 miliar parameter — masing-masing berjalan lokal di Ollama, tanpa cloud dan tanpa kunci API. Satu perintah per tingkat.",
@@ -208,7 +208,7 @@ id: {
   cta_b1: "Pasang sekarang", cta_b2: "Tonton video",
   foot_desc: "Asisten AI pribadimu. Lokal, privat, dan jujur — dibangun di Swiss.",
   foot_product: "Produk", foot_res: "Sumber daya", foot_legal: "Hukum",
-  rights: "© 2026 OpenAmer · Amer Sacirovic · Swiss",
+  rights: "© 2026 OpenAmer · Swiss",
   folge: "Ikuti OpenAmer", folge_sub: "Jadilah bagian dari perjalanan."
 },
 hi: {
@@ -216,7 +216,7 @@ hi: {
   dl_oneline_note: "Linux, macOS, Termux — या PowerShell में Windows (WSL नहीं, एडमिन नहीं)। फिर:",
   nav_models: "मॉडल",
   mdl_eyebrow: "मॉडल परिवार",
-  mdl_title: "OpenAmer-Max — हर डिवाइस के लिए एक स्तर",
+  mdl_title: "OpenAmer — हर डिवाइस के लिए एक स्तर",
   mdl_sub: "नाम पैरामीटर संख्या से, मार्केटिंग से नहीं। हर स्तर अपने लक्षित डिवाइस पर चलता है: लोकल, बिना क्लाउड, बिना खाता।",
   mdl_state_live: "उपलब्ध",
   mdl_state_soon: "काम जारी",
@@ -242,7 +242,7 @@ hi: {
   dl_demo: "लाइव डेमो: TokenHarbor के साथ 4 मिनट — ताकि हर कोई आज़मा सके।",
   dl_byok: "OpenAmer खुला है और लोकल चलता है। क्लाउड प्रदाताओं (OpenAI, TokenHarbor …) के लिए आप अपनी API कुंजी लेते हैं।",
   model_eyebrow: "हमारा मॉडल",
-  model_title: "OpenAmer-Max — हमारा अपना भाषा मॉडल",
+  model_title: "OpenAmer — हमारा अपना भाषा मॉडल",
   dl_space_btn: "ब्राउज़र में आज़माएँ",
   dl_bench_btn: "बेंचमार्क डाउनलोड करें",
   model_desc: "0,6 से 24 अरब पैरामीटर तक पाँच स्तर — हर स्तर Ollama में लोकल चलता है, बिना क्लाउड और बिना API कुंजी। हर स्तर के लिए एक कमांड।",
@@ -314,7 +314,7 @@ hi: {
   cta_b1: "अभी इंस्टॉल करें", cta_b2: "वीडियो देखें",
   foot_desc: "आपका व्यक्तिगत AI सहायक। लोकल, निजी और ईमानदार — स्विट्ज़रलैंड में बना।",
   foot_product: "उत्पाद", foot_res: "संसाधन", foot_legal: "कानूनी",
-  rights: "© 2026 OpenAmer · Amer Sacirovic · स्विट्ज़रलैंड",
+  rights: "© 2026 OpenAmer · स्विट्ज़रलैंड",
   folge: "OpenAmer को फ़ॉलो करें", folge_sub: "इस सफ़़र का हिस्सा बनें।"
 },
 ja: {
@@ -322,7 +322,7 @@ ja: {
   dl_oneline_note: "Linux、macOS、Termux — または PowerShell で Windows 版（WSL 不要、管理者権限不要）。その後：",
   nav_models: "モデル",
   mdl_eyebrow: "モデルファミリー",
-  mdl_title: "OpenAmer-Max — デバイスごとに 1 つのティア",
+  mdl_title: "OpenAmer — デバイスごとに 1 つのティア",
   mdl_sub: "名前はパラメータ数に基づき、マーケティングではありません。各ティアは対象デバイスで動作します。ローカル、クラウドなし、アカウントなし。",
   mdl_state_live: "公開中",
   mdl_state_soon: "開発中",
@@ -348,7 +348,7 @@ ja: {
   dl_demo: "ライブデモ：TokenHarbor で 4 分間 — 誰でも試せます。",
   dl_byok: "OpenAmer はオープンでローカル動作します。クラウド事業者（OpenAI、TokenHarbor …）を使う場合はご自身の API キーが必要です。",
   model_eyebrow: "自社モデル",
-  model_title: "OpenAmer-Max — 自社開発の言語モデル",
+  model_title: "OpenAmer — 自社開発の言語モデル",
   dl_space_btn: "ブラウザで試す",
   dl_bench_btn: "ベンチマークをダウンロード",
   model_desc: "0.6 から 240 億パラメータまで 5 段階——いずれも Ollama でローカル動作、クラウドも API キーも不要。段階ごとにコマンド 1 つ。",
@@ -420,7 +420,7 @@ ja: {
   cta_b1: "今すぐインストール", cta_b2: "動画を見る",
   foot_desc: "あなた専用の AI アシスタント。ローカルで、プライベートで、誠実 — スイス製。",
   foot_product: "製品", foot_res: "リソース", foot_legal: "法的情報",
-  rights: "© 2026 OpenAmer · Amer Sacirovic · スイス",
+  rights: "© 2026 OpenAmer · スイス",
   folge: "OpenAmer をフォロー", folge_sub: "この旅の一部になろう。"
 }
 };
