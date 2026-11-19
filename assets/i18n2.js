@@ -1,6 +1,13 @@
 /* OpenAmer i18n — Teil 2: RU, AR, ZH, TR, BS, SQ */
 window.I18N2 = {
 ru: {
+  nav_models: "Модели",
+  mdl_eyebrow: "Семейство моделей",
+  mdl_title: "OpenAmer-Max — уровень для каждого устройства",
+  mdl_sub: "Названия по числу параметров, а не по маркетингу. Каждый уровень работает на своём устройстве: локально, без облака и аккаунта.",
+  mdl_state_live: "Работает",
+  mdl_state_soon: "В работе",
+  mdl_state_planned: "Запланировано",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer для вашего ПК",
   dl_win_sub: "Полное настольное приложение: ядро агента, терминал, управление браузером, навыки и плагины.",
@@ -70,6 +77,13 @@ ru: {
   folge: "Следи за OpenAmer", folge_sub: "Стань частью пути."
 },
 ar: {
+  nav_models: "النماذج",
+  mdl_eyebrow: "عائلة النماذج",
+  mdl_title: "OpenAmer-Max — مستوى لكل جهاز",
+  mdl_sub: "التسمية حسب عدد المعاملات، لا حسب التسويق. كل مستوى يعمل على جهازه المستهدف: محليًا، بدون سحابة وبدون حساب.",
+  mdl_state_live: "متاح",
+  mdl_state_soon: "قيد التطوير",
+  mdl_state_planned: "مخطط له",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer لحاسوبك",
   dl_win_sub: "تطبيق سطح المكتب الكامل: نواة الوكيل، الطرفية، التحكم بالمتصفح، المهارات والإضافات.",
@@ -139,6 +153,13 @@ ar: {
   folge: "تابع OpenAmer", folge_sub: "كن جزءًا من الرحلة."
 },
 zh: {
+  nav_models: "模型",
+  mdl_eyebrow: "模型家族",
+  mdl_title: "OpenAmer-Max —— 每个设备一个档位",
+  mdl_sub: "按参数数量命名，而非营销。每个档位都在目标设备上运行：本地、无需云、无需账号。",
+  mdl_state_live: "已上线",
+  mdl_state_soon: "开发中",
+  mdl_state_planned: "计划中",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer 桌面版",
   dl_win_sub: "完整的桌面应用：智能体内核、终端、浏览器控制、技能与插件。",
@@ -208,6 +229,13 @@ zh: {
   folge: "关注 OpenAmer", folge_sub: "加入这段旅程。"
 },
 tr: {
+  nav_models: "Modeller",
+  mdl_eyebrow: "Model ailesi",
+  mdl_title: "OpenAmer-Max — her cihaz için bir kademe",
+  mdl_sub: "Adlandırma pazarlamaya göre değil, parametre sayısına göre. Her kademe hedef cihazında çalışır: yerel, bulutsuz, hesapsız.",
+  mdl_state_live: "Yayında",
+  mdl_state_soon: "Geliştiriliyor",
+  mdl_state_planned: "Planlandı",
   dl_win_eyebrow: "Windows",
   dl_win_title: "PC için OpenAmer",
   dl_win_sub: "Tam masaüstü uygulaması: ajan çekirdeği, terminal, tarayıcı kontrolü, yetenekler ve eklentiler.",
@@ -277,6 +305,13 @@ tr: {
   folge: "OpenAmer'i takip et", folge_sub: "Yolculuğun parçası ol."
 },
 bs: {
+  nav_models: "Modeli",
+  mdl_eyebrow: "Porodica modela",
+  mdl_title: "OpenAmer-Max — nivo za svaki uređaj",
+  mdl_sub: "Nazivi po broju parametara, ne po marketingu. Svaki nivo radi na svom ciljnom uređaju: lokalno, bez oblaka, bez računa.",
+  mdl_state_live: "Uživo",
+  mdl_state_soon: "U izradi",
+  mdl_state_planned: "Planirano",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer za tvoj PC",
   dl_win_sub: "Kompletna desktop aplikacija: jezgro agenta, terminal, upravljanje preglednikom, vještine i dodaci.",
@@ -346,6 +381,13 @@ bs: {
   folge: "Prati OpenAmer", folge_sub: "Postani dio putovanja."
 },
 sq: {
+  nav_models: "Modelet",
+  mdl_eyebrow: "Familja e modeleve",
+  mdl_title: "OpenAmer-Max — një nivel për çdo pajisje",
+  mdl_sub: "Emërtimi sipas numrit të parametrave, jo sipas marketingut. Çdo nivel punon në pajisjen e vet: lokalisht, pa re, pa llogari.",
+  mdl_state_live: "Aktiv",
+  mdl_state_soon: "Në punë",
+  mdl_state_planned: "Planifikuar",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer për PC-në tënd",
   dl_win_sub: "Aplikacioni i plotë desktop: bërthama e agjentit, terminali, kontrolli i shfletuesit, aftësitë dhe shtojcat.",

@@ -155,6 +155,13 @@ en: {
   folge: "Follow OpenAmer", folge_sub: "Join the journey."
 },
 es: {
+  nav_models: "Modelos",
+  mdl_eyebrow: "Familia de modelos",
+  mdl_title: "OpenAmer-Max: un nivel para cada dispositivo",
+  mdl_sub: "Nombres según el número de parámetros, no según el marketing. Cada nivel corre en su dispositivo objetivo: local, sin nube, sin cuenta.",
+  mdl_state_live: "Disponible",
+  mdl_state_soon: "En desarrollo",
+  mdl_state_planned: "Planificado",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer para tu PC",
   dl_win_sub: "La app de escritorio completa: núcleo del agente, terminal, control del navegador, skills y plugins.",
@@ -224,6 +231,13 @@ es: {
   folge: "Sigue OpenAmer", folge_sub: "Forma parte del viaje."
 },
 fr: {
+  nav_models: "Modèles",
+  mdl_eyebrow: "Famille de modèles",
+  mdl_title: "OpenAmer-Max : un niveau pour chaque appareil",
+  mdl_sub: "Nommés d'après le nombre de paramètres, pas selon le marketing. Chaque niveau tourne sur son appareil cible : local, sans cloud, sans compte.",
+  mdl_state_live: "Disponible",
+  mdl_state_soon: "En cours",
+  mdl_state_planned: "Prévu",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer pour ton PC",
   dl_win_sub: "L’application de bureau complète : cœur de l’agent, terminal, pilotage du navigateur, skills et plugins.",
@@ -293,6 +307,13 @@ fr: {
   folge: "Suivez OpenAmer", folge_sub: "Rejoignez l'aventure."
 },
 it: {
+  nav_models: "Modelli",
+  mdl_eyebrow: "Famiglia di modelli",
+  mdl_title: "OpenAmer-Max: un livello per ogni dispositivo",
+  mdl_sub: "Nomi basati sul numero di parametri, non sul marketing. Ogni livello gira sul suo dispositivo: locale, senza cloud, senza account.",
+  mdl_state_live: "Attivo",
+  mdl_state_soon: "In sviluppo",
+  mdl_state_planned: "Pianificato",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer per il tuo PC",
   dl_win_sub: "L’app desktop completa: core dell’agente, terminale, controllo del browser, skills e plugin.",
@@ -362,6 +383,13 @@ it: {
   folge: "Segui OpenAmer", folge_sub: "Entra nel viaggio."
 },
 pt: {
+  nav_models: "Modelos",
+  mdl_eyebrow: "Família de modelos",
+  mdl_title: "OpenAmer-Max: um nível para cada dispositivo",
+  mdl_sub: "Nomeados pelo número de parâmetros, não por marketing. Cada nível roda no seu dispositivo: local, sem nuvem, sem conta.",
+  mdl_state_live: "Disponível",
+  mdl_state_soon: "Em desenvolvimento",
+  mdl_state_planned: "Planeado",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer para o teu PC",
   dl_win_sub: "A aplicação de ambiente de trabalho completa: núcleo do agente, terminal, controlo do navegador, skills e plugins.",

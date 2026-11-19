@@ -2,6 +2,13 @@
    Wird wie Teil 2 per Object.assign in window.I18N gemischt. */
 window.I18N3 = {
 pl: {
+  nav_models: "Modele",
+  mdl_eyebrow: "Rodzina modeli",
+  mdl_title: "OpenAmer-Max — poziom dla każdego urządzenia",
+  mdl_sub: "Nazwy od liczby parametrów, nie od marketingu. Każdy poziom działa na swoim urządzeniu: lokalnie, bez chmury, bez konta.",
+  mdl_state_live: "Dostępny",
+  mdl_state_soon: "W przygotowaniu",
+  mdl_state_planned: "Planowany",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer na twój PC",
   dl_win_sub: "Pełna aplikacja desktopowa: rdzeń agenta, terminal, sterowanie przeglądarką, umiejętności i wtyczki.",
@@ -97,6 +104,13 @@ pl: {
   folge: "Obserwuj OpenAmer", folge_sub: "Bądź częścią drogi."
 },
 id: {
+  nav_models: "Model",
+  mdl_eyebrow: "Keluarga model",
+  mdl_title: "OpenAmer-Max — satu tingkatan untuk setiap perangkat",
+  mdl_sub: "Dinamai menurut jumlah parameter, bukan pemasaran. Setiap tingkatan berjalan di perangkat targetnya: lokal, tanpa cloud, tanpa akun.",
+  mdl_state_live: "Aktif",
+  mdl_state_soon: "Sedang dikerjakan",
+  mdl_state_planned: "Direncanakan",
   dl_win_eyebrow: "Windows",
   dl_win_title: "OpenAmer untuk PC-mu",
   dl_win_sub: "Aplikasi desktop lengkap: inti agen, terminal, kendali peramban, keterampilan dan plugin.",
@@ -194,6 +208,13 @@ id: {
   folge: "Ikuti OpenAmer", folge_sub: "Jadilah bagian dari perjalanan."
 },
 hi: {
+  nav_models: "मॉडल",
+  mdl_eyebrow: "मॉडल परिवार",
+  mdl_title: "OpenAmer-Max — हर डिवाइस के लिए एक स्तर",
+  mdl_sub: "नाम पैरामीटर संख्या से, मार्केटिंग से नहीं। हर स्तर अपने लक्षित डिवाइस पर चलता है: लोकल, बिना क्लाउड, बिना खाता।",
+  mdl_state_live: "उपलब्ध",
+  mdl_state_soon: "काम जारी",
+  mdl_state_planned: "नियोजित",
   dl_win_eyebrow: "Windows",
   dl_win_title: "आपके PC के लिए OpenAmer",
   dl_win_sub: "पूरा डेस्कटॉप ऐप: एजेंट कोर, टर्मिनल, ब्राउज़र नियंत्रण, स्किल्स और प्लगइन।",
@@ -291,6 +312,13 @@ hi: {
   folge: "OpenAmer को फ़ॉलो करें", folge_sub: "इस सफ़़र का हिस्सा बनें।"
 },
 ja: {
+  nav_models: "モデル",
+  mdl_eyebrow: "モデルファミリー",
+  mdl_title: "OpenAmer-Max — デバイスごとに 1 つのティア",
+  mdl_sub: "名前はパラメータ数に基づき、マーケティングではありません。各ティアは対象デバイスで動作します。ローカル、クラウドなし、アカウントなし。",
+  mdl_state_live: "公開中",
+  mdl_state_soon: "開発中",
+  mdl_state_planned: "予定",
   dl_win_eyebrow: "Windows",
   dl_win_title: "PC 版 OpenAmer",
   dl_win_sub: "デスクトップ完全版：エージェントコア、ターミナル、ブラウザ操作、スキルとプラグイン。",
