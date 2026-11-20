@@ -684,6 +684,48 @@
   </div>
 </section>
 
+
+  <!-- Uebersetzungs-API: kostenlos, 138 Sprachen, kein Schluessel -->
+  <section id="api" class="reveal" style="max-width:1100px;margin:70px auto 30px;padding:0 24px">
+    <div style="background:linear-gradient(135deg,rgba(6,43,58,.85),rgba(11,59,77,.6));border:1px solid rgba(34,211,238,.3);border-radius:16px;padding:34px 38px">
+      <p class="eyebrow" style="margin:0 0 10px;color:#22d3ee;letter-spacing:.14em;text-transform:uppercase;font-size:13px">
+        Offene Schnittstelle
+      </p>
+      <h2 style="margin:0 0 14px;font-size:clamp(24px,3.4vw,34px);line-height:1.2">
+        138 Sprachen als kostenlose API — ohne Schlüssel, ohne Tageslimit
+      </h2>
+      <p style="margin:0 0 22px;color:#b9d6e4;font-size:16px;line-height:1.65;max-width:760px">
+        Dieselbe Übersetzung, die diese Seite in 138 Sprachen trägt, steht jedem offen.
+        Ein Aufruf, ein JSON, fertig. Kein Konto, kein Token, keine Abrechnung —
+        das Modell läuft auf HuggingFace, nicht auf einem Werbeserver.
+      </p>
+
+      <pre style="background:rgba(2,10,16,.85);border:1px solid rgba(34,211,238,.22);border-radius:10px;padding:18px 20px;overflow-x:auto;font-size:13.5px;line-height:1.7;color:#8be9fd;margin:0 0 20px"><code>curl -X POST https://openamer-max-openamer-translate.hf.space/translate \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Sechs Modelle, lokal.","target":"rw","source":"de"}'
+
+# {"text":"Imodeli esheshatu, ziri ku gikoresho cyawe.","target":"rw"}</code></pre>
+
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <a href="https://huggingface.co/spaces/openamer-max/openamer-translate"
+           target="_blank" rel="noopener"
+           style="display:inline-block;padding:12px 22px;border-radius:9px;background:#22d3ee;color:#04141d;
+                  font-weight:700;text-decoration:none;font-size:15px">
+          API auf HuggingFace öffnen
+        </a>
+        <a href="https://openamer-max-openamer-translate.hf.space/health"
+           target="_blank" rel="noopener"
+           style="display:inline-block;padding:12px 22px;border-radius:9px;border:1px solid rgba(34,211,238,.45);
+                  color:#8be9fd;text-decoration:none;font-size:15px">
+          Status prüfen
+        </a>
+        <span style="color:#7fa8bd;font-size:13.5px">
+          NLLB-200 · CPU · ~1–8 s pro Satz · 47 seltene Sprachen ohne Modell
+        </span>
+      </div>
+    </div>
+  </section>
+
 <section id="download">
 
   <div class="wrap">
