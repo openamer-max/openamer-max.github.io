@@ -97,10 +97,34 @@
 
 </script>
 
-<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}
+/* === Sprach-Banner: jeder Besucher findet seine Sprache === */
+.lang-banner{position:relative;z-index:60;background:linear-gradient(90deg,#062b3a,#0b3b4d 55%,#12384a);
+  border-bottom:1px solid rgba(34,211,238,.35)}
+.lang-banner[hidden]{display:none}
+.lang-banner-in{display:flex;align-items:center;gap:14px;padding:11px 0;font-size:14px;flex-wrap:wrap}
+.lang-ico{font-size:18px;line-height:1}
+.lang-txt{color:#cfe9f5;flex:1;min-width:200px}
+.lang-quick{background:rgba(3,20,30,.85);color:#8be9fd;border:1px solid rgba(34,211,238,.45);
+  border-radius:8px;padding:7px 12px;font-size:14px;font-family:inherit;max-width:280px}
+.lang-quick:focus{outline:2px solid #22d3ee;outline-offset:1px}
+.lang-x{background:transparent;border:none;color:#7fa8bd;font-size:16px;cursor:pointer;padding:4px 8px;line-height:1}
+.lang-x:hover{color:#fff}
+@media (max-width:640px){.lang-banner-in{font-size:13px;gap:9px}.lang-quick{max-width:100%;width:100%}}
+</style></noscript>
 </head>
 
 <body>
+<div class="lang-banner" id="langBanner" hidden>
+  <div class="wrap lang-banner-in">
+    <span class="lang-ico">🌍</span>
+    <span class="lang-txt" id="langTxt">This page is available in 185 languages.</span>
+    <select id="langQuick" class="lang-quick" aria-label="Sprache / Language"></select>
+    <button class="lang-x" id="langX" type="button" aria-label="Schließen">✕</button>
+  </div>
+</div>
+
+
 
 
 

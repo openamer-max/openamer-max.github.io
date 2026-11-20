@@ -80,4 +80,71 @@
     }, { threshold: 0, rootMargin: "200px 0px 200px 0px" });
     document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
   });
+
+  /* === Sprach-Banner: erkennt die Browsersprache und bietet sie sofort an === */
+  (function () {
+    var banner = document.getElementById("langBanner");
+    var quick = document.getElementById("langQuick");
+    var txt = document.getElementById("langTxt");
+    var x = document.getElementById("langX");
+    var sel = document.getElementById("langSel");
+    if (!banner || !quick) return;
+
+    // Alle Sprachen aus dem Haupt-Selektor uebernehmen
+    if (sel) {
+      quick.innerHTML = sel.innerHTML;
+    }
+
+    var TEXTE = {
+      de: "Diese Seite gibt es in 185 Sprachen.",
+      en: "This page is available in 185 languages.",
+      ar: "\u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629 \u0645\u062a\u0627\u062d\u0629 \u0628\u0640 185 \u0644\u063a\u0629.",
+      fr: "Cette page est disponible en 185 langues.",
+      es: "Esta p\u00e1gina est\u00e1 disponible en 185 idiomas.",
+      it: "Questa pagina \u00e8 disponibile in 185 lingue.",
+      pt: "Esta p\u00e1gina est\u00e1 dispon\u00edvel em 185 idiomas.",
+      ru: "\u042d\u0442\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0430 \u043d\u0430 185 \u044f\u0437\u044b\u043a\u0430\u0445.",
+      tr: "Bu sayfa 185 dilde mevcut.",
+      pl: "Ta strona jest dost\u0119pna w 185 j\u0119zykach.",
+      nl: "Deze pagina is beschikbaar in 185 talen.",
+      zh: "\u672c\u9875\u9762\u63d0\u4f9b 185 \u79cd\u8bed\u8a00\u3002",
+      ja: "\u3053\u306e\u30da\u30fc\u30b8\u306f 185 \u8a00\u8a9e\u3067\u5229\u7528\u3067\u304d\u307e\u3059\u3002",
+      hi: "\u092f\u0939 \u092a\u0943\u0937\u094d\u0920 185 \u092d\u093e\u0937\u093e\u0913\u0902 \u092e\u0947\u0902 \u0909\u092a\u0932\u092c\u094d\u0927 \u0939\u0948\u0964",
+      ko: "\uc774 \ud398\uc774\uc9c0\ub294 185\uac1c \uc5b8\uc5b4\ub85c \uc81c\uacf5\ub429\ub2c8\ub2e4.",
+      uk: "\u0426\u044f \u0441\u0442\u043e\u0440\u0456\u043d\u043a\u0430 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0430 185 \u043c\u043e\u0432\u0430\u043c\u0438."
+    };
+
+    // Browsersprache: de-DE -> de, zh-Hans -> zh
+    function basis(code) {
+      if (!code) return "en";
+      var c = String(code).toLowerCase().split("-")[0];
+      return c;
+    }
+
+    var gewuenscht = basis(navigator.language || navigator.userLanguage || "en");
+    var vorhanden = sel ? Array.prototype.some.call(sel.options, function (o) { return o.value === gewuenscht; }) : false;
+
+    // Banner nur zeigen, wenn die Browsersprache NICHT schon aktiv ist
+    var aktuell = sel ? sel.value : null;
+    if (gewuenscht && gewuenscht !== aktuell) {
+      txt.textContent = TEXTE[gewuenscht] || TEXTE.en;
+      quick.value = vorhanden ? gewuenscht : "";
+      banner.hidden = false;
+    }
+
+    quick.addEventListener("change", function () {
+      if (!quick.value) return;
+      if (sel) {
+        sel.value = quick.value;
+        sel.dispatchEvent(new Event("change", { bubbles: true }));
+      } else if (window.apply) {
+        window.apply(quick.value);
+      }
+      try { localStorage.setItem("oa_lang", quick.value); } catch (e) {}
+      banner.hidden = true;
+    });
+
+    if (x) x.addEventListener("click", function () { banner.hidden = true; });
+  })();
+
 })();
