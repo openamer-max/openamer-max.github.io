@@ -96,12 +96,12 @@
     }
 
     var TEXTE = {
-      de: "Diese Seite gibt es in 185 Sprachen.",
-      en: "This page is available in 185 languages.",
+      de: "Diese Seite gibt es in 185 Sprachen, 155 davon vollst\u00e4ndig \u00fcbersetzt.",
+      en: "This page is available in 185 languages, 155 of them fully translated.",
       ar: "\u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629 \u0645\u062a\u0627\u062d\u0629 \u0628\u0640 185 \u0644\u063a\u0629.",
-      fr: "Cette page est disponible en 185 langues.",
-      es: "Esta p\u00e1gina est\u00e1 disponible en 185 idiomas.",
-      it: "Questa pagina \u00e8 disponibile in 185 lingue.",
+      fr: "Cette page est disponible en 185 langues, dont 155 enti\u00e8rement traduites.",
+      es: "Esta p\u00e1gina est\u00e1 disponible en 185 idiomas, 155 de ellos totalmente traducidos.",
+      it: "Questa pagina \u00e8 disponibile in 185 lingue, 155 delle quali completamente tradotte.",
       pt: "Esta p\u00e1gina est\u00e1 dispon\u00edvel em 185 idiomas.",
       ru: "\u042d\u0442\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0430 \u043d\u0430 185 \u044f\u0437\u044b\u043a\u0430\u0445.",
       tr: "Bu sayfa 185 dilde mevcut.",
