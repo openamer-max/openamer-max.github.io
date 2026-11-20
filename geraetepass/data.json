@@ -1,0 +1,117 @@
+{
+  "stand": "2026-11-20",
+  "testhardware": {
+    "name": "RTX 5060 Laptop + Ryzen (32 GB RAM)",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "vram_gb": 7.96,
+    "ram_gb": 31.1,
+    "treiber": "621.14",
+    "betriebssystem": "Windows 10 (AMD64)"
+  },
+  "modelle": [
+    {
+      "id": "watch",
+      "name": "OpenAmer-Watch",
+      "parameter": "0,6 Mrd.",
+      "dateigroesse_mb": 639,
+      "quantisierung": "Q4_K_M",
+      "pruefstand": "45/45",
+      "ram_empfehlung_gb": 2,
+      "vram_empfehlung_gb": 1,
+      "status": "berechnet",
+      "hinweis": "RAM-Bedarf aus Dateigroesse + 30% Kontext-Cache geschaetzt, nicht auf dieser Hardware gemessen."
+    },
+    {
+      "id": "phone",
+      "name": "OpenAmer-Phone",
+      "parameter": "3,09 Mrd.",
+      "dateigroesse_mb": 2500,
+      "quantisierung": "Q4_K_M",
+      "pruefstand": "43/45",
+      "ram_empfehlung_gb": 4,
+      "vram_empfehlung_gb": 3,
+      "status": "berechnet",
+      "hinweis": "geschaetzt, nicht gemessen."
+    },
+    {
+      "id": "tab",
+      "name": "OpenAmer-Tab",
+      "parameter": "7,62 Mrd.",
+      "dateigroesse_mb": 4400,
+      "quantisierung": "Q4_K_M",
+      "pruefstand": "42/45",
+      "ram_empfehlung_gb": 6,
+      "vram_empfehlung_gb": 5,
+      "status": "berechnet",
+      "hinweis": "geschaetzt, nicht gemessen."
+    },
+    {
+      "id": "desktop",
+      "name": "OpenAmer-Desktop",
+      "parameter": "14,70 Mrd.",
+      "dateigroesse_mb": 8400,
+      "quantisierung": "Q4_K_M",
+      "pruefstand": "44/45",
+      "ram_empfehlung_gb": 11,
+      "vram_empfehlung_gb": 9,
+      "status": "berechnet",
+      "hinweis": "geschaetzt, nicht gemessen."
+    },
+    {
+      "id": "pro",
+      "name": "OpenAmer-Pro",
+      "parameter": "24,00 Mrd.",
+      "dateigroesse_mb": 13400,
+      "quantisierung": "Q4_K_M",
+      "pruefstand": "43/45",
+      "ram_empfehlung_gb": 17,
+      "vram_empfehlung_gb": 14,
+      "status": "berechnet",
+      "hinweis": "geschaetzt, nicht gemessen."
+    },
+    {
+      "id": "ultra",
+      "name": "OpenAmer-Ultra",
+      "parameter": "32,00 Mrd.",
+      "dateigroesse_mb": 18500,
+      "quantisierung": "Q4_K_M",
+      "pruefstand": "41/45",
+      "ram_empfehlung_gb": 23,
+      "vram_empfehlung_gb": 19,
+      "status": "berechnet",
+      "hinweis": "geschaetzt, nicht gemessen."
+    },
+    {
+      "id": "vl-8b",
+      "name": "OpenAmer-Max VL-8B",
+      "parameter": "8,2 Mrd.",
+      "dateigroesse_mb": 4680,
+      "quantisierung": "Q4_K_M",
+      "familie": "qwen3vl",
+      "pruefstand": "nicht im 45er-Satz enthalten",
+      "ram_empfehlung_gb": 7,
+      "vram_empfehlung_gb": 5,
+      "status": "gemessen",
+      "messung": {
+        "latenz_s_median": 2.21,
+        "durchsatz_tok_s_median": 32.6,
+        "laeufe": 3,
+        "prompt": "Erkläre in drei Sätzen, was ein lokales Sprachmodell ist.",
+        "max_tokens": 120,
+        "temperatur": 0.2
+      },
+      "hinweis": "Auf der Testhardware gemessen (3 Läufe, Median)."
+    }
+  ],
+  "pruefstand": {
+    "faelle": 45,
+    "beschreibung": "45 eingefrorene Aufgaben im Repository, plus ein Frischtest mit 20 neuen Fällen.",
+    "einschraenkung": "Selbst gebauter Satz, kein MMLU oder GSM8K. Ein Selbstzeugnis, kein Standard."
+  },
+  "bekannte_grenzen": [
+    "Nur ein Modell (VL-8B) wurde auf echter Hardware gemessen.",
+    "Die RAM-Empfehlungen der übrigen Modelle sind aus der Dateigröße berechnet, nicht gemessen.",
+    "Keine Messung auf macOS, Linux oder Android.",
+    "Keine tok/s-Werte für CPU-only-Betrieb."
+  ]
+}

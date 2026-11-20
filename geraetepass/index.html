@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenAmer Gerätepass — welches Modell passt auf dein Gerät?</title>
+<meta name="description" content="Für jedes OpenAmer-Modell: Größe, RAM-Bedarf, Prüfstand-Ergebnis und gemessene Antwortzeiten. Mit Rohdaten zum Nachfahren.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:#050a10; --ink:#e8f4f8; --dim:#8fa9b8; --linie:rgba(143,169,184,.18);
+    --cy:#22d3ee; --gr:#34d399; --am:#fbbf24; --vi:#8b5cf6;
+  }
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Inter","Segoe UI",system-ui,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  header{padding:60px 0 40px;border-bottom:1px solid var(--linie);margin-bottom:44px}
+  .badge{
+    display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--cy);margin-bottom:20px;
+  }
+  .badge i{width:7px;height:7px;border-radius:50%;background:var(--cy);display:inline-block}
+  h1{font-size:clamp(28px,4.4vw,46px);line-height:1.14;font-weight:800;letter-spacing:-.022em;max-width:22ch}
+  h1 span{background:linear-gradient(100deg,var(--gr),var(--cy) 50%,var(--vi));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{margin-top:20px;font-size:17.5px;color:var(--dim);max-width:66ch}
+
+  /* Testhardware */
+  .hw{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;
+    background:rgba(34,211,238,.045);border:1px solid rgba(34,211,238,.2);
+    border-radius:12px;padding:22px 24px;margin-bottom:44px;
+  }
+  .hw .k{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:5px}
+  .hw .v{font-size:15.5px;font-weight:600;color:#fff}
+
+  h2{font-size:clamp(20px,2.6vw,27px);font-weight:700;margin:44px 0 16px;letter-spacing:-.01em}
+  .sub{color:var(--dim);font-size:15px;margin-bottom:20px;max-width:70ch}
+
+  table{width:100%;border-collapse:collapse;font-size:14.5px;margin-bottom:12px}
+  th{
+    text-align:left;font-weight:600;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+    color:var(--dim);padding:0 12px 11px 0;border-bottom:1px solid var(--linie);white-space:nowrap;
+  }
+  td{padding:13px 12px 13px 0;border-bottom:1px solid rgba(143,169,184,.10);vertical-align:top}
+  td.n{font-weight:700;color:#fff;white-space:nowrap}
+  td.z{font-variant-numeric:tabular-nums;color:#cfe9f5;white-space:nowrap}
+  .pruef{font-variant-numeric:tabular-nums;font-weight:700}
+  .pruef.gut{color:var(--gr)}
+  .pruef.mittel{color:var(--am)}
+  .pruef.offen{color:var(--dim);font-weight:500;font-size:13px}
+
+  .marke{
+    display:inline-block;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+    padding:3px 8px;border-radius:5px;font-weight:700;
+  }
+  .marke.gemessen{background:rgba(52,211,153,.15);color:#6ee7b7;border:1px solid rgba(52,211,153,.4)}
+  .marke.berechnet{background:rgba(251,191,36,.13);color:#fcd34d;border:1px solid rgba(251,191,36,.35)}
+
+  .gemessen-box{
+    background:linear-gradient(135deg,rgba(52,211,153,.07),rgba(34,211,238,.05));
+    border:1px solid rgba(52,211,153,.3);border-radius:12px;padding:24px 26px;margin:26px 0;
+  }
+  .gemessen-box h3{font-size:16px;font-weight:700;margin-bottom:14px;color:#6ee7b7}
+  .werte{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;margin-top:6px}
+  .w .zahl{font-size:34px;font-weight:800;color:var(--gr);line-height:1;font-variant-numeric:tabular-nums}
+  .w .lab{font-size:12.5px;color:var(--dim);margin-top:6px}
+  .bedingung{font-size:13px;color:var(--dim);margin-top:16px;padding-top:14px;border-top:1px solid rgba(143,169,184,.14)}
+
+  .grenzen{background:rgba(251,191,36,.05);border:1px solid rgba(251,191,36,.24);border-radius:12px;padding:22px 26px;margin:26px 0}
+  .grenzen h3{font-size:15px;font-weight:700;color:#fcd34d;margin-bottom:12px;letter-spacing:.02em}
+  .grenzen ul{list-style:none;font-size:14.5px;color:#d9c9a8}
+  .grenzen li{padding:6px 0 6px 20px;position:relative}
+  .grenzen li::before{content:"—";position:absolute;left:0;color:#fbbf24}
+
+  .dl{
+    display:inline-flex;align-items:center;gap:9px;margin:10px 10px 0 0;
+    padding:12px 20px;border-radius:9px;background:var(--cy);color:#04141d;
+    font-weight:700;text-decoration:none;font-size:14.5px;
+  }
+  .dl.zweit{background:transparent;border:1px solid rgba(34,211,238,.45);color:#8be9fd;font-weight:600}
+  .dl:hover{opacity:.88}
+
+  footer{margin-top:60px;padding:28px 0 50px;border-top:1px solid var(--linie);color:var(--dim);font-size:13.5px}
+  footer a{color:var(--cy);text-decoration:none}
+  @media(max-width:760px){
+    table{font-size:13px}
+    th:nth-child(6),td:nth-child(6){display:none}
+    .hw{padding:18px}
+    h1{max-width:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="badge"><i></i>Gerätepass · Stand 20.11.2026</div>
+  <h1>Welches Modell passt auf <span>dein Gerät</span>?</h1>
+  <p class="lead">Nicht welches das beste ist — welches läuft. Für jedes Modell: Dateigröße,
+  empfohlener Arbeitsspeicher, Ergebnis im Prüfstand. Und offen markiert, was davon
+  gemessen und was nur berechnet ist.</p>
+</header>
+
+<div class="hw">
+  <div><div class="k">Grafikkarte</div><div class="v">RTX 5060 Laptop</div></div>
+  <div><div class="k">VRAM</div><div class="v">8 GB</div></div>
+  <div><div class="k">Arbeitsspeicher</div><div class="v">31 GB</div></div>
+  <div><div class="k">System</div><div class="v">Windows 10</div></div>
+  <div><div class="k">Treiber</div><div class="v">621.14</div></div>
+</div>
+
+<h2>Die sechs Modelle</h2>
+<p class="sub">Der Prüfstand besteht aus 45 eingefrorenen Aufgaben im Repository plus einem
+Frischtest mit 20 neuen Fällen. Es ist ein selbst gebauter Satz — kein MMLU, kein GSM8K.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modell</th><th>Parameter</th><th>Datei</th><th>RAM</th><th>VRAM</th><th>Prüfstand</th><th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="n">Watch</td><td class="z">0,6 Mrd.</td><td class="z">639 MB</td>
+      <td class="z">2 GB</td><td class="z">1 GB</td>
+      <td><span class="pruef gut">45/45</span></td>
+      <td><span class="marke berechnet">berechnet</span></td>
+    </tr>
+    <tr>
+      <td class="n">Phone</td><td class="z">3,09 Mrd.</td><td class="z">2,5 GB</td>
+      <td class="z">4 GB</td><td class="z">3 GB</td>
+      <td><span class="pruef">43/45</span></td>
+      <td><span class="marke berechnet">berechnet</span></td>
+    </tr>
+    <tr>
+      <td class="n">Tab</td><td class="z">7,62 Mrd.</td><td class="z">4,4 GB</td>
+      <td class="z">6 GB</td><td class="z">5 GB</td>
+      <td><span class="pruef">42/45</span></td>
+      <td><span class="marke berechnet">berechnet</span></td>
+    </tr>
+    <tr>
+      <td class="n">Desktop</td><td class="z">14,70 Mrd.</td><td class="z">8,4 GB</td>
+      <td class="z">11 GB</td><td class="z">9 GB</td>
+      <td><span class="pruef gut">44/45</span></td>
+      <td><span class="marke berechnet">berechnet</span></td>
+    </tr>
+    <tr>
+      <td class="n">Pro</td><td class="z">24,00 Mrd.</td><td class="z">13 GB</td>
+      <td class="z">17 GB</td><td class="z">14 GB</td>
+      <td><span class="pruef">43/45</span></td>
+      <td><span class="marke berechnet">berechnet</span></td>
+    </tr>
+    <tr>
+      <td class="n">Ultra</td><td class="z">32,00 Mrd.</td><td class="z">19 GB</td>
+      <td class="z">23 GB</td><td class="z">19 GB</td>
+      <td><span class="pruef mittel">41/45</span></td>
+      <td><span class="marke berechnet">berechnet</span></td>
+    </tr>
+    <tr>
+      <td class="n">VL-8B</td><td class="z">8,2 Mrd.</td><td class="z">4,7 GB</td>
+      <td class="z">7 GB</td><td class="z">5 GB</td>
+      <td><span class="pruef offen">nicht im Satz</span></td>
+      <td><span class="marke gemessen">gemessen</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="gemessen-box">
+  <h3>Gemessen: OpenAmer-Max VL-8B (Qwen3-VL, 8,2 Mrd., Q4_K_M)</h3>
+  <div class="werte">
+    <div class="w"><div class="zahl">2,21 s</div><div class="lab">Antwortzeit (Median aus 3 Läufen)</div></div>
+    <div class="w"><div class="zahl">32,6</div><div class="lab">Token pro Sekunde (Median)</div></div>
+    <div class="w"><div class="zahl">8,2 Mrd.</div><div class="lab">Parameter</div></div>
+    <div class="w"><div class="zahl">4,7 GB</div><div class="lab">Dateigröße</div></div>
+  </div>
+  <div class="bedingung">
+    Bedingung: RTX 5060 Laptop (8 GB VRAM), 31 GB RAM, Windows 10, Treiber 621.14.<br>
+    Prompt: „Erkläre in drei Sätzen, was ein lokales Sprachmodell ist." — 120 Token, Temperatur 0,2.
+  </div>
+</div>
+
+<h2>Was hier fehlt</h2>
+<div class="grenzen">
+  <h3>Offen benannt, nicht versteckt</h3>
+  <ul>
+    <li>Nur <strong>ein</strong> Modell (VL-8B) wurde auf echter Hardware gemessen.</li>
+    <li>Die RAM- und VRAM-Werte der übrigen Modelle sind aus der Dateigröße berechnet, nicht gemessen.</li>
+    <li>Keine Messung auf macOS, Linux oder Android.</li>
+    <li>Keine tok/s-Werte für reinen CPU-Betrieb.</li>
+    <li>Der 45er-Prüfstand ist selbst gebaut — ein Selbstzeugnis, kein Standard-Benchmark.</li>
+  </ul>
+</div>
+
+<h2>Rohdaten</h2>
+<p class="sub">Damit du nicht glauben musst: die Zahlen als JSON, mit Testhardware, Prompt
+und Einschränkungen. Selbst nachrechnen ist ausdrücklich erwünscht.</p>
+<a class="dl" href="data.json" download>data.json herunterladen</a>
+<a class="dl zweit" href="https://openamer-max.github.io/">Zur Startseite</a>
+
+<footer>
+  OpenAmer · <a href="https://openamer-max.github.io/">openamer-max.github.io</a> ·
+  <a href="https://github.com/openamer-max/openamer">Quellcode</a> ·
+  Diese Seite enthält keine erfundenen Zahlen. Wo gemessen wird, steht „gemessen";
+  wo gerechnet wird, steht „berechnet".
+</footer>
+
+</div>
+</body>
+</html>
