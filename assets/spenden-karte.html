@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1080px;height:1080px;overflow:hidden}
+  body{
+    background:#050a12;
+    font-family:'Segoe UI',Roboto,system-ui,sans-serif;
+    color:#e8f4f8;display:flex;flex-direction:column;
+    padding:64px 60px;position:relative;
+  }
+  .glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;pointer-events:none}
+  .g1{width:520px;height:520px;background:#0ea5e9;top:-160px;right:-140px}
+  .g2{width:460px;height:460px;background:#14b8a6;bottom:-180px;left:-120px}
+  .kopf{position:relative;z-index:2}
+  .marke{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+  .ring{width:44px;height:44px;border:3px solid #14b8a6;border-radius:50%;
+        display:flex;align-items:center;justify-content:center;
+        font-weight:800;font-size:22px;color:#14b8a6}
+  .name{font-size:26px;font-weight:700;letter-spacing:.5px}
+  h1{font-size:56px;line-height:1.1;font-weight:800;letter-spacing:-1px;margin-bottom:20px}
+  h1 .frei{background:linear-gradient(92deg,#22d3ee,#14b8a6 55%,#a3e635);
+           -webkit-background-clip:text;background-clip:text;color:transparent}
+  .plattformen{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+  .chip{padding:9px 18px;border-radius:999px;font-size:17px;font-weight:600;
+        border:1px solid rgba(20,184,166,.35);background:rgba(20,184,166,.09);color:#7ee7d6}
+  .projekte{font-size:18px;line-height:1.65;color:#a8c8d6;margin-bottom:30px;max-width:640px}
+  .projekte strong{color:#e8f4f8}
+  .mitte{display:flex;gap:44px;align-items:center;position:relative;z-index:2;margin-top:auto}
+  .qrw{background:#fff;padding:18px;border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.55)}
+  .qrw img{display:block;width:300px;height:300px;border-radius:10px}
+  .rechts h2{font-size:32px;font-weight:700;margin-bottom:12px;line-height:1.2}
+  .rechts p{font-size:17px;color:#8fb3c4;line-height:1.6;max-width:330px;margin-bottom:16px}
+  .link{font-size:15px;color:#22d3ee;word-break:break-all;font-family:ui-monospace,monospace}
+  .fuss{position:relative;z-index:2;margin-top:26px;font-size:14px;color:#5f7f8d;
+        display:flex;justify-content:space-between;align-items:center}
+</style>
+</head>
+<body>
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+
+  <div class="kopf">
+    <div class="marke"><div class="ring">A</div><div class="name">OpenAmer</div></div>
+    <h1>Kostenlos.<br><span class="frei">Für jeden. Überall.</span></h1>
+    <div class="plattformen">
+      <div class="chip">Windows</div>
+      <div class="chip">Linux</div>
+      <div class="chip">macOS</div>
+      <div class="chip">Android</div>
+      <div class="chip">185 Sprachen</div>
+    </div>
+    <p class="projekte">
+      <strong>OpenAmer OS</strong> · <strong>OpenAmer Agent</strong> · <strong>OpenAmer Plattform</strong><br>
+      KI-Modelle: Watch · Smartphone · Tab · Desktop · Pro · Ultra
+    </p>
+  </div>
+
+  <div class="mitte">
+    <div class="qrw"><img src="spenden-qr.png" alt="PayPal QR"></div>
+    <div class="rechts">
+      <h2>Wir freuen uns<br>über deine Spende.</h2>
+      <p>Jeder Beitrag fliesst in neue Ausbilder, GPU-Zeit und mehr kostenlose Projekte.</p>
+      <div class="link">paypal.com/qrcodes/p2pqrc/<br>BVZD4HRJ9G6YG</div>
+    </div>
+  </div>
+
+  <div class="fuss">
+    <span>openamer-max.github.io</span>
+    <span>Apache 2.0 · kein Konto · keine Cloud</span>
+  </div>
+</body>
+</html>
