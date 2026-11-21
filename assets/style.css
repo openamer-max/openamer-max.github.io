@@ -352,6 +352,21 @@ html[dir="rtl"] .faq summary { flex-direction: row-reverse; }
   .demo-card picture, .demo-card img { height: 210px; }
 }
 
+/* Chat-Abschnitt: der Hugging-Face-Space im iframe.
+   Feste Hoehe, weil ein iframe ohne Hoehe sonst auf 150 px zusammenfaellt;
+   auf schmalen Geraeten kuerzer, damit die Seite nicht endlos scrollt. */
+.chat-section { padding: 88px 0; }
+.chat-frame { margin-top: 34px; border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden; background: var(--surface);
+  box-shadow: var(--shadow); }
+.chat-frame iframe { display: block; width: 100%; height: 720px; border: 0; }
+.chat-hint { margin: 16px 0 0; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+.chat-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+@media (max-width: 860px) {
+  .chat-section { padding: 64px 0; }
+  .chat-frame iframe { height: 560px; }
+}
+
 /* Hero-Banner: Logo + Wortmarke, Trennlinie, Tagline, Plattformzeile - alles zentriert */
 .hero-banner { display: flex; flex-direction: column; align-items: center;
   max-width: 980px; margin: 26px auto 34px; padding: 38px 44px 34px;
